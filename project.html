@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details | ADS Creative Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-detail-wrap {
+      max-width: 1200px;
+      margin: 120px auto 80px;
+      padding: 0 20px;
+    }
+    .project-detail-image {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .project-detail-image img {
+      width: 100%;
+      display: block;
+      max-height: 560px;
+      object-fit: cover;
+    }
+    .project-detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0 30px;
+      color: #666;
+    }
+    .project-detail-meta span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    .project-nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="project-detail-wrap">
+    <div id="projectDetail">Loading project...</div>
+  </div>
+
+  <footer class="advanced-footer">
+    <div class="footer-grid">
+      <div class="f-col">
+        <a href="index.html">
+          <img src="logo.png" alt="ADS Creative Space" style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+        </a>
+        <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <a href="#">Architecture Design</a>
+        <a href="#">Interior Design</a>
+        <a href="#">Working Drawings</a>
+        <a href="#">3D Visualization</a>
+        <a href="#">Project Management</a>
+        <a href="#">BOQ & Estimation</a>
+      </div>
+      <div class="f-col contact-col">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+        <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
+        <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    async function loadProjectDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+      const container = document.getElementById('projectDetail');
+
+      if (!slug) {
+        container.innerHTML = '<p>Project not found.</p>';
+        return;
+      }
+
+      const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
+
+      try {
+        const res = await fetch(apiUrl);
+        const files = await res.json();
+        const mdFiles = files.filter(f => f.name.endsWith('.md'));
+
+        const projects = [];
+
+        for (const file of mdFiles) {
+          const fr = await fetch(file.download_url);
+          const text = await fr.text();
+
+          const fileSlug = file.name.replace('.md', '');
+          const title = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';
+          const category = text.match(/category:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'interior';
+          const location = text.match(/location:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+          const area = text.match(/area:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+          const year = text.match(/year:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+          const description = text.match(/description:\s*["']?([\s\S]*?)["']?\s*\n(?:\w+:|$)/)?.[1]?.trim();
+
+          const parts = text.split('---');
+          const body = parts.length >= 3 ? parts.slice(2).join('---').trim() : '';
+          const fullText = body || description || '';
+
+          const thumbMatch = text.match(/thumbnail:\s*["']?([^"'\n\r]+)/);
+          let thumbnail = thumbMatch ? thumbMatch[1].trim() : '';
+
+          const imageMatches = [...text.matchAll(/-\s*image:\s*["']?([^"'\n\r]+)/g)].map(m => {
+            let img = m[1].trim();
+            if (img.startsWith('/')) img = img.slice(1);
+            return img;
+          });
+
+          if (!thumbnail && imageMatches.length) thumbnail = imageMatches[0];
+          if (thumbnail.startsWith('/')) thumbnail = thumbnail.slice(1);
+
+          projects.push({
+            slug: fileSlug,
+            title,
+            category,
+            location,
+            area,
+            year,
+            description,
+            body: fullText,
+            thumbnail,
+            images: imageMatches
+          });
+        }
+
+        const index = projects.findIndex(p => p.slug === slug);
+        if (index === -1) {
+          container.innerHTML = '<p>Project not found.</p>';
+          return;
+        }
+
+        const project = projects[index];
+        const prevProject = index > 0 ? projects[index - 1] : null;
+        const nextProject = index < projects.length - 1 ? projects[index + 1] : null;
+
+        const galleryHtml = project.images.length
+          ? `<div class="project-gallery">
+              ${project.images.map(img => `<img src="${img}" alt="${project.title}">`).join('')}
+             </div>`
+          : '';
+
+        container.innerHTML = `
+          <span class="subtitle">${project.category.toUpperCase()}</span>
+          <h1>${project.title}</h1>
+
+          <div class="project-detail-meta">
+            <span><i class="fa-solid fa-location-dot"></i> ${project.location}</span>
+            <span><i class="fa-regular fa-square"></i> ${project.area}</span>
+            <span><i class="fa-regular fa-calendar"></i> ${project.year}</span>
+          </div>
+
+          ${project.thumbnail ? `
+            <div class="project-detail-image">
+              <img src="${project.thumbnail}" alt="${project.title}">
+            </div>
+          ` : ''}
+
+          <div style="line-height:1.9; color:#555; font-size:1rem;">
+            ${project.body ? project.body.replace(/\n/g, '<br>') : 'No description available.'}
+          </div>
+
+          ${galleryHtml}
+
+          <div class="project-nav">
+            <div>
+              ${prevProject ? `<a href="project.html?slug=${prevProject.slug}"><i class="fa-solid fa-arrow-left"></i> Previous Project</a>` : ''}
+            </div>
+            <div>
+              ${nextProject ? `<a href="project.html?slug=${nextProject.slug}">Next Project <i class="fa-solid fa-arrow-right"></i></a>` : ''}
+            </div>
+          </div>
+        `;
+      } catch (err) {
+        container.innerHTML = '<p>Error loading project.</p>';
+        console.error(err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProjectDetail);
+  </script>
+
+</body>
+</html>
