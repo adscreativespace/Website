@@ -15,30 +15,31 @@ collections:
       - { label: "Project Title", name: "title", widget: "string" }
       - { label: "Subtitle (e.g. Soft Sage Luxury Interior)", name: "subtitle", widget: "string", required: false }
       - { label: "Short Description (for Hero & Cards)", name: "description", widget: "text" }
-      
-      # STATS BAR
+      - { label: "Hero Main Image", name: "hero_image", widget: "image", required: false }
+
+      # Stats Bar
       - { label: "Category / Project Type", name: "category", widget: "select", options: ["Residential Interior", "Commercial Workspace", "Retail Interior", "Institutional", "Hospitality"] }
       - { label: "Location", name: "location", widget: "string", required: false }
       - { label: "Area (e.g. 185 sq.ft.)", name: "area", widget: "string", required: false }
       - { label: "Year", name: "year", widget: "string", required: false }
       - { label: "Design Style (e.g. Contemporary Minimalist)", name: "style", widget: "string", required: false }
       - { label: "Client (e.g. Private Residence)", name: "client", widget: "string", required: false }
-      
-      # ABOUT SECTION
+
+      # About Section
       - { label: "About The Project (Full Text)", name: "body", widget: "markdown", required: false }
       - { label: "About Section Image", name: "about_image", widget: "image", required: false }
 
-      # FEATURE 1 (Left Image, Right Text)
+      # Feature 1 (Left Image, Right Text)
       - { label: "Feature 1 Title", name: "f1_title", widget: "string", required: false }
       - { label: "Feature 1 Text", name: "f1_text", widget: "text", required: false }
       - { label: "Feature 1 Image", name: "f1_image", widget: "image", required: false }
 
-      # FEATURE 2 (Left Text, Right Image)
+      # Feature 2 (Left Text, Right Image)
       - { label: "Feature 2 Title", name: "f2_title", widget: "string", required: false }
       - { label: "Feature 2 Text", name: "f2_text", widget: "text", required: false }
       - { label: "Feature 2 Image", name: "f2_image", widget: "image", required: false }
 
-      # DESIGN HIGHLIGHTS (Grid of 6 items)
+      # Design Highlights (Grid of 6 items)
       - label: "Design Highlights"
         name: "highlights"
         widget: "list"
@@ -47,10 +48,10 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Text", name: "text", widget: "text" }
 
-      # MEDIA
+      # Media
       - label: "Gallery Images (Bottom Grid)"
         name: "images"
         widget: "list"
         required: false
         field: { label: "Image", name: "image", widget: "image" }
-      - label: "Main Hero Image / Card Thumbnail", name: "thumbnail", widget: "image", required: false
+      - label: "Main Hero Image / Card Thumbnail", name: "thumbnail", widget: "image", required: false }
