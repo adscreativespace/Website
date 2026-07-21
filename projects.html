@@ -1,139 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | Ads Creative Space</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | ADS Creative Space</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <!-- Fixed logo name to logo.png -->
-                <a href="index.html"><img src="logo.png" alt="Ads Creative Space" style="width: 150px;"></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Our <span class="highlight">Projects</span></h1>
-            <p>Every design tells a story. Explore our latest work and see how we transform spaces.</p>
-        </div>
-    </section>
+  <!-- ── NAV (matches index.html exactly) ── -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="ADS Creative Space">
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="project-section">
-        <div class="container">
-            <div class="grid" id="projects-container">
-                <!-- Projects load here -->
-            </div>
-        </div>
-    </section>
+  <!-- ── PAGE HERO ── -->
+  <section style="padding: 80px 5% 50px; text-align: center; background: var(--light-bg);">
+    <span class="subtitle">Our Work</span>
+    <h1>Our Projects</h1>
+    <div class="gold-line" style="margin: 16px auto 20px;"></div>
+    <p style="max-width: 580px; margin: 0 auto; color: var(--text);">
+      Every design tells a story. Explore our latest work and see how we transform spaces.
+    </p>
+  </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-col">
-                    <h3>Ads Creative Space</h3>
-                    <p>Crafting elegant spaces that inspire, engage, and transform lives.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Siliguri, India</p>
-                    <p><i class="fas fa-envelope"></i> contact@adscreativespace.com</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <!-- ── PROJECTS GRID ── -->
+  <section style="padding: 60px 5%; background: #fff;">
+    <div id="projects-container" style="
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    ">
+      <p style="color:#888;"><i class="fas fa-spinner fa-spin"></i> Loading projects...</p>
+    </div>
+  </section>
 
-    <script>
-        async function loadProjects() {
-            const container = document.getElementById('projects-container');
-            const githubApiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
+  <!-- ── FOOTER (matches index.html exactly) ── -->
+  <footer style="background:#111; color:#fff; padding: 60px 5% 30px;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap:40px; max-width:1200px; margin:0 auto; padding-bottom:40px; border-bottom:1px solid #333;">
+      <div>
+        <img src="logo.png" alt="ADS Creative Space" style="height:50px; margin-bottom:16px;">
+        <p style="color:#aaa; font-size:0.9rem; line-height:1.7;">Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+      </div>
+      <div>
+        <h4 style="color:#fff; margin-bottom:16px; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase;">Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li style="margin-bottom:8px;"><a href="index.html" style="color:#aaa; font-size:0.9rem;">Home</a></li>
+          <li style="margin-bottom:8px;"><a href="projects.html" style="color:#aaa; font-size:0.9rem;">Projects</a></li>
+          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Services</a></li>
+          <li style="margin-bottom:8px;"><a href="gallery.html" style="color:#aaa; font-size:0.9rem;">Gallery</a></li>
+          <li style="margin-bottom:8px;"><a href="about.html" style="color:#aaa; font-size:0.9rem;">About</a></li>
+          <li><a href="contact.html" style="color:#aaa; font-size:0.9rem;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff; margin-bottom:16px; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase;">Services</h4>
+        <ul style="list-style:none; padding:0;">
+          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Architecture Design</a></li>
+          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Interior Design</a></li>
+          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Working Drawings</a></li>
+          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">3D Visualization</a></li>
+          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Project Management</a></li>
+          <li><a href="services.html" style="color:#aaa; font-size:0.9rem;">BOQ & Estimation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff; margin-bottom:16px; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase;">Contact Us</h4>
+        <p style="color:#aaa; font-size:0.9rem; margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:#C59D5F; margin-right:8px;"></i> Sky City Mall, Gangarampur, WB</p>
+        <p style="color:#aaa; font-size:0.9rem; margin-bottom:10px;"><i class="fas fa-phone" style="color:#C59D5F; margin-right:8px;"></i> +91 70030 71858</p>
+        <p style="color:#aaa; font-size:0.9rem;"><i class="fas fa-envelope" style="color:#C59D5F; margin-right:8px;"></i> adscreativespace@gmail.com</p>
+      </div>
+    </div>
+    <p style="text-align:center; color:#555; font-size:0.85rem; margin-top:30px; max-width:1200px; margin-left:auto; margin-right:auto;">
+      © 2025 ADS Creative Space. All Rights Reserved.
+    </p>
+  </footer>
 
-            try {
-                const response = await fetch(githubApiUrl);
-                const files = await response.json();
-                const projectFiles = files.filter(f => f.name.endsWith('.md'));
+  <!-- ── SCRIPT: Load projects from GitHub ── -->
+  <script>
+    async function loadProjects() {
+      const container = document.getElementById('projects-container');
+      const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
 
-                container.innerHTML = '';
+      try {
+        const res = await fetch(apiUrl);
+        const files = await res.json();
+        const mdFiles = files.filter(f => f.name.endsWith('.md'));
 
-                for (const file of projectFiles) {
-                    const res = await fetch(file.download_url);
-                    const text = await res.text();
-
-                    // Better Parsing Logic
-                    const title = text.match(/title:\s*(.*)/)?.[1]?.replace(/"/g, '') || "Project";
-                    
-                    // Find the first image path
-                    const imgMatch = text.match(/image:\s*["']?([^"'\n\r]+)/);
-                    const imageUrl = imgMatch ? imgMatch[1].trim() : '';
-
-                    // Get description (content after the second ---)
-                    const parts = text.split('---');
-                    const description = parts.length > 2 ? parts[2].trim().substring(0, 120) + "..." : "View our latest interior design project.";
-
-                    const card = document.createElement('div');
-                    card.className = 'project-card';
-                    card.innerHTML = `
-                        <div class="project-image">
-                            <img src="${imageUrl}" alt="${title}" style="background:#eee">
-                        </div>
-                        <div class="project-details">
-                            <h3>${title}</h3>
-                            <p>${description}</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    `;
-                    container.appendChild(card);
-                }
-            } catch (e) {
-                container.innerHTML = "<p>Error loading projects.</p>";
-            }
+        if (!mdFiles.length) {
+          container.innerHTML = '<p style="color:#888;">No projects added yet.</p>';
+          return;
         }
-        document.addEventListener('DOMContentLoaded', loadProjects);
-    </script>
 
-    <style>
-        /* Essential styles for the grid */
-        .project-section { padding: 50px 0; background: #f4f4f4; min-height: 400px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .project-image img { width: 100%; height: 250px; object-fit: cover; display: block; }
-        .project-details { padding: 20px; }
-        .project-details h3 { margin: 0 0 10px; font-size: 1.2rem; }
-        .project-details p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
-        .btn { background: #2c4690; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        header { padding: 20px 0; border-bottom: 1px solid #eee; }
-        nav ul { list-style: none; display: flex; gap: 20px; float: right; margin-top: 10px; }
-        nav ul li a { text-decoration: none; color: #333; font-weight: 600; }
-        .logo { float: left; }
-        .hero { text-align: center; padding: 60px 0; background: #fff; }
-        footer { background: #111; color: #fff; padding: 40px 0; margin-top: 50px; }
-        footer ul { list-style: none; padding: 0; }
-        footer a { color: #ccc; text-decoration: none; }
-    </style>
+        container.innerHTML = '';
+
+        for (const file of mdFiles) {
+          const r = await fetch(file.download_url);
+          const text = await r.text();
+
+          // Parse title
+          const title = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';
+
+          // Parse first image
+          const imgMatch = text.match(/image:\s*["']?([^\s"'\n]+)/);
+          const imageUrl = imgMatch ? imgMatch[1].trim() : '';
+
+          // Parse description (content after second ---)
+          const parts = text.split('---');
+          const desc = parts.length >= 3
+            ? parts.slice(2).join('').trim().replace(/\n/g, ' ').substring(0, 130) + '…'
+            : 'A beautifully crafted interior design project.';
+
+          const card = document.createElement('div');
+          card.style.cssText = 'background:#fff; border:1px solid #E7E1D8; border-radius:4px; overflow:hidden; transition: box-shadow 0.3s;';
+          card.onmouseenter = () => card.style.boxShadow = '0 8px 30px rgba(0,0,0,0.12)';
+          card.onmouseleave = () => card.style.boxShadow = 'none';
+
+          card.innerHTML = `
+            <div style="overflow:hidden; height:240px; background:#f0ede8;">
+              ${imageUrl
+                ? `<img src="${imageUrl}" alt="${title}" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s;"
+                     onmouseenter="this.style.transform='scale(1.05)'"
+                     onmouseleave="this.style.transform='scale(1)'"
+                     onerror="this.parentElement.innerHTML='<div style=\\'height:100%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.85rem;\\'>No Image</div>'">`
+                : `<div style="height:100%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.85rem;">No Image</div>`
+              }
+            </div>
+            <div style="padding:24px;">
+              <div style="width:35px;height:2px;background:#C59D5F;margin-bottom:14px;"></div>
+              <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; color:#111; margin-bottom:10px;">${title}</h3>
+              <p style="font-size:0.88rem; color:#666; line-height:1.7; margin-bottom:18px;">${desc}</p>
+              <a href="#" style="display:inline-flex;align-items:center;gap:8px;color:#C59D5F;font-size:0.85rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;text-decoration:none;">
+                View Project <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          `;
+
+          container.appendChild(card);
+        }
+
+      } catch (e) {
+        container.innerHTML = '<p style="color:#c00;">Error loading projects. Please refresh and try again.</p>';
+        console.error(e);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProjects);
+  </script>
+
 </body>
 </html>
