@@ -15,14 +15,15 @@ collections:
       - { label: "Project Title", name: "title", widget: "string" }
       - { label: "Category", name: "category", widget: "select", options: ["residential", "commercial", "interior", "institutional", "retail", "hospitality"] }
       - { label: "Location", name: "location", widget: "string", required: false }
-      - { label: "Area (sq.ft)", name: "area", widget: "string", required: false }
-      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Area", name: "area", widget: "string", required: false, hint: "Example: 2,400 sq.ft" }
+      - { label: "Year", name: "year", widget: "string", required: false, hint: "Example: 2024" }
       - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Full Description", name: "body", widget: "markdown", required: false }
       - label: "Project Images"
         name: "images"
         widget: "list"
         field: { label: "Image", name: "image", widget: "image" }
-      - label: "Card Thumbnail (pick one image to show on the card)"
+      - label: "Card Thumbnail"
         name: "thumbnail"
         widget: "image"
         required: false
