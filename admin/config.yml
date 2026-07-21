@@ -2,6 +2,7 @@ backend:
   name: github
   repo: adscreativespace/Website
   branch: main
+  base_url: https://decap-cms-oauth-gh-pages.vercel.app
   auth_scope: repo
 
 media_folder: "images/uploads"
