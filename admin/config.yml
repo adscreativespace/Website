@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "projects" # This will save projects as files
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Project Image", name: "thumbnail", widget: "image" }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "gallery"
+    create: true
+    fields:
+      - { label: "Image Title", name: "title", widget: "string" }
+      - { label: "Gallery Image", name: "image", widget: "image" }
