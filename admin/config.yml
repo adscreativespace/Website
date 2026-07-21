@@ -2,6 +2,7 @@ backend:
   name: github
   repo: adscreativespace/Website
   branch: main
+  auth_scope: repo
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
