@@ -6,15 +6,14 @@
     <title>Our Projects | Ads Creative Space</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="adslogo.png" alt="Ads Creative Space Logo" style="width: 100px;"></a>
+                <!-- Fixed logo name to logo.png -->
+                <a href="index.html"><img src="logo.png" alt="Ads Creative Space" style="width: 150px;"></a>
             </div>
             <nav>
                 <ul>
@@ -29,7 +28,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Our <span class="highlight">Projects</span></h1>
@@ -37,16 +35,14 @@
         </div>
     </section>
 
-    <!-- Projects Grid (This is where your projects will display automatically) -->
     <section class="project-section">
         <div class="container">
             <div class="grid" id="projects-container">
-                <!-- Projects will be loaded automatically here -->
+                <!-- Projects load here -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-top">
@@ -60,189 +56,84 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Siliguri, India</li>
-                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                        <li><i class="fas fa-envelope"></i> contact@adscreativespace.com</li>
-                    </ul>
+                    <p><i class="fas fa-map-marker-alt"></i> Siliguri, India</p>
+                    <p><i class="fas fa-envelope"></i> contact@adscreativespace.com</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Ads Creative Space. All rights reserved. | Designed with <i class="fas fa-heart"></i> by Your Team</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript block to fetch projects from GitHub -->
     <script>
-        // This function fetches all your projects from GitHub and displays them
         async function loadProjects() {
             const container = document.getElementById('projects-container');
-            container.innerHTML = '<p><i class="fas fa-spinner fa-spin"></i> Loading projects...</p>';
-
-            // The API URL to your GitHub projects folder (now Public)
             const githubApiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
 
             try {
                 const response = await fetch(githubApiUrl);
                 const files = await response.json();
-
-                if (!Array.isArray(files)) {
-                    container.innerHTML = '<p>No projects found.</p>';
-                    return;
-                }
-
-                // Filter only markdown files
-                const projectFiles = files.filter(file => file.name.endsWith('.md'));
-
-                if (projectFiles.length === 0) {
-                    container.innerHTML = '<p>No projects have been added yet.</p>';
-                    return;
-                }
+                const projectFiles = files.filter(f => f.name.endsWith('.md'));
 
                 container.innerHTML = '';
 
-                // Load each project
                 for (const file of projectFiles) {
-                    try {
-                        const rawUrl = file.download_url;
-                        const fileResponse = await fetch(rawUrl);
-                        const content = await fileResponse.text();
+                    const res = await fetch(file.download_url);
+                    const text = await res.text();
 
-                        // Parse the markdown file
-                        const titleMatch = content.match(/title:\s*(.+)/i);
-                        const descriptionMatch = content.match(/body:\s*(.+?)(?=\n---|\nimages:|$)/is);
-                        const imagesMatch = content.match(/images:\s*\n(?:\s+-\s+image:\s*(.+?)\n)+/gi);
+                    // Better Parsing Logic
+                    const title = text.match(/title:\s*(.*)/)?.[1]?.replace(/"/g, '') || "Project";
+                    
+                    // Find the first image path
+                    const imgMatch = text.match(/image:\s*["']?([^"'\n\r]+)/);
+                    const imageUrl = imgMatch ? imgMatch[1].trim() : '';
 
-                        const title = titleMatch ? titleMatch[1].trim() : 'Untitled Project';
-                        const description = descriptionMatch ? descriptionMatch[1].trim().replace(/"/g, '').substring(0, 150) + '...' : 'No description available';
+                    // Get description (content after the second ---)
+                    const parts = text.split('---');
+                    const description = parts.length > 2 ? parts[2].trim().substring(0, 120) + "..." : "View our latest interior design project.";
 
-                        // Create project card
-                        const card = document.createElement('div');
-                        card.className = 'project-card';
-
-                        // Get the first image if available
-                        let imageUrl = 'default-image.jpg'; // fallback
-                        if (imagesMatch) {
-                            const firstImage = imagesMatch[0].match(/image:\s*(.+)/);
-                            if (firstImage && firstImage[1]) {
-                                imageUrl = firstImage[1].trim();
-                            }
-                        }
-
-                        card.innerHTML = `
-                            <div class="project-image">
-                                <img src="${imageUrl}" alt="${title}" onerror="this.src='default-image.jpg'">
-                            </div>
-                            <div class="project-details">
-                                <h3>${title}</h3>
-                                <p>${description}</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                        `;
-
-                        container.appendChild(card);
-                    } catch (error) {
-                        console.error('Error loading project:', file.name, error);
-                    }
+                    const card = document.createElement('div');
+                    card.className = 'project-card';
+                    card.innerHTML = `
+                        <div class="project-image">
+                            <img src="${imageUrl}" alt="${title}" style="background:#eee">
+                        </div>
+                        <div class="project-details">
+                            <h3>${title}</h3>
+                            <p>${description}</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    `;
+                    container.appendChild(card);
                 }
-
-            } catch (error) {
-                console.error('Error fetching projects:', error);
-                container.innerHTML = '<p>Error loading projects. Please try again later.</p>';
+            } catch (e) {
+                container.innerHTML = "<p>Error loading projects.</p>";
             }
         }
-
-        // Load the projects when page loads
         document.addEventListener('DOMContentLoaded', loadProjects);
     </script>
 
     <style>
-        /* Project Grid Styles */
-        .project-section {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .project-details {
-            padding: 25px;
-        }
-
-        .project-details h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #222;
-            font-size: 1.5rem;
-        }
-
-        .project-details p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(90deg, #2c4690, #4a6fdc);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: linear-gradient(90deg, #1e3270, #395ac9);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        /* Essential styles for the grid */
+        .project-section { padding: 50px 0; background: #f4f4f4; min-height: 400px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        .project-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .project-image img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .project-details { padding: 20px; }
+        .project-details h3 { margin: 0 0 10px; font-size: 1.2rem; }
+        .project-details p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+        .btn { background: #2c4690; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; border-bottom: 1px solid #eee; }
+        nav ul { list-style: none; display: flex; gap: 20px; float: right; margin-top: 10px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 600; }
+        .logo { float: left; }
+        .hero { text-align: center; padding: 60px 0; background: #fff; }
+        footer { background: #111; color: #fff; padding: 40px 0; margin-top: 50px; }
+        footer ul { list-style: none; padding: 0; }
+        footer a { color: #ccc; text-decoration: none; }
     </style>
 </body>
 </html>
