@@ -1,165 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Projects | ADS Creative Space</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | ADS Creative Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ── NAV (matches index.html exactly) ── -->
-  <nav>
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="ADS Creative Space">
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Hero Banner -->
+    <section class="projects-hero">
+        <div class="projects-hero-content">
+            <span class="subtitle">OUR PROJECTS</span>
+            <h1>Featured Projects</h1>
+            <p>A curated selection of residential, commercial and interior<br>projects designed with precision and creativity.</p>
+            <div class="gold-line"></div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="interior">Interior</button>
+            <button class="filter-btn" data-filter="institutional">Institutional</button>
+            <button class="filter-btn" data-filter="retail">Retail</button>
+        </div>
+        <div class="filter-sort">
+            <select>
+                <option>Latest First</option>
+                <option>Oldest First</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-new" id="projectsGrid">
+        <!-- Cards are injected here by JavaScript -->
+    </section>
+
+    <!-- View All Button -->
+    <div class="view-all-wrap">
+        <button class="btn-view-all">VIEW ALL PROJECTS</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="advanced-footer">
+        <div class="footer-grid">
+            <div class="f-col">
+                <a href="index.html">
+                    <img src="logo.png" alt="ADS Creative Space"
+                         style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                </a>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+                <div class="socials" style="margin-top:16px;">
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="f-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="f-col">
+                <h4>Services</h4>
+                <a href="#">Architecture Design</a>
+                <a href="#">Interior Design</a>
+                <a href="#">Working Drawings</a>
+                <a href="#">3D Visualization</a>
+                <a href="#">Project Management</a>
+                <a href="#">BOQ & Estimation</a>
+            </div>
+            <div class="f-col contact-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+                <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
+                <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/917003071858?text=Hello%20AD%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
+       class="whatsapp-float" target="_blank">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- ── PAGE HERO ── -->
-  <section style="padding: 80px 5% 50px; text-align: center; background: var(--light-bg);">
-    <span class="subtitle">Our Work</span>
-    <h1>Our Projects</h1>
-    <div class="gold-line" style="margin: 16px auto 20px;"></div>
-    <p style="max-width: 580px; margin: 0 auto; color: var(--text);">
-      Every design tells a story. Explore our latest work and see how we transform spaces.
-    </p>
-  </section>
+    <script>
+        // ── 6 Demo cards (shown only when not yet replaced by a real project) ──
+        const demoProjects = [
+            {
+                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+                tag: "RESIDENTIAL",
+                category: "residential",
+                title: "Premium Residence – Siliguri",
+                desc: "Contemporary 4BHK residence with open plan living, double height ceiling and seamless indoor–outdoor connection.",
+                location: "Siliguri, West Bengal",
+                area: "4,200 sq.ft",
+                year: "2024"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+                tag: "RETAIL",
+                category: "retail",
+                title: "Retail Experience Store",
+                desc: "Concept driven interior for a lifestyle brand with accent lighting, visual merchandising and efficient circulation.",
+                location: "Kolkata, West Bengal",
+                area: "1,800 sq.ft",
+                year: "2023"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+                tag: "COMMERCIAL",
+                category: "commercial",
+                title: "Corporate Workspace",
+                desc: "Modern office design focused on natural light, collaborative zones and ergonomic workstations.",
+                location: "Gurugram, Haryana",
+                area: "6,500 sq.ft",
+                year: "2024"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+                tag: "RESIDENTIAL",
+                category: "residential",
+                title: "Luxury Villa – Goa",
+                desc: "Tropical modern villa with private pool, lush landscaping and expansive outdoor living areas.",
+                location: "Goa",
+                area: "5,800 sq.ft",
+                year: "2023"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
+                tag: "HOSPITALITY",
+                category: "interior",
+                title: "Boutique Hotel Interior",
+                desc: "Warm, elegant interiors with handcrafted details and a refined material palette.",
+                location: "Jaipur, Rajasthan",
+                area: "12,000 sq.ft",
+                year: "2024"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800",
+                tag: "RETAIL",
+                category: "retail",
+                title: "Airport Retail Store",
+                desc: "Designed and executed 30+ retail stores across major airports in India.",
+                location: "Pan India",
+                area: "Various",
+                year: "2019 – 2024"
+            }
+        ];
 
-  <!-- ── PROJECTS GRID ── -->
-  <section style="padding: 60px 5%; background: #fff;">
-    <div id="projects-container" style="
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 32px;
-      max-width: 1200px;
-      margin: 0 auto;
-    ">
-      <p style="color:#888;"><i class="fas fa-spinner fa-spin"></i> Loading projects...</p>
-    </div>
-  </section>
+        function buildCard(data) {
+            let imgHtml = data.image
+                ? `<img src="${data.image}" alt="${data.title}" onerror="this.src='https://placehold.co/800x500?text=Image+Loading';">`
+                : `<div style="width:100%;height:220px;background:#f3f0ea;display:flex;align-items:center;justify-content:center;color:#b0a79a;">No Image</div>`;
 
-  <!-- ── FOOTER (matches index.html exactly) ── -->
-  <footer style="background:#111; color:#fff; padding: 60px 5% 30px;">
-    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap:40px; max-width:1200px; margin:0 auto; padding-bottom:40px; border-bottom:1px solid #333;">
-      <div>
-        <img src="logo.png" alt="ADS Creative Space" style="height:50px; margin-bottom:16px;">
-        <p style="color:#aaa; font-size:0.9rem; line-height:1.7;">Architecture and interior design consultancy creating timeless spaces that inspire.</p>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-bottom:16px; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase;">Quick Links</h4>
-        <ul style="list-style:none; padding:0;">
-          <li style="margin-bottom:8px;"><a href="index.html" style="color:#aaa; font-size:0.9rem;">Home</a></li>
-          <li style="margin-bottom:8px;"><a href="projects.html" style="color:#aaa; font-size:0.9rem;">Projects</a></li>
-          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Services</a></li>
-          <li style="margin-bottom:8px;"><a href="gallery.html" style="color:#aaa; font-size:0.9rem;">Gallery</a></li>
-          <li style="margin-bottom:8px;"><a href="about.html" style="color:#aaa; font-size:0.9rem;">About</a></li>
-          <li><a href="contact.html" style="color:#aaa; font-size:0.9rem;">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-bottom:16px; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase;">Services</h4>
-        <ul style="list-style:none; padding:0;">
-          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Architecture Design</a></li>
-          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Interior Design</a></li>
-          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Working Drawings</a></li>
-          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">3D Visualization</a></li>
-          <li style="margin-bottom:8px;"><a href="services.html" style="color:#aaa; font-size:0.9rem;">Project Management</a></li>
-          <li><a href="services.html" style="color:#aaa; font-size:0.9rem;">BOQ & Estimation</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-bottom:16px; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase;">Contact Us</h4>
-        <p style="color:#aaa; font-size:0.9rem; margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:#C59D5F; margin-right:8px;"></i> Sky City Mall, Gangarampur, WB</p>
-        <p style="color:#aaa; font-size:0.9rem; margin-bottom:10px;"><i class="fas fa-phone" style="color:#C59D5F; margin-right:8px;"></i> +91 70030 71858</p>
-        <p style="color:#aaa; font-size:0.9rem;"><i class="fas fa-envelope" style="color:#C59D5F; margin-right:8px;"></i> adscreativespace@gmail.com</p>
-      </div>
-    </div>
-    <p style="text-align:center; color:#555; font-size:0.85rem; margin-top:30px; max-width:1200px; margin-left:auto; margin-right:auto;">
-      © 2025 ADS Creative Space. All Rights Reserved.
-    </p>
-  </footer>
-
-  <!-- ── SCRIPT: Load projects from GitHub ── -->
-  <script>
-    async function loadProjects() {
-      const container = document.getElementById('projects-container');
-      const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
-
-      try {
-        const res = await fetch(apiUrl);
-        const files = await res.json();
-        const mdFiles = files.filter(f => f.name.endsWith('.md'));
-
-        if (!mdFiles.length) {
-          container.innerHTML = '<p style="color:#888;">No projects added yet.</p>';
-          return;
+            return `
+                ${imgHtml}
+                <span class="proj-tag">${data.tag}</span>
+                <div class="proj-info">
+                    <div class="proj-text">
+                        <h3>${data.title}</h3>
+                        <p>${data.desc}</p>
+                        <div class="proj-meta">
+                            <span><i class="fa-solid fa-location-dot"></i> ${data.location || '—'}</span>
+                            <span><i class="fa-regular fa-square"></i> ${data.area || '—'}</span>
+                            <span><i class="fa-regular fa-calendar"></i> ${data.year || '—'}</span>
+                        </div>
+                    </div>
+                    <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            `;
         }
 
-        container.innerHTML = '';
+        async function loadProjects() {
+            const grid = document.getElementById('projectsGrid');
+            const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
 
-        for (const file of mdFiles) {
-          const r = await fetch(file.download_url);
-          const text = await r.text();
+            let realProjects = [];
 
-          // Parse title
-          const title = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';
+            try {
+                const res = await fetch(apiUrl);
+                const files = await res.json();
 
-          // Parse first image
-          const imgMatch = text.match(/image:\s*["']?([^\s"'\n]+)/);
-          const imageUrl = imgMatch ? imgMatch[1].trim() : '';
+                if (Array.isArray(files)) {
+                    const mdFiles = files.filter(f => f.name.endsWith('.md'));
 
-          // Parse description (content after second ---)
-          const parts = text.split('---');
-          const desc = parts.length >= 3
-            ? parts.slice(2).join('').trim().replace(/\n/g, ' ').substring(0, 130) + '…'
-            : 'A beautifully crafted interior design project.';
+                    for (const file of mdFiles) {
+                        const fr = await fetch(file.download_url);
+                        const text = await fr.text();
 
-          const card = document.createElement('div');
-          card.style.cssText = 'background:#fff; border:1px solid #E7E1D8; border-radius:4px; overflow:hidden; transition: box-shadow 0.3s;';
-          card.onmouseenter = () => card.style.boxShadow = '0 8px 30px rgba(0,0,0,0.12)';
-          card.onmouseleave = () => card.style.boxShadow = 'none';
+                        // Parse all fields
+                        const title    = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';
+                        const category = text.match(/category:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'interior';
+                        const location = text.match(/location:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+                        const area     = text.match(/area:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+                        const year     = text.match(/year:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
 
-          card.innerHTML = `
-            <div style="overflow:hidden; height:240px; background:#f0ede8;">
-              ${imageUrl
-                ? `<img src="${imageUrl}" alt="${title}" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s;"
-                     onmouseenter="this.style.transform='scale(1.05)'"
-                     onmouseleave="this.style.transform='scale(1)'"
-                     onerror="this.parentElement.innerHTML='<div style=\\'height:100%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.85rem;\\'>No Image</div>'">`
-                : `<div style="height:100%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.85rem;">No Image</div>`
-              }
-            </div>
-            <div style="padding:24px;">
-              <div style="width:35px;height:2px;background:#C59D5F;margin-bottom:14px;"></div>
-              <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; color:#111; margin-bottom:10px;">${title}</h3>
-              <p style="font-size:0.88rem; color:#666; line-height:1.7; margin-bottom:18px;">${desc}</p>
-              <a href="#" style="display:inline-flex;align-items:center;gap:8px;color:#C59D5F;font-size:0.85rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;text-decoration:none;">
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          `;
+                        // Description after second ---
+                        const parts = text.split('---');
+                        const desc = parts.length >= 3
+                            ? parts.slice(2).join('').trim().replace(/\n+/g, ' ').substring(0, 140) + '…'
+                            : 'Explore this interior project.';
 
-          container.appendChild(card);
+                        // Thumbnail (chosen by user in admin) takes priority
+                        // Falls back to first image in the list
+                        const thumbMatch = text.match(/thumbnail:\s*["']?([^"'\n\r]+)/);
+                        let thumbnail = thumbMatch ? thumbMatch[1].trim() : '';
+
+                        if (!thumbnail) {
+                            const imgMatch = text.match(/-\s*image:\s*["']?([^"'\n\r]+)/);
+                            thumbnail = imgMatch ? imgMatch[1].trim() : '';
+                        }
+
+                        if (thumbnail.startsWith('/')) thumbnail = thumbnail.slice(1);
+
+                        realProjects.push({
+                            image: thumbnail,
+                            tag: category.toUpperCase(),
+                            category: category,
+                            title,
+                            desc,
+                            location,
+                            area,
+                            year
+                        });
+                    }
+                }
+            } catch (err) {
+                console.error('Error loading CMS projects:', err);
+            }
+
+            // ── Build the final card list ──
+            // Real projects replace demo cards one by one
+            // Extra real projects are added after the 6 slots
+            grid.innerHTML = '';
+
+            const totalSlots = Math.max(6, realProjects.length);
+
+            for (let i = 0; i < totalSlots; i++) {
+                const card = document.createElement('div');
+                card.className = 'proj-card';
+
+                const data = i < realProjects.length ? realProjects[i] : demoProjects[i];
+                card.setAttribute('data-category', data.category);
+                card.innerHTML = buildCard(data);
+                grid.appendChild(card);
+            }
+
+            // ── Re-attach filter buttons to new cards ──
+            const buttons = document.querySelectorAll('.filter-btn');
+            const allCards = document.querySelectorAll('.proj-card');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    allCards.forEach(card => {
+                        card.style.display =
+                            (filter === 'all' || card.dataset.category === filter)
+                            ? 'block' : 'none';
+                    });
+                });
+            });
         }
 
-      } catch (e) {
-        container.innerHTML = '<p style="color:#c00;">Error loading projects. Please refresh and try again.</p>';
-        console.error(e);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', loadProjects);
-  </script>
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
 
 </body>
 </html>
