@@ -10,349 +10,94 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 
   <style>
-    body {
-      background: #fff;
-      font-family: 'Montserrat', sans-serif;
-      color: #2A2A2A;
-    }
+    /* ── BASE ── */
+    body { background: #fff; font-family: 'Montserrat', sans-serif; color: #2A2A2A; margin: 0; }
 
     /* ── HERO ── */
-    .pd-hero {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      min-height: 85vh;
-      background: #F8F7F3;
-    }
-    .pd-hero-left {
-      padding: 120px 8% 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .pd-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #C59D5F;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      margin-bottom: 50px;
-    }
-    .pd-hero-left h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.6rem;
-      line-height: 1.1;
-      color: #111;
-      margin: 0 0 12px 0;
-    }
-    .pd-hero-subtitle {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: #C59D5F;
-      margin-bottom: 30px;
-    }
-    .pd-hero-desc {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: #666;
-      max-width: 85%;
-      text-align: justify;
-    }
-    .pd-hero-right img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .pd-hero { display: grid; grid-template-columns: 1fr 1.3fr; min-height: 85vh; background: #F8F7F3; }
+    .pd-hero-left { padding: 120px 8% 80px; display: flex; flex-direction: column; justify-content: center; }
+    .pd-back { display: inline-flex; align-items: center; gap: 8px; color: #C59D5F; text-decoration: none; font-size: 0.85rem; font-weight: 500; margin-bottom: 50px; }
+    .pd-hero-left h1 { font-family: 'Playfair Display', serif; font-size: 3.6rem; line-height: 1.1; color: #111; margin: 0 0 12px 0; }
+    .pd-hero-subtitle { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #C59D5F; margin-bottom: 30px; }
+    .pd-hero-desc { font-size: 0.95rem; line-height: 1.8; color: #666; max-width: 85%; text-align: justify; }
+    .pd-hero-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ── STATS BAR ── */
-    .pd-stats {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      text-align: center;
-      padding: 40px 4%;
-      background: #fff;
-      border-bottom: 1px solid #EAEAEA;
-      gap: 10px;
-    }
-    .pd-stat i {
-      font-size: 1.4rem;
-      color: #C59D5F;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .pd-stat-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #111;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .pd-stat-val {
-      font-size: 0.88rem;
-      color: #555;
-    }
+    .pd-stats { display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; padding: 40px 4%; background: #fff; border-bottom: 1px solid #EAEAEA; gap: 10px; }
+    .pd-stat i { font-size: 1.4rem; color: #C59D5F; margin-bottom: 12px; display: block; }
+    .pd-stat-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: #111; font-weight: 600; margin-bottom: 6px; }
+    .pd-stat-val { font-size: 0.88rem; color: #555; }
 
-    /* ── ABOUT ── */
-    .pd-about {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 60px;
-      align-items: center;
-      padding: 80px 6%;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .pd-section-label {
-      font-size: 0.8rem;
-      color: #C59D5F;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
-    .pd-body-text {
-      font-size: 0.95rem;
-      line-height: 1.9;
-      color: #555;
-    }
-    .pd-body-text p {
-      text-align: justify;
-      margin-bottom: 1rem;
-    }
-    .pd-about-img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ── FEATURES ── */
-    .pd-feature {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      align-items: center;
-      padding: 0 6% 80px;
-      max-width: 1300px;
-      margin: 0 auto;
-      gap: 60px;
-    }
-    .pd-feature.flip {
-      grid-template-columns: 1fr 1.2fr;
-    }
-    .pd-feature img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .pd-feature-text-wrap {
-      padding: 40px;
-      background: #F8F7F3;
-    }
-    .pd-feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #4B5A51;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-    .pd-feature-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: #C59D5F;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-    .pd-feature-desc {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.8;
-      text-align: justify;
-    }
-
-    /* ── HIGHLIGHTS ── */
-    .pd-highlights {
-      background: #F8F7F3;
-      padding: 60px 6%;
-    }
-    .pd-hl-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 30px;
-      margin-top: 30px;
-      max-width: 1300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .pd-hl-item i {
-      font-size: 1.5rem;
-      color: #111;
-      margin-bottom: 15px;
-      display: block;
-    }
-    .pd-hl-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 8px;
-    }
-    .pd-hl-text {
-      font-size: 0.82rem;
-      color: #666;
-      line-height: 1.6;
-      text-align: justify;
-    }
-
-    /* ── GALLERY ── */
-    .pd-gallery {
-      padding: 60px 6%;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .pd-gal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 15px;
-      margin-top: 25px;
-    }
-    .pd-gal-grid img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
+    /* ── ABOUT SECTION ── */
+    .pd-about { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; padding: 80px 6%; max-width: 1300px; margin: 0 auto; }
+    .pd-section-label { font-size: 0.8rem; color: #C59D5F; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 24px; }
+    
+    /* THE FILL FIX */
+    .pd-body-text { 
+      padding: 30px; 
+      background: #F8F7F3; /* This is the "fill" background */
       border-radius: 4px;
     }
+    .pd-body-text p { 
+      font-size: 0.95rem; 
+      line-height: 1.9; 
+      color: #555; 
+      text-align: justify !important; /* THE JUSTIFY FIX */
+      margin-bottom: 1.2rem;
+    }
+    .pd-about-img img { width: 100%; height: auto; display: block; }
 
-    /* ── PROJECT NAV ── */
-    .pd-project-nav {
-      max-width: 1300px;
-      margin: 0 auto 60px;
-      padding: 0 6%;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .pd-project-nav a {
-      flex: 1;
-      text-decoration: none;
-      border: 1px solid #E5E5E5;
-      padding: 20px 24px;
-      color: #111;
-      transition: 0.3s;
-      background: #fff;
-    }
-    .pd-project-nav a:hover {
-      border-color: #C59D5F;
-      color: #C59D5F;
-    }
-    .pd-project-nav small {
-      display: block;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-    .pd-project-nav strong {
-      display: block;
-      font-size: 1rem;
-      font-weight: 600;
-      line-height: 1.4;
-    }
-    .pd-nav-right {
-      text-align: right;
-    }
+    /* ── FEATURES ── */
+    .pd-feature { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; padding: 0 6% 80px; max-width: 1300px; margin: 0 auto; gap: 60px; }
+    .pd-feature.flip { grid-template-columns: 1fr 1.2fr; }
+    .pd-feature img { width: 100%; height: auto; display: block; }
+    .pd-feature-text-wrap { padding: 40px; background: #F8F7F3; }
+    .pd-feature-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #C59D5F; margin-bottom: 15px; }
+    .pd-feature-desc { font-size: 0.95rem; color: #555; line-height: 1.8; text-align: justify; }
 
-    /* ── RELATED PROJECTS ── */
-    .pd-related {
-      padding: 70px 6% 90px;
-      background: #F8F7F3;
-    }
-    .pd-related-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .pd-related-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 25px;
-    }
-    .rel-card {
-      background: #fff;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      border: 1px solid #EAEAEA;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .rel-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-    .rel-card img {
-      width: 130px;
-      height: 130px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    .rel-info {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .rel-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      margin-bottom: 6px;
-      color: #111;
-    }
-    .rel-cat {
-      font-size: 0.75rem;
-      color: #888;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-    }
-    .rel-link {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #C59D5F;
-    }
+    /* ── HIGHLIGHTS ── */
+    .pd-highlights { background: #F8F7F3; padding: 60px 6%; }
+    .pd-hl-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 30px; margin-top: 30px; max-width: 1300px; margin: 30px auto 0; }
+    .pd-hl-item i { font-size: 1.5rem; color: #111; margin-bottom: 15px; display: block; }
+    .pd-hl-title { font-size: 0.9rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+    .pd-hl-text { font-size: 0.82rem; color: #666; line-height: 1.6; text-align: justify; }
 
-    /* ── RESPONSIVE ── */
+    /* ── GALLERY ── */
+    .pd-gallery { padding: 60px 6%; max-width: 1300px; margin: 0 auto; }
+    .pd-gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin-top: 25px; }
+    .pd-gal-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border-radius: 4px; }
+
+    /* ── NAVIGATION ── */
+    .pd-project-nav { max-width: 1300px; margin: 0 auto 60px; padding: 0 6%; display: flex; justify-content: space-between; gap: 20px; }
+    .pd-project-nav a { flex: 1; text-decoration: none; border: 1px solid #E5E5E5; padding: 20px; color: #111; background: #fff; transition: 0.3s; }
+    .pd-project-nav a:hover { border-color: #C59D5F; color: #C59D5F; }
+    .pd-project-nav small { display: block; font-size: 0.7rem; text-transform: uppercase; color: #999; margin-bottom: 5px; }
+
+    /* ── RELATED ── */
+    .pd-related { padding: 70px 6% 90px; background: #F8F7F3; }
+    .pd-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1300px; margin: 25px auto 0; }
+    .rel-card { background: #fff; text-decoration: none; color: inherit; display: flex; border: 1px solid #EAEAEA; transition: 0.3s; }
+    .rel-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .rel-card img { width: 120px; height: 120px; object-fit: cover; }
+    .rel-info { padding: 15px; display: flex; flex-direction: column; justify-content: center; }
+
+    /* ── THE FOOTER FIX (Forcing Styles) ── */
+    .advanced-footer { background: #1a1a1a !important; color: #fff !important; padding: 60px 6% 20px !important; margin-top: 0 !important; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; max-width: 1300px; margin: 0 auto; }
+    .f-col h4 { font-size: 1rem; color: #C59D5F; margin-bottom: 25px; text-transform: uppercase; }
+    .f-col p, .f-col a { color: #ccc !important; font-size: 0.9rem; text-decoration: none; line-height: 1.8; display: block; margin-bottom: 10px; }
+    .f-col a:hover { color: #C59D5F !important; }
+    .footer-bottom { border-top: 1px solid #333; padding-top: 20px; margin-top: 40px; text-align: center; color: #777; font-size: 0.8rem; }
+
     @media (max-width: 960px) {
-      .pd-hero,
-      .pd-about,
-      .pd-feature,
-      .pd-feature.flip {
-        grid-template-columns: 1fr;
-      }
-      .pd-hero-right { min-height: 350px; }
-      .pd-hero-right img { height: 350px; }
-      .pd-stats { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-      .pd-hl-grid { grid-template-columns: repeat(3, 1fr); }
-      .pd-related-grid { grid-template-columns: repeat(2, 1fr); }
-      .pd-hero-left h1 { font-size: 2.4rem; }
+      .pd-hero, .pd-about, .pd-feature, .pd-feature.flip, .footer-grid, .pd-related-grid { grid-template-columns: 1fr; }
+      .pd-stats { grid-template-columns: repeat(3, 1fr); }
       .pd-project-nav { flex-direction: column; }
-    }
-    @media (max-width: 560px) {
-      .pd-stats { grid-template-columns: repeat(2, 1fr); }
-      .pd-hl-grid { grid-template-columns: repeat(2, 1fr); }
-      .pd-related-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="index.html" class="logo">
       <img src="logo.png" alt="ADS Creative Space" style="height:52px;width:auto;">
@@ -367,365 +112,120 @@
     </ul>
   </nav>
 
-  <!-- CONTENT -->
   <div id="pd-root">
     <div style="padding:140px;text-align:center;color:#999;">
-      <i class="fas fa-spinner fa-spin fa-2x"></i><br><br>Loading...
+      <i class="fas fa-spinner fa-spin fa-2x"></i><br>Loading Project...
     </div>
   </div>
 
-  <!-- FOOTER — exactly your original footer, unchanged -->
   <footer class="advanced-footer">
     <div class="footer-grid">
       <div class="f-col">
-        <a href="index.html">
-          <img src="logo.png" alt="ADS Creative Space"
-               style="height:48px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);">
-        </a>
-        <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
-        <div class="socials" style="margin-top:16px;">
-          <a href="https://www.facebook.com/adscreativespace" target="_blank">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/adscreativespace" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
-            <i class="fa-brands fa-pinterest-p"></i>
-          </a>
+        <img src="logo.png" style="height:45px; filter:brightness(0) invert(1); margin-bottom:20px;">
+        <p style="text-align: justify;">Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+        <div style="margin-top:20px;">
+          <a href="#" style="display:inline; margin-right:15px;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" style="display:inline; margin-right:15px;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="display:inline;"><i class="fab fa-pinterest-p"></i></a>
         </div>
       </div>
       <div class="f-col">
-        <h4>Quick Links</h4>
+        <h4>Links</h4>
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="f-col">
         <h4>Services</h4>
-        <a href="#">Architecture Design</a>
+        <a href="#">Architecture</a>
         <a href="#">Interior Design</a>
-        <a href="#">Working Drawings</a>
         <a href="#">3D Visualization</a>
         <a href="#">Project Management</a>
-        <a href="#">BOQ & Estimation</a>
       </div>
-      <div class="f-col contact-col">
-        <h4>Contact Us</h4>
-        <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
-        <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
-        <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Sky City Mall, WB</p>
+        <p><i class="fas fa-phone"></i> +91 70030 71858</p>
+        <p><i class="fas fa-envelope"></i> adscreativespace@gmail.com</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
-    </div>
+    <div class="footer-bottom">&copy; 2025 ADS Creative Space. All Rights Reserved.</div>
   </footer>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
-     class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-
   <script>
-    function fixImg(path) {
-      if (!path) return '';
-      path = String(path).trim();
-      return path.startsWith('/') ? path.slice(1) : path;
-    }
-
-    const hlIcons = [
-      'fa-palette', 'fa-bed', 'fa-door-closed',
-      'fa-lightbulb', 'fa-chair', 'fa-gem'
-    ];
+    function fixImg(p) { return p ? (String(p).trim().startsWith('/') ? p.slice(1) : p) : ''; }
 
     async function loadPage() {
       const root = document.getElementById('pd-root');
       const slug = new URLSearchParams(window.location.search).get('slug');
-
-      if (!slug) {
-        root.innerHTML = '<div style="padding:100px;text-align:center;">Project not found. <a href="projects.html">← Go Back</a></div>';
-        return;
-      }
+      if (!slug) return;
 
       try {
-        const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
-        const res = await fetch(apiUrl);
+        const res = await fetch('https://api.github.com/repos/adscreativespace/Website/contents/projects');
         const files = await res.json();
-        const mdFiles = files.filter(f => f.name.endsWith('.md'));
+        let all = []; let cur = null;
 
-        let allProjects = [];
-        let current = null;
-
-        for (const file of mdFiles) {
-          const r = await fetch(file.download_url);
+        for (const f of files.filter(x => x.name.endsWith('.md'))) {
+          const r = await fetch(f.download_url);
           const raw = await r.text();
-          const fileSlug = file.name.replace('.md', '');
-
-          const sections = raw.split(/^---\s*$/m);
-          let data = {};
-          let bodyMd = '';
-
-          if (sections.length >= 3) {
-            try { data = jsyaml.load(sections[1]) || {}; } catch(e) { data = {}; }
-            bodyMd = sections.slice(2).join('---').trim();
-          }
-
-          data.slug = fileSlug;
-          data._body = bodyMd;
-          allProjects.push(data);
-          if (fileSlug === slug) current = data;
+          const parts = raw.split(/^---\s*$/m);
+          let d = jsyaml.load(parts[1]) || {};
+          d.slug = f.name.replace('.md', '');
+          d._body = parts.slice(2).join('---').trim();
+          all.push(d);
+          if (d.slug === slug) cur = d;
         }
 
-        if (!current) {
-          root.innerHTML = '<div style="padding:100px;text-align:center;">Project not found. <a href="projects.html">← Go Back</a></div>';
-          return;
-        }
+        all.sort((a,b) => a.slug.localeCompare(b.slug));
+        const idx = all.findIndex(p => p.slug === slug);
+        const prev = all[idx-1]; const next = all[idx+1];
+        const rel = all.filter(p => p.slug !== slug).slice(0,3);
 
-        // Sort all projects alphabetically by slug for consistent prev/next
-        allProjects.sort((a, b) => a.slug.localeCompare(b.slug));
-        const currentIndex = allProjects.findIndex(p => p.slug === slug);
-        const prevProject  = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
-        const nextProject  = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
+        const hImg = fixImg(cur.hero_image || cur.thumbnail || (cur.images?.[0]?.image || cur.images?.[0]));
+        const aImg = fixImg(cur.about_image || (cur.images?.[1]?.image || cur.images?.[1]));
+        const body = cur._body ? cur._body.split(/\n{2,}/).map(p => `<p>${p.trim()}</p>`).join('') : `<p>${cur.description}</p>`;
 
-        // Related = up to 3 other projects, auto from list
-        const related = allProjects.filter(p => p.slug !== slug).slice(0, 3);
-
-        // Image helpers
-        const heroSrc  = fixImg(current.hero_image)
-                      || fixImg(current.thumbnail)
-                      || (current.images && current.images.length ? fixImg(current.images[0].image || current.images[0]) : '');
-
-        const aboutSrc = fixImg(current.about_image)
-                      || (current.images && current.images.length > 1 ? fixImg(current.images[1].image || current.images[1]) : '');
-
-        // Body text — wrap each paragraph properly
-        const bodyHtml = current._body
-          ? current._body
-              .split(/\n{2,}/)
-              .map(para => `<p>${para.replace(/\n/g, ' ').trim()}</p>`)
-              .join('')
-          : `<p>${current.description || ''}</p>`;
-
-        // All gallery images
-        const galleryImgs = (current.images || [])
-          .map(g => fixImg(g.image || g))
-          .filter(Boolean);
-
-        let html = '';
-
-        /* ── 1. HERO ── */
-        html += `
+        let h = `
           <div class="pd-hero">
             <div class="pd-hero-left">
-              <a href="projects.html" class="pd-back">
-                <i class="fa-solid fa-arrow-left"></i> Back to Projects
-              </a>
-              <h1>${current.title || 'Project'}</h1>
-              ${current.subtitle ? `<div class="pd-hero-subtitle">${current.subtitle}</div>` : ''}
-              <p class="pd-hero-desc">${current.description || ''}</p>
+              <a href="projects.html" class="pd-back"><i class="fas fa-arrow-left"></i> Back</a>
+              <h1>${cur.title}</h1>
+              <div class="pd-hero-subtitle">${cur.subtitle || ''}</div>
+              <p class="pd-hero-desc">${cur.description}</p>
             </div>
-            <div class="pd-hero-right">
-              ${heroSrc
-                ? `<img src="${heroSrc}" alt="${current.title || 'Project'}">`
-                : '<div style="background:#eee;width:100%;height:100%;"></div>'}
-            </div>
+            <div class="pd-hero-right"><img src="${hImg}"></div>
           </div>
-        `;
-
-        /* ── 2. STATS ── */
-        html += `
           <div class="pd-stats">
-            <div class="pd-stat">
-              <i class="fa-solid fa-location-dot"></i>
-              <div class="pd-stat-label">Location</div>
-              <div class="pd-stat-val">${current.location || '—'}</div>
-            </div>
-            <div class="pd-stat">
-              <i class="fa-solid fa-vector-square"></i>
-              <div class="pd-stat-label">Area</div>
-              <div class="pd-stat-val">${current.area || '—'}</div>
-            </div>
-            <div class="pd-stat">
-              <i class="fa-solid fa-building"></i>
-              <div class="pd-stat-label">Project Type</div>
-              <div class="pd-stat-val">${current.category || '—'}</div>
-            </div>
-            <div class="pd-stat">
-              <i class="fa-solid fa-compass-drafting"></i>
-              <div class="pd-stat-label">Design Style</div>
-              <div class="pd-stat-val">${current.style || '—'}</div>
-            </div>
-            <div class="pd-stat">
-              <i class="fa-regular fa-calendar"></i>
-              <div class="pd-stat-label">Year</div>
-              <div class="pd-stat-val">${current.year || '—'}</div>
-            </div>
-            <div class="pd-stat">
-              <i class="fa-regular fa-user"></i>
-              <div class="pd-stat-label">Client</div>
-              <div class="pd-stat-val">${current.client || '—'}</div>
-            </div>
+            <div class="pd-stat"><i class="fas fa-map-marker-alt"></i><div class="pd-stat-label">Location</div><div class="pd-stat-val">${cur.location||'—'}</div></div>
+            <div class="pd-stat"><i class="fas fa-vector-square"></i><div class="pd-stat-label">Area</div><div class="pd-stat-val">${cur.area||'—'}</div></div>
+            <div class="pd-stat"><i class="fas fa-building"></i><div class="pd-stat-label">Type</div><div class="pd-stat-val">${cur.category||'—'}</div></div>
+            <div class="pd-stat"><i class="fas fa-pen-nib"></i><div class="pd-stat-label">Style</div><div class="pd-stat-val">${cur.style||'—'}</div></div>
+            <div class="pd-stat"><i class="far fa-calendar"></i><div class="pd-stat-label">Year</div><div class="pd-stat-val">${cur.year||'—'}</div></div>
+            <div class="pd-stat"><i class="far fa-user"></i><div class="pd-stat-label">Client</div><div class="pd-stat-val">${cur.client||'—'}</div></div>
           </div>
-        `;
-
-        /* ── 3. ABOUT ── */
-        html += `
           <div class="pd-about">
-            <div>
-              <div class="pd-section-label">About The Project</div>
-              <div class="pd-body-text">${bodyHtml}</div>
-            </div>
-            <div class="pd-about-img">
-              ${aboutSrc ? `<img src="${aboutSrc}" alt="Project Image">` : ''}
-            </div>
+            <div><div class="pd-section-label">About</div><div class="pd-body-text">${body}</div></div>
+            <div class="pd-about-img"><img src="${aImg}"></div>
           </div>
         `;
 
-        /* ── 4. FEATURE 1 — image left, text right ── */
-        if (current.f1_title || current.f1_image || current.f1_text) {
-          html += `
-            <div class="pd-feature" style="padding-top:0;">
-              <div>
-                ${current.f1_image
-                  ? `<img src="${fixImg(current.f1_image)}" alt="${current.f1_title || ''}">`
-                  : ''}
-              </div>
-              <div class="pd-feature-text-wrap">
-                <div class="pd-feature-icon"><i class="fa-solid fa-layer-group"></i></div>
-                <div class="pd-feature-title">${current.f1_title || ''}</div>
-                <div class="pd-feature-desc">${current.f1_text || ''}</div>
-              </div>
-            </div>
-          `;
-        }
+        if (cur.f1_title) h += `<div class="pd-feature"><div><img src="${fixImg(cur.f1_image)}"></div><div class="pd-feature-text-wrap"><div class="pd-feature-title">${cur.f1_title}</div><div class="pd-feature-desc">${cur.f1_text}</div></div></div>`;
+        if (cur.f2_title) h += `<div class="pd-feature flip"><div class="pd-feature-text-wrap"><div class="pd-feature-title">${cur.f2_title}</div><div class="pd-feature-desc">${cur.f2_text}</div></div><div><img src="${fixImg(cur.f2_image)}"></div></div>`;
 
-        /* ── 5. FEATURE 2 — text left, image right ── */
-        if (current.f2_title || current.f2_image || current.f2_text) {
-          html += `
-            <div class="pd-feature flip" style="padding-top:0;">
-              <div class="pd-feature-text-wrap">
-                <div class="pd-feature-icon"><i class="fa-solid fa-couch"></i></div>
-                <div class="pd-feature-title">${current.f2_title || ''}</div>
-                <div class="pd-feature-desc">${current.f2_text || ''}</div>
-              </div>
-              <div>
-                ${current.f2_image
-                  ? `<img src="${fixImg(current.f2_image)}" alt="${current.f2_title || ''}">`
-                  : ''}
-              </div>
-            </div>
-          `;
-        }
+        if (cur.highlights?.length) h += `<div class="pd-highlights"><div class="pd-section-label" style="max-width:1300px;margin:0 auto;">Highlights</div><div class="pd-hl-grid">${cur.highlights.map(x => `<div class="pd-hl-item"><i class="fas fa-check-circle"></i><div class="pd-hl-title">${x.title}</div><div class="pd-hl-text">${x.text}</div></div>`).join('')}</div></div>`;
 
-        /* ── 6. DESIGN HIGHLIGHTS ── */
-        if (current.highlights && current.highlights.length > 0) {
-          html += `
-            <div class="pd-highlights">
-              <div class="pd-section-label" style="max-width:1300px;margin:0 auto 0;">
-                Design Highlights
-              </div>
-              <div class="pd-hl-grid">
-                ${current.highlights.map((h, i) => `
-                  <div class="pd-hl-item">
-                    <i class="fa-solid ${hlIcons[i % hlIcons.length]}"></i>
-                    <div class="pd-hl-title">${h.title || ''}</div>
-                    <div class="pd-hl-text">${h.text || ''}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          `;
-        }
+        const imgs = (cur.images||[]).map(x => fixImg(x.image||x));
+        if (imgs.length) h += `<div class="pd-gallery"><div class="pd-section-label">Gallery</div><div class="pd-gal-grid">${imgs.map(x => `<img src="${x}">`).join('')}</div></div>`;
 
-        /* ── 7. GALLERY — shows ALL images ── */
-        if (galleryImgs.length > 0) {
-          html += `
-            <div class="pd-gallery">
-              <div class="pd-section-label">Project Gallery</div>
-              <div class="pd-gal-grid">
-                ${galleryImgs.map(src => `<img src="${src}" alt="Gallery Image">`).join('')}
-              </div>
-            </div>
-          `;
-        }
+        if (prev || next) h += `<div class="pd-project-nav">${prev?`<a href="project.html?slug=${prev.slug}"><small>Previous</small><strong>${prev.title}</strong></a>`:'<div></div>'}${next?`<a href="project.html?slug=${next.slug}" style="text-align:right;"><small>Next</small><strong>${next.title}</strong></a>`:'<div></div>'}</div>`;
 
-        /* ── 8. PREV / NEXT NAVIGATION ── */
-        if (prevProject || nextProject) {
-          html += `<div class="pd-project-nav">`;
+        if (rel.length) h += `<div class="pd-related"><div style="max-width:1300px;margin:0 auto;"><div class="pd-section-label">Related</div><div class="pd-related-grid">${rel.map(p => `<a href="project.html?slug=${p.slug}" class="rel-card"><img src="${fixImg(p.thumbnail||p.hero_image)}"><div class="rel-info"><strong>${p.title}</strong><small>${p.category}</small></div></a>`).join('')}</div></div></div>`;
 
-          if (prevProject) {
-            const pImg = fixImg(prevProject.thumbnail) || fixImg(prevProject.hero_image) || '';
-            html += `
-              <a href="project.html?slug=${prevProject.slug}">
-                <small>← Previous Project</small>
-                <strong>${prevProject.title || 'Project'}</strong>
-              </a>
-            `;
-          } else {
-            html += `<div></div>`;
-          }
-
-          if (nextProject) {
-            html += `
-              <a href="project.html?slug=${nextProject.slug}" class="pd-nav-right">
-                <small>Next Project →</small>
-                <strong>${nextProject.title || 'Project'}</strong>
-              </a>
-            `;
-          } else {
-            html += `<div></div>`;
-          }
-
-          html += `</div>`;
-        }
-
-        /* ── 9. RELATED PROJECTS — fully automatic ── */
-        if (related.length > 0) {
-          html += `
-            <div class="pd-related">
-              <div class="pd-related-inner">
-                <div class="pd-section-label">Related Projects</div>
-                <div class="pd-related-grid">
-                  ${related.map(p => {
-                    const rImg = fixImg(p.thumbnail)
-                              || fixImg(p.hero_image)
-                              || (p.images && p.images[0]
-                                  ? fixImg(p.images[0].image || p.images[0])
-                                  : '');
-                    return `
-                      <a href="project.html?slug=${p.slug}" class="rel-card">
-                        ${rImg
-                          ? `<img src="${rImg}" alt="${p.title || 'Project'}">`
-                          : '<div style="width:130px;height:130px;background:#eee;flex-shrink:0;"></div>'}
-                        <div class="rel-info">
-                          <div class="rel-title">${p.title || 'Project'}</div>
-                          <div class="rel-cat">${p.category || 'Interior'}</div>
-                          <div class="rel-link">View Project →</div>
-                        </div>
-                      </a>
-                    `;
-                  }).join('')}
-                </div>
-              </div>
-            </div>
-          `;
-        }
-
-        root.innerHTML = html;
-
-      } catch(err) {
-        console.error(err);
-        root.innerHTML = '<div style="padding:100px;text-align:center;color:red;">Error loading project. Please try again.</div>';
-      }
+        root.innerHTML = h;
+      } catch(e) { console.error(e); }
     }
-
     document.addEventListener('DOMContentLoaded', loadPage);
   </script>
-
 </body>
 </html>
