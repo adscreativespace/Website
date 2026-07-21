@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | ADS Creative Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+    <a href="index.html" class="logo">
+        <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+    </a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-content">
+            <h1>Our Gallery</h1>
+            <div class="gold-line" style="margin: 20px auto;"></div>
+            <p>A visual journey through our finest architectural and interior design work.</p>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="interior">Interior</button>
+            <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+            <button class="filter-btn" data-filter="institutional">Institutional</button>
+            <button class="filter-btn" data-filter="renovation">Renovation</button>
+        </div>
+        <div class="filter-right">
+            <select class="filter-select">
+                <option>Latest First</option>
+                <option>Oldest First</option>
+            </select>
+            <button class="view-toggle active" id="gridView"><i class="fa-solid fa-grip"></i></button>
+            <button class="view-toggle" id="listView"><i class="fa-solid fa-list"></i></button>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-new" id="galleryGrid">
+
+        <div class="gal-card" data-category="residential">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700" alt="Luxury Villa">
+            <span class="proj-tag">RESIDENTIAL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Luxury Villa – Goa</h3>
+                    <p>Tropical modern villa with private pool and lush landscaping.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="residential">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700" alt="Premium Residence">
+            <span class="proj-tag">RESIDENTIAL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Premium Residence – Siliguri</h3>
+                    <p>Contemporary 4BHK residence with open plan living.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="interior">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700" alt="Apartment Interior">
+            <span class="proj-tag">INTERIOR</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Apartment Interior – Kolkata</h3>
+                    <p>Elegant and minimal interiors with custom finishes.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="commercial">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700" alt="Corporate Workspace">
+            <span class="proj-tag">COMMERCIAL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Corporate Workspace</h3>
+                    <p>Modern office design with collaborative zones and ergonomic workstations.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="retail">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700" alt="Retail Store">
+            <span class="proj-tag">RETAIL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Retail Experience Store</h3>
+                    <p>Lifestyle store with accent lighting and visual merchandising.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="hospitality">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=700" alt="Boutique Hotel">
+            <span class="proj-tag">HOSPITALITY</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Boutique Hotel – Jaipur</h3>
+                    <p>Warm and welcoming hotel interiors with refined details.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="institutional">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700" alt="School Building">
+            <span class="proj-tag">INSTITUTIONAL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>School Building – Siliguri</h3>
+                    <p>Functional and sustainable design for future-ready learning.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="commercial">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700" alt="Cafe Interior">
+            <span class="proj-tag">COMMERCIAL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Café Interior – Delhi</h3>
+                    <p>Inviting café design with natural materials and greenery.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="residential">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700" alt="Duplex Residence">
+            <span class="proj-tag">RESIDENTIAL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Duplex Residence – Pune</h3>
+                    <p>Spacious duplex with modern aesthetics and functionality.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="gal-card" data-category="retail">
+            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=700" alt="Airport Retail">
+            <span class="proj-tag">RETAIL</span>
+            <div class="gal-info">
+                <div class="gal-text">
+                    <h3>Airport Retail Store</h3>
+                    <p>Designed and executed 30+ retail stores across major airports in India.</p>
+                </div>
+                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="gallery-cta">
+        <div class="gallery-cta-left">
+            <i class="fa-regular fa-image fa-2x" style="color: var(--gold);"></i>
+            <div>
+                <h3>Have a project in mind?</h3>
+                <p>Let's create something extraordinary together.</p>
+            </div>
+        </div>
+        <div class="services-cta-right">
+            <a href="contact.html" class="btn-solid-gold">
+                <i class="fa-regular fa-calendar"></i> BOOK CONSULTATION
+            </a>
+            <a href="https://wa.me/917003071858" target="_blank" class="btn-outline-dark-gallery">
+                <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="advanced-footer">
+    <div class="footer-grid">
+        <div class="f-col">
+            <a href="index.html">
+                <img src="logo.png" alt="ADS Creative Space"
+                     style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+            </a>
+            <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+            <div class="socials" style="margin-top:16px;">
+                <a href="https://www.facebook.com/adscreativespace" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/adscreativespace" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+            </div>
+        </div>
+        <div class="f-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="f-col">
+            <h4>Services</h4>
+            <a href="#">Architecture Design</a>
+            <a href="#">Interior Design</a>
+            <a href="#">Working Drawings</a>
+            <a href="#">3D Visualization</a>
+            <a href="#">Project Management</a>
+            <a href="#">BOQ & Estimation</a>
+        </div>
+        <div class="f-col contact-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+            <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
+            <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
+   class="whatsapp-float" target="_blank">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+    <script>
+        // Filter
+        const btns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.gal-card');
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                cards.forEach(card => {
+                    card.style.display = (f === 'all' || card.dataset.category === f) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Grid / List Toggle
+        const grid = document.getElementById('galleryGrid');
+        document.getElementById('gridView').addEventListener('click', function() {
+            grid.classList.remove('list-view');
+            document.querySelectorAll('.view-toggle').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+        document.getElementById('listView').addEventListener('click', function() {
+            grid.classList.add('list-view');
+            document.querySelectorAll('.view-toggle').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    </script>
+
+</body>
+</html>

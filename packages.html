@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages | ADS Creative Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ════════════════════════════════════════════════════════════════
+           HERO
+        ════════════════════════════════════════════════════════════════ */
+
+        .packages-page-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: stretch;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .packages-page-hero-left {
+            padding: 70px 6% 70px 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .packages-page-hero-left h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            line-height: 1.12;
+            color: #111;
+            margin-bottom: 16px;
+        }
+
+        .packages-page-hero-left p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 480px;
+            margin-top: 8px;
+        }
+
+        .packages-page-hero-right {
+            min-height: 420px;
+            overflow: hidden;
+        }
+
+        .packages-page-hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           PACKAGES OVERVIEW
+        ════════════════════════════════════════════════════════════════ */
+
+        .packages-overview {
+            padding: 70px 5%;
+            background: #fff;
+        }
+
+        .packages-overview-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .packages-overview-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .packages-overview-header p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .packages-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            align-items: start;
+        }
+
+        .package-detail-card {
+            background: #faf8f4;
+            border: 1px solid #e8e2d9;
+            border-radius: 10px;
+            padding: 28px 20px 24px;
+            transition: 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-detail-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+            border-color: #C59D5F;
+            background: #fff;
+        }
+
+        .package-detail-card.featured {
+            border: 2px solid #C59D5F;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(197,157,95,0.1);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #C59D5F;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .package-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #F8F6F2;
+            color: #C59D5F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 14px;
+            flex-shrink: 0;
+        }
+
+        .package-detail-card.featured .package-icon {
+            background: #fdf6ec;
+        }
+
+        .package-detail-card h3 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .package-subtitle {
+            text-align: center;
+            font-size: 0.88rem;
+            color: #888;
+            margin-bottom: 16px;
+        }
+
+        .package-fee-label {
+            text-align: center;
+            font-size: 0.74rem;
+            color: #C59D5F;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .package-price-big {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #111;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .package-price-big span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .package-minimum {
+            text-align: center;
+            font-size: 0.84rem;
+            color: #888;
+            margin-bottom: 18px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 0 0 22px;
+            padding: 0;
+            border-top: 1px solid #ece6dc;
+            padding-top: 16px;
+            flex-grow: 1;
+        }
+
+        .package-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 9px;
+        }
+
+        .package-features li i {
+            color: #C59D5F;
+            margin-top: 3px;
+            font-size: 0.76rem;
+            flex-shrink: 0;
+        }
+
+        .pkg-enquire-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #111;
+            background: transparent;
+            color: #111;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+            margin-top: auto;
+        }
+
+        .pkg-enquire-btn:hover,
+        .package-detail-card.featured .pkg-enquire-btn {
+            background: #C59D5F;
+            border-color: #C59D5F;
+            color: #fff;
+        }
+
+        .package-detail-card.featured .pkg-enquire-btn:hover {
+            background: #b08a4e;
+            border-color: #b08a4e;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           COMPARISON TABLE
+        ════════════════════════════════════════════════════════════════ */
+
+        .comparison-section {
+            padding: 0 5% 70px;
+            background: #fff;
+        }
+
+        .comparison-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #111;
+            margin-bottom: 30px;
+        }
+
+        .comparison-box {
+            border: 1px solid #e8e2d9;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 13px 16px;
+            border-bottom: 1px solid #f0ebe3;
+            text-align: center;
+            font-size: 0.88rem;
+            color: #444;
+        }
+
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            text-align: left;
+            white-space: nowrap;
+            color: #111;
+            font-weight: 500;
+        }
+
+        .comparison-table thead th {
+            background: #faf8f4;
+            color: #111;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-bottom: 2px solid #e8e2d9;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover td {
+            background: #fdfbf8;
+        }
+
+        .comparison-table td i.fa-check {
+            color: #C59D5F;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table td i.fa-minus {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           BENEFITS ROW
+        ════════════════════════════════════════════════════════════════ */
+
+        .package-benefits-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin: 50px 5% 0;
+        }
+
+        .package-benefit {
+            background: #faf8f4;
+            border: 1px solid #ece6dc;
+            border-radius: 8px;
+            padding: 20px 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .package-benefit i {
+            font-size: 1.4rem;
+            color: #C59D5F;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .package-benefit h4 {
+            font-size: 0.92rem;
+            color: #111;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .package-benefit p {
+            font-size: 0.82rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           PACKAGES CTA
+        ════════════════════════════════════════════════════════════════ */
+
+        .packages-cta {
+            background: #111;
+            color: #fff;
+            padding: 60px 5%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .packages-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .packages-cta p {
+            color: #bbb;
+            font-size: 1rem;
+        }
+
+        .packages-cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline-white-packages {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-outline-white-packages:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           RESPONSIVE
+        ════════════════════════════════════════════════════════════════ */
+
+        @media (max-width: 1300px) {
+            .packages-detail-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .package-benefits-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .packages-page-hero,
+            .packages-cta {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-page-hero-right {
+                min-height: 360px;
+            }
+
+            .packages-cta {
+                text-align: center;
+            }
+
+            .packages-cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .packages-page-hero-left h1 {
+                font-size: 2.4rem;
+            }
+
+            .packages-detail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .package-benefits-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .packages-overview-header h2,
+            .comparison-title,
+            .packages-cta h2 {
+                font-size: 1.9rem;
+            }
+
+            .packages-cta-buttons {
+                flex-direction: column;
+            }
+
+            .packages-cta-buttons a {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .packages-detail-grid,
+            .package-benefits-row {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-page-hero-left {
+                padding: 50px 5%;
+            }
+
+            .packages-page-hero-left h1 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="packages-page-hero">
+        <div class="packages-page-hero-left">
+            <span class="subtitle">OUR PACKAGES</span>
+            <h1>Designed for Every Vision.<br>Tailored for You.</h1>
+            <div class="gold-line"></div>
+            <p>From concept to completion, our packages are crafted to suit different needs, budgets and project scales — with the same commitment to quality, creativity and precision.</p>
+        </div>
+        <div class="packages-page-hero-right">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400" alt="Luxury House Exterior">
+        </div>
+    </section>
+
+    <!-- PACKAGES DETAIL CARDS -->
+    <section class="packages-overview">
+        <div class="packages-overview-header">
+            <h2>Our Design Packages</h2>
+            <div class="gold-line" style="margin: 14px auto 16px;"></div>
+            <p>Choose the perfect package that matches your project requirements and goals.</p>
+        </div>
+
+        <div class="packages-detail-grid">
+
+            <div class="package-detail-card" id="building-planning">
+                <div class="package-icon"><i class="fa-regular fa-building"></i></div>
+                <h3>Building Planning</h3>
+                <p class="package-subtitle">Planning Essentials</p>
+                <div class="package-fee-label">Consultancy Fee</div>
+                <div class="package-price-big">₹20<span>/sq.ft</span></div>
+                <p class="package-minimum">Minimum Fee: ₹15,000</p>
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> 2D Floor Plan</li>
+                    <li><i class="fa-solid fa-check"></i> Dimensioned Floor Plan</li>
+                    <li><i class="fa-solid fa-check"></i> Door & Window Schedule</li>
+                    <li><i class="fa-solid fa-check"></i> Vastu Compliance (Optional)</li>
+                </ul>
+                <a href="contact.html" class="pkg-enquire-btn">Enquire Now</a>
+            </div>
+
+            <div class="package-detail-card" id="essential">
+                <div class="package-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                <h3>Essential</h3>
+                <p class="package-subtitle">Design Package</p>
+                <div class="package-fee-label">Consultancy Fee</div>
+                <div class="package-price-big">₹25<span>/sq.ft</span></div>
+                <p class="package-minimum">Minimum Fee: ₹20,000</p>
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> Everything in Building Planning</li>
+                    <li><i class="fa-solid fa-check"></i> Furniture Layout Plan</li>
+                </ul>
+                <a href="contact.html" class="pkg-enquire-btn">Enquire Now</a>
+            </div>
+
+            <div class="package-detail-card featured" id="essential-plus">
+                <div class="popular-badge">Most Popular</div>
+                <div class="package-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>Essential+</h3>
+                <p class="package-subtitle">Premium Package</p>
+                <div class="package-fee-label">Consultancy Fee</div>
+                <div class="package-price-big">₹30<span>/sq.ft</span></div>
+                <p class="package-minimum">Minimum Fee: ₹30,000</p>
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> Everything in Essential</li>
+                    <li><i class="fa-solid fa-check"></i> 1 Photorealistic Exterior Design</li>
+                    <li><i class="fa-solid fa-check"></i> Exterior Colour Scheme</li>
+                    <li><i class="fa-solid fa-check"></i> Material & Finish Recommendation</li>
+                    <li><i class="fa-solid fa-check"></i> Working Drawings</li>
+                    <li><i class="fa-solid fa-check"></i> High Resolution Exterior Render</li>
+                </ul>
+                <a href="contact.html" class="pkg-enquire-btn">Enquire Now</a>
+            </div>
+
+            <div class="package-detail-card" id="signature">
+                <div class="package-icon"><i class="fa-regular fa-gem"></i></div>
+                <h3>Signature</h3>
+                <p class="package-subtitle">Interior & Design</p>
+                <div class="package-fee-label">Consultancy Fee</div>
+                <div class="package-price-big">₹70<span>/sq.ft</span></div>
+                <p class="package-minimum">Minimum Fee: ₹60,000</p>
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> Everything in Essential+</li>
+                    <li><i class="fa-solid fa-check"></i> Interior Design for Approved Areas</li>
+                    <li><i class="fa-solid fa-check"></i> Complete Working Drawing Set</li>
+                    <li><i class="fa-solid fa-check"></i> Walkthrough Video (Optional)</li>
+                </ul>
+                <a href="contact.html" class="pkg-enquire-btn">Enquire Now</a>
+            </div>
+
+            <div class="package-detail-card" id="complete">
+                <div class="package-icon"><i class="fa-solid fa-crown"></i></div>
+                <h3>Complete</h3>
+                <p class="package-subtitle">Turnkey Consultancy</p>
+                <div class="package-fee-label">Consultancy Fee</div>
+                <div class="package-price-big">₹110<span>/sq.ft</span></div>
+                <p class="package-minimum">Minimum Fee: ₹1,00,000</p>
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> Everything in Signature</li>
+                    <li><i class="fa-solid fa-check"></i> Premium Exterior Design</li>
+                    <li><i class="fa-solid fa-check"></i> Complete Interior Design</li>
+                    <li><i class="fa-solid fa-check"></i> Complete Working Drawing Set</li>
+                    <li><i class="fa-solid fa-check"></i> Walkthrough Video (Optional)</li>
+                    <li><i class="fa-solid fa-check"></i> Periodic Site Supervision (As Agreed)</li>
+                </ul>
+                <a href="contact.html" class="pkg-enquire-btn">Enquire Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="comparison-section">
+        <h2 class="comparison-title">Package Comparison</h2>
+
+        <div class="comparison-box">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Deliverables</th>
+                        <th>Building Planning<br><span style="font-weight:400; color:#888;">₹20/sq.ft</span></th>
+                        <th>Essential<br><span style="font-weight:400; color:#888;">₹25/sq.ft</span></th>
+                        <th>Essential+<br><span style="font-weight:400; color:#C59D5F;">₹30/sq.ft</span></th>
+                        <th>Signature<br><span style="font-weight:400; color:#888;">₹70/sq.ft</span></th>
+                        <th>Complete<br><span style="font-weight:400; color:#888;">₹110/sq.ft</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2D Floor Plan</td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Dimensioned Floor Plan</td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Door & Window Schedule</td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Vastu Compliance</td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Furniture Layout</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Exterior Design</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Exterior Colour Scheme</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Material & Finish Recommendation</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Working Drawings</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Interior Design</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Complete Working Drawing Set</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>High Resolution Exterior Render</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Walkthrough Video</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Site Consultation</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Periodic Site Supervision</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                    <tr><td>Construction Coordination</td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-minus"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BENEFITS ROW -->
+        <div class="package-benefits-row">
+            <div class="package-benefit">
+                <i class="fa-solid fa-tags"></i>
+                <div>
+                    <h4>Transparent Pricing</h4>
+                    <p>No hidden costs. What we promise, we deliver.</p>
+                </div>
+            </div>
+            <div class="package-benefit">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <h4>Timely Delivery</h4>
+                    <p>We value your time and ensure on-time delivery.</p>
+                </div>
+            </div>
+            <div class="package-benefit">
+                <i class="fa-solid fa-users"></i>
+                <div>
+                    <h4>Personalized Approach</h4>
+                    <p>Every project is unique and gets our full attention.</p>
+                </div>
+            </div>
+            <div class="package-benefit">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h4>Quality Assurance</h4>
+                    <p>High standards of design, documentation and service.</p>
+                </div>
+            </div>
+            <div class="package-benefit">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <h4>Ongoing Support</h4>
+                    <p>We're with you from concept to completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES CTA -->
+    <section class="packages-cta">
+        <div>
+            <h2>Not sure which package is right for you?</h2>
+            <p>Let's discuss your project and find the perfect solution.</p>
+        </div>
+        <div class="packages-cta-buttons">
+            <a href="contact.html" class="btn-solid-gold">
+                <i class="fa-regular fa-calendar"></i> Book a Consultation
+            </a>
+            <a href="https://wa.me/917003071858" target="_blank" class="btn-outline-white-packages">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="advanced-footer">
+        <div class="footer-grid">
+            <div class="f-col">
+                <a href="index.html">
+                    <img src="logo.png" alt="ADS Creative Space"
+                         style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                </a>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+                <div class="socials" style="margin-top:16px;">
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="f-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="f-col">
+                <h4>Services</h4>
+                <a href="services.html">Architecture Design</a>
+                <a href="services.html">Interior Design</a>
+                <a href="services.html">Working Drawings</a>
+                <a href="services.html">3D Visualization</a>
+                <a href="services.html">Project Management</a>
+                <a href="services.html">BOQ & Estimation</a>
+            </div>
+            <div class="f-col contact-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+917003071858">+91 70030 71858</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:adscreativespace@gmail.com">adscreativespace@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
+       class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

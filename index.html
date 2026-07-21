@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS Creative Space | Luxury Architecture & Interior Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ════════════════════════════════════════════════════════════════
+           HERO
+        ════════════════════════════════════════════════════════════════ */
+
+        .hero-advanced {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            padding: 80px 5%;
+            min-height: 88vh;
+            background: #ffffff;
+        }
+
+        .hero-inner h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .hero-inner p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            max-width: 460px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .gold-text {
+            color: #C59D5F;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 28px;
+            border: 2px solid #111;
+            color: #111;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-outline-dark:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           SERVICES
+        ════════════════════════════════════════════════════════════════ */
+
+        .home-services {
+            padding: 90px 5%;
+            background: #F8F6F2;
+        }
+
+        .home-services-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .home-services-header-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #111;
+            margin-bottom: 12px;
+        }
+
+        .home-services-header-left p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 500px;
+            line-height: 1.7;
+        }
+
+        .services-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .s-card {
+            background: #fff;
+            padding: 30px 24px;
+            border-radius: 8px;
+            border: 1px solid #e8e2d9;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .s-card:hover {
+            border-color: #C59D5F;
+            box-shadow: 0 8px 24px rgba(197,157,95,0.12);
+            transform: translateY(-4px);
+        }
+
+        .s-card-icon {
+            width: 60px;
+            height: 60px;
+            background: #F8F6F2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.6rem;
+            color: #C59D5F;
+            transition: all 0.3s;
+        }
+
+        .s-card:hover .s-card-icon {
+            background: #C59D5F;
+            color: #fff;
+        }
+
+        .s-card h4 {
+            font-size: 1rem;
+            color: #111;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .s-card p {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           STATS
+        ════════════════════════════════════════════════════════════════ */
+
+        .stats-banner {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 60px 20px;
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat i {
+            font-size: 2rem;
+            color: #C59D5F;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .stat h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .stat p {
+            font-size: 0.82rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           RECENT WORK
+        ════════════════════════════════════════════════════════════════ */
+
+        .recent-work {
+            padding: 90px 5%;
+            background: #fff;
+        }
+
+        .section-header-split {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .section-header-split h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #111;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .work-card {
+            overflow: hidden;
+        }
+
+        .work-card-img {
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 14px;
+        }
+
+        .work-card-img img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .work-card:hover .work-card-img img {
+            transform: scale(1.05);
+        }
+
+        .work-card h4 {
+            font-size: 1rem;
+            color: #111;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .work-card p {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           PROCESS
+        ════════════════════════════════════════════════════════════════ */
+
+        .process-section {
+            padding: 90px 5%;
+            background: #F8F6F2;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .process-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #111;
+            margin-bottom: 14px;
+        }
+
+        .process-header p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 44px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: #ddd;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .step-icon {
+            width: 88px;
+            height: 88px;
+            background: #fff;
+            border: 2px solid #e8e2d9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.8rem;
+            color: #111;
+            transition: all 0.3s;
+        }
+
+        .step:hover .step-icon {
+            background: #C59D5F;
+            border-color: #C59D5F;
+            color: #fff;
+        }
+
+        .step-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #C59D5F;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .step h4 {
+            font-size: 0.98rem;
+            color: #111;
+            font-weight: 600;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           PACKAGES
+        ════════════════════════════════════════════════════════════════ */
+
+        .packages-section {
+            padding: 90px 5%;
+            background: #fff;
+        }
+
+        .packages-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .packages-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #111;
+            margin-bottom: 14px;
+        }
+
+        .packages-header p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        /* Each card IS the link */
+        .pack-card {
+            background: #F8F6F2;
+            padding: 36px 20px 28px;
+            border-radius: 10px;
+            border: 1px solid #e8e2d9;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pack-card:hover {
+            background: #fff;
+            border-color: #C59D5F;
+            box-shadow: 0 10px 30px rgba(197,157,95,0.14);
+            transform: translateY(-6px);
+        }
+
+        .pack-card i {
+            font-size: 2rem;
+            color: #C59D5F;
+            margin-bottom: 14px;
+        }
+
+        .pack-card h4 {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pack-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #111;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .pack-price span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .pack-min {
+            font-size: 0.83rem;
+            color: #999;
+            margin-bottom: 24px;
+            margin-top: 4px;
+        }
+
+        .pack-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 11px 16px;
+            border: 2px solid #111;
+            color: #111;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            margin-top: auto;
+        }
+
+        .pack-card:hover .pack-btn {
+            background: #111;
+            color: #fff;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           BOTTOM CTA
+        ════════════════════════════════════════════════════════════════ */
+
+        .bottom-cta {
+            background: linear-gradient(rgba(17,17,17,0.91), rgba(17,17,17,0.91)),
+                url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .bottom-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .bottom-cta p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 36px;
+        }
+
+        .bottom-cta .hero-buttons {
+            justify-content: center;
+        }
+
+        .btn-outline-white-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 28px;
+            border: 2px solid #fff;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-outline-white-cta:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           RESPONSIVE
+        ════════════════════════════════════════════════════════════════ */
+
+        @media (max-width: 1200px) {
+            .services-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .stats-banner {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .stat:nth-child(3) {
+                border-right: none;
+            }
+
+            .stat:nth-child(4),
+            .stat:nth-child(5) {
+                border-top: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .work-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-advanced {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 60px;
+                min-height: auto;
+                gap: 40px;
+            }
+
+            .hero-inner p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                height: 420px;
+            }
+
+            .home-services-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-inner h1 {
+                font-size: 2.8rem;
+            }
+
+            .services-cards-grid,
+            .work-grid,
+            .process-steps,
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-banner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+
+            .bottom-cta h2 {
+                font-size: 2.2rem;
+            }
+
+            .section-header-split {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-inner h1 {
+                font-size: 2.2rem;
+            }
+
+            .services-cards-grid,
+            .work-grid,
+            .process-steps,
+            .packages-grid,
+            .stats-banner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image img {
+                height: 300px;
+            }
+
+            .bottom-cta .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-outline-white-cta,
+            .btn-outline-dark {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         NAVIGATION
+    ════════════════════════════════════════════════════════════════ -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+        </a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════════════════════ -->
+    <header class="hero-advanced">
+        <div class="hero-inner">
+            <span class="subtitle">ARCHITECTURE & INTERIOR DESIGN</span>
+            <h1>Designing Spaces,<br>Defining <span class="gold-text">Lifestyles.</span></h1>
+            <p>Luxury architecture and interior design for homes, villas and commercial spaces — built around your vision.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn-solid-gold">View Projects</a>
+                <a href="contact.html" class="btn-outline-dark">Book Consultation</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1000" alt="Luxury Living Room Interior">
+        </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SERVICES
+    ════════════════════════════════════════════════════════════════ -->
+    <section class="home-services">
+        <div class="home-services-header">
+            <div class="home-services-header-left">
+                <span class="subtitle">OUR SERVICES</span>
+                <h2>End-to-End Design Solutions</h2>
+                <p>A complete range of architectural and interior design services tailored to your vision, needs and lifestyle.</p>
+            </div>
+            <a href="services.html" class="link-gold">
+                Explore All Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="services-cards-grid">
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-building"></i></div>
+                <h4>Architecture</h4>
+                <p>Thoughtful planning and innovative architectural design.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-couch"></i></div>
+                <h4>Interior Design</h4>
+                <p>Beautiful interiors that blend aesthetics with functionality.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-store"></i></div>
+                <h4>Commercial Design</h4>
+                <p>Creating inspiring commercial and retail environments.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                <h4>Working Drawings</h4>
+                <p>Accurate technical drawings for smooth execution.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h4>Site Consultation</h4>
+                <p>Professional guidance at every stage of your project.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-calculator"></i></div>
+                <h4>BOQ & Estimation</h4>
+                <p>Detailed BOQ and cost estimation for better budgeting.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-cube"></i></div>
+                <h4>3D Visualization</h4>
+                <p>Realistic 3D views to bring your space to life.</p>
+            </div>
+            <div class="s-card">
+                <div class="s-card-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                <h4>Project Management</h4>
+                <p>End-to-end support for timely project delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         STATS
+    ════════════════════════════════════════════════════════════════ -->
+    <section class="stats-banner">
+        <div class="stat">
+            <i class="fa-solid fa-store"></i>
+            <h3>34+</h3>
+            <p>Airport Retail Stores</p>
+        </div>
+        <div class="stat">
+            <i class="fa-regular fa-circle-check"></i>
+            <h3>100+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+            <i class="fa-solid fa-gear"></i>
+            <h3>5+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <i class="fa-solid fa-earth-americas"></i>
+            <h3>3</h3>
+            <p>Countries Served</p>
+        </div>
+        <div class="stat">
+            <i class="fa-solid fa-face-smile"></i>
+            <h3>98%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         RECENT WORK
+    ════════════════════════════════════════════════════════════════ -->
+    <section class="recent-work">
+        <div class="section-header-split">
+            <div>
+                <span class="subtitle">FEATURED PROJECTS</span>
+                <h2>Our Recent Work</h2>
+            </div>
+            <a href="projects.html" class="link-gold">
+                View All Projects <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="work-card-img">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500" alt="Luxury Villa">
+                </div>
+                <h4>Luxury Villa</h4>
+                <p>Siliguri</p>
+            </div>
+            <div class="work-card">
+                <div class="work-card-img">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500" alt="Modern Residence">
+                </div>
+                <h4>Modern Residence</h4>
+                <p>Kolkata</p>
+            </div>
+            <div class="work-card">
+                <div class="work-card-img">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500" alt="Airport Retail Store">
+                </div>
+                <h4>Airport Retail Store</h4>
+                <p>Bangalore Airport</p>
+            </div>
+            <div class="work-card">
+                <div class="work-card-img">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500" alt="Corporate Office">
+                </div>
+                <h4>Corporate Office</h4>
+                <p>Gurugram</p>
+            </div>
+            <div class="work-card">
+                <div class="work-card-img">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500" alt="Hotel Interior">
+                </div>
+                <h4>Hotel Interior</h4>
+                <p>Goa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         PROCESS
+    ════════════════════════════════════════════════════════════════ -->
+    <section class="process-section">
+        <div class="process-header">
+            <span class="subtitle">HOW WE WORK</span>
+            <h2>Our Design Process</h2>
+            <p>A seamless journey from concept to completion with full transparency and efficiency.</p>
+        </div>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-icon"><i class="fa-regular fa-comments"></i></div>
+                <div class="step-num">Step 01</div>
+                <h4>Consultation</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                <div class="step-num">Step 02</div>
+                <h4>Concept Design</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fa-solid fa-cube"></i></div>
+                <div class="step-num">Step 03</div>
+                <h4>3D Visualization</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                <div class="step-num">Step 04</div>
+                <h4>Technical Drawings</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fa-solid fa-hammer"></i></div>
+                <div class="step-num">Step 05</div>
+                <h4>Execution Support</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         PACKAGES
+         Each card links to packages.html with its anchor
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="packages" class="packages-section">
+        <div class="packages-header">
+            <span class="subtitle">OUR PACKAGES</span>
+            <h2>Choose the Perfect Package</h2>
+            <p>Flexible packages designed to meet different project needs and budgets. Click any package to view full details.</p>
+        </div>
+
+        <div class="packages-grid">
+
+            <a href="packages.html#building-planning" class="pack-card">
+                <i class="fa-regular fa-building"></i>
+                <h4>Building Planning</h4>
+                <div class="pack-price">₹20 <span>/sq.ft</span></div>
+                <p class="pack-min">Min. ₹15,000</p>
+                <span class="pack-btn">View Details</span>
+            </a>
+
+            <a href="packages.html#essential" class="pack-card">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h4>Essential</h4>
+                <div class="pack-price">₹25 <span>/sq.ft</span></div>
+                <p class="pack-min">Min. ₹20,000</p>
+                <span class="pack-btn">View Details</span>
+            </a>
+
+            <a href="packages.html#essential-plus" class="pack-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h4>Essential+</h4>
+                <div class="pack-price">₹30 <span>/sq.ft</span></div>
+                <p class="pack-min">Min. ₹30,000</p>
+                <span class="pack-btn">View Details</span>
+            </a>
+
+            <a href="packages.html#signature" class="pack-card">
+                <i class="fa-regular fa-gem"></i>
+                <h4>Signature</h4>
+                <div class="pack-price">₹70 <span>/sq.ft</span></div>
+                <p class="pack-min">Min. ₹60,000</p>
+                <span class="pack-btn">View Details</span>
+            </a>
+
+            <a href="packages.html#complete" class="pack-card">
+                <i class="fa-solid fa-crown"></i>
+                <h4>Complete</h4>
+                <div class="pack-price">₹110 <span>/sq.ft</span></div>
+                <p class="pack-min">Min. ₹1,00,000</p>
+                <span class="pack-btn">View Details</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         BOTTOM CTA
+    ════════════════════════════════════════════════════════════════ -->
+    <section class="bottom-cta">
+        <h2>Ready to Build Your Dream Space?</h2>
+        <p>Let's create something extraordinary together.</p>
+        <div class="hero-buttons">
+            <a href="contact.html" class="btn-solid-gold">Book Consultation</a>
+            <a href="https://wa.me/917003071858" target="_blank" class="btn-outline-white-cta">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════════════════════════ -->
+    <footer class="advanced-footer">
+        <div class="footer-grid">
+            <div class="f-col">
+                <a href="index.html">
+                    <img src="logo.png" alt="ADS Creative Space"
+                         style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                </a>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+                <div class="socials" style="margin-top:16px;">
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="f-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="f-col">
+                <h4>Services</h4>
+                <a href="services.html">Architecture Design</a>
+                <a href="services.html">Interior Design</a>
+                <a href="services.html">Working Drawings</a>
+                <a href="services.html">3D Visualization</a>
+                <a href="services.html">Project Management</a>
+                <a href="services.html">BOQ & Estimation</a>
+            </div>
+            <div class="f-col contact-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+                <p><i class="fa-solid fa-phone"></i>
+                    <a href="tel:+917003071858">+91 70030 71858</a>
+                </p>
+                <p><i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:adscreativespace@gmail.com">adscreativespace@gmail.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
+       class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
