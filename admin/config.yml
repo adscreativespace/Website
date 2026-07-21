@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: adscreativespace/Website
   branch: main
 
 media_folder: "images/uploads"
@@ -11,6 +12,8 @@ collections:
     folder: "projects"
     create: true
     slug: "{{slug}}"
+    extension: md
+    format: frontmatter
     fields:
       - { label: "Project Title", name: "title", widget: "string" }
       - { label: "Subtitle (e.g. Soft Sage Luxury Interior)", name: "subtitle", widget: "string", required: false }
