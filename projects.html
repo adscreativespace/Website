@@ -10,14 +10,13 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <a href="index.html" class="logo">
             <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
         </a>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
@@ -25,7 +24,6 @@
         </ul>
     </nav>
 
-    <!-- Projects Hero Banner -->
     <section class="projects-hero">
         <div class="projects-hero-content">
             <span class="subtitle">OUR PROJECTS</span>
@@ -35,7 +33,6 @@
         </div>
     </section>
 
-    <!-- Filter Bar -->
     <section class="filter-bar">
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All Projects</button>
@@ -44,44 +41,33 @@
             <button class="filter-btn" data-filter="interior">Interior</button>
             <button class="filter-btn" data-filter="institutional">Institutional</button>
             <button class="filter-btn" data-filter="retail">Retail</button>
+            <button class="filter-btn" data-filter="hospitality">Hospitality</button>
         </div>
         <div class="filter-sort">
-            <select>
-                <option>Latest First</option>
-                <option>Oldest First</option>
+            <select id="sortProjects">
+                <option value="latest">Latest First</option>
+                <option value="oldest">Oldest First</option>
             </select>
         </div>
     </section>
 
-    <!-- Projects Grid -->
-    <section class="projects-grid-new" id="projectsGrid">
-        <!-- Cards are injected here by JavaScript -->
-    </section>
+    <section class="projects-grid-new" id="projectsGrid"></section>
 
-    <!-- View All Button -->
     <div class="view-all-wrap">
         <button class="btn-view-all">VIEW ALL PROJECTS</button>
     </div>
 
-    <!-- Footer -->
     <footer class="advanced-footer">
         <div class="footer-grid">
             <div class="f-col">
                 <a href="index.html">
-                    <img src="logo.png" alt="ADS Creative Space"
-                         style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                    <img src="logo.png" alt="ADS Creative Space" style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
                 </a>
                 <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
                 <div class="socials" style="margin-top:16px;">
-                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
-                        <i class="fa-brands fa-pinterest-p"></i>
-                    </a>
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
                 </div>
             </div>
             <div class="f-col">
@@ -114,14 +100,12 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
     <a href="https://wa.me/917003071858?text=Hello%20AD%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
        class="whatsapp-float" target="_blank">
        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
     <script>
-        // ── 6 Demo cards (shown only when not yet replaced by a real project) ──
         const demoProjects = [
             {
                 image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
@@ -131,7 +115,8 @@
                 desc: "Contemporary 4BHK residence with open plan living, double height ceiling and seamless indoor–outdoor connection.",
                 location: "Siliguri, West Bengal",
                 area: "4,200 sq.ft",
-                year: "2024"
+                year: "2024",
+                slug: "#"
             },
             {
                 image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
@@ -141,7 +126,8 @@
                 desc: "Concept driven interior for a lifestyle brand with accent lighting, visual merchandising and efficient circulation.",
                 location: "Kolkata, West Bengal",
                 area: "1,800 sq.ft",
-                year: "2023"
+                year: "2023",
+                slug: "#"
             },
             {
                 image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
@@ -151,7 +137,8 @@
                 desc: "Modern office design focused on natural light, collaborative zones and ergonomic workstations.",
                 location: "Gurugram, Haryana",
                 area: "6,500 sq.ft",
-                year: "2024"
+                year: "2024",
+                slug: "#"
             },
             {
                 image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
@@ -161,17 +148,19 @@
                 desc: "Tropical modern villa with private pool, lush landscaping and expansive outdoor living areas.",
                 location: "Goa",
                 area: "5,800 sq.ft",
-                year: "2023"
+                year: "2023",
+                slug: "#"
             },
             {
                 image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
                 tag: "HOSPITALITY",
-                category: "interior",
+                category: "hospitality",
                 title: "Boutique Hotel Interior",
                 desc: "Warm, elegant interiors with handcrafted details and a refined material palette.",
                 location: "Jaipur, Rajasthan",
                 area: "12,000 sq.ft",
-                year: "2024"
+                year: "2024",
+                slug: "#"
             },
             {
                 image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800",
@@ -181,37 +170,67 @@
                 desc: "Designed and executed 30+ retail stores across major airports in India.",
                 location: "Pan India",
                 area: "Various",
-                year: "2019 – 2024"
+                year: "2019 – 2024",
+                slug: "#"
             }
         ];
 
+        let allProjects = [];
+
         function buildCard(data) {
-            let imgHtml = data.image
+            const projectLink = data.slug && data.slug !== "#" ? `project.html?slug=${encodeURIComponent(data.slug)}` : "#";
+
+            const imgHtml = data.image
                 ? `<img src="${data.image}" alt="${data.title}" onerror="this.src='https://placehold.co/800x500?text=Image+Loading';">`
                 : `<div style="width:100%;height:220px;background:#f3f0ea;display:flex;align-items:center;justify-content:center;color:#b0a79a;">No Image</div>`;
 
             return `
-                ${imgHtml}
-                <span class="proj-tag">${data.tag}</span>
-                <div class="proj-info">
-                    <div class="proj-text">
-                        <h3>${data.title}</h3>
-                        <p>${data.desc}</p>
-                        <div class="proj-meta">
-                            <span><i class="fa-solid fa-location-dot"></i> ${data.location || '—'}</span>
-                            <span><i class="fa-regular fa-square"></i> ${data.area || '—'}</span>
-                            <span><i class="fa-regular fa-calendar"></i> ${data.year || '—'}</span>
+                <a href="${projectLink}" style="text-decoration:none; color:inherit; display:block;">
+                    ${imgHtml}
+                    <span class="proj-tag">${data.tag}</span>
+                    <div class="proj-info">
+                        <div class="proj-text">
+                            <h3>${data.title}</h3>
+                            <p>${data.desc}</p>
+                            <div class="proj-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> ${data.location || '—'}</span>
+                                <span><i class="fa-regular fa-square"></i> ${data.area || '—'}</span>
+                                <span><i class="fa-regular fa-calendar"></i> ${data.year || '—'}</span>
+                            </div>
                         </div>
+                        <span class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
-                    <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                </a>
             `;
         }
 
-        async function loadProjects() {
+        function renderProjects(filter = 'all', sort = 'latest') {
             const grid = document.getElementById('projectsGrid');
-            const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
+            grid.innerHTML = '';
 
+            let filtered = [...allProjects];
+
+            if (filter !== 'all') {
+                filtered = filtered.filter(p => p.category === filter);
+            }
+
+            filtered.sort((a, b) => {
+                const yearA = parseInt((a.year || '').toString()) || 0;
+                const yearB = parseInt((b.year || '').toString()) || 0;
+                return sort === 'latest' ? yearB - yearA : yearA - yearB;
+            });
+
+            filtered.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'proj-card';
+                card.setAttribute('data-category', project.category);
+                card.innerHTML = buildCard(project);
+                grid.appendChild(card);
+            });
+        }
+
+        async function loadProjects() {
+            const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
             let realProjects = [];
 
             try {
@@ -225,21 +244,22 @@
                         const fr = await fetch(file.download_url);
                         const text = await fr.text();
 
-                        // Parse all fields
-                        const title    = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';
+                        const slug = file.name.replace('.md', '');
+                        const title = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';
                         const category = text.match(/category:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'interior';
                         const location = text.match(/location:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
-                        const area     = text.match(/area:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
-                        const year     = text.match(/year:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+                        const area = text.match(/area:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+                        const year = text.match(/year:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+                        const description = text.match(/description:\s*["']?([\s\S]*?)["']?\s*\n(?:\w+:|$)/)?.[1]?.trim();
 
-                        // Description after second ---
-                        const parts = text.split('---');
-                        const desc = parts.length >= 3
-                            ? parts.slice(2).join('').trim().replace(/\n+/g, ' ').substring(0, 140) + '…'
-                            : 'Explore this interior project.';
+                        let desc = description;
+                        if (!desc) {
+                            const parts = text.split('---');
+                            desc = parts.length >= 3
+                                ? parts.slice(2).join('').trim().replace(/\n+/g, ' ').substring(0, 140) + '…'
+                                : 'Explore this interior project.';
+                        }
 
-                        // Thumbnail (chosen by user in admin) takes priority
-                        // Falls back to first image in the list
                         const thumbMatch = text.match(/thumbnail:\s*["']?([^"'\n\r]+)/);
                         let thumbnail = thumbMatch ? thumbMatch[1].trim() : '';
 
@@ -258,7 +278,8 @@
                             desc,
                             location,
                             area,
-                            year
+                            year,
+                            slug
                         });
                     }
                 }
@@ -266,38 +287,34 @@
                 console.error('Error loading CMS projects:', err);
             }
 
-            // ── Build the final card list ──
-            // Real projects replace demo cards one by one
-            // Extra real projects are added after the 6 slots
-            grid.innerHTML = '';
-
             const totalSlots = Math.max(6, realProjects.length);
+            allProjects = [];
 
             for (let i = 0; i < totalSlots; i++) {
-                const card = document.createElement('div');
-                card.className = 'proj-card';
-
-                const data = i < realProjects.length ? realProjects[i] : demoProjects[i];
-                card.setAttribute('data-category', data.category);
-                card.innerHTML = buildCard(data);
-                grid.appendChild(card);
+                if (i < realProjects.length) {
+                    allProjects.push(realProjects[i]);
+                } else {
+                    allProjects.push(demoProjects[i]);
+                }
             }
 
-            // ── Re-attach filter buttons to new cards ──
+            renderProjects();
+
             const buttons = document.querySelectorAll('.filter-btn');
-            const allCards = document.querySelectorAll('.proj-card');
+            const sortSelect = document.getElementById('sortProjects');
 
             buttons.forEach(btn => {
                 btn.addEventListener('click', () => {
                     buttons.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    const filter = btn.dataset.filter;
-                    allCards.forEach(card => {
-                        card.style.display =
-                            (filter === 'all' || card.dataset.category === filter)
-                            ? 'block' : 'none';
-                    });
+                    renderProjects(btn.dataset.filter, sortSelect.value);
                 });
+            });
+
+            sortSelect.addEventListener('change', () => {
+                const activeBtn = document.querySelector('.filter-btn.active');
+                const currentFilter = activeBtn ? activeBtn.dataset.filter : 'all';
+                renderProjects(currentFilter, sortSelect.value);
             });
         }
 
