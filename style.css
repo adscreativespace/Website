@@ -440,6 +440,22 @@ footer,
     display: block;
 }
 
+/* FIX: Keep contact items on one line */
+.contact-col p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.contact-col i {
+    min-width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+
 .f-col a:hover,
 .footer-top a:hover {
     color: var(--gold);
