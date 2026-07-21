@@ -3,245 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | ADS Creative Space</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Our Projects | Ads Creative Space</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="adslogo.png" alt="Ads Creative Space Logo" style="width: 100px;"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Navigation -->
-    <nav>
-    <a href="index.html" class="logo">
-        <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
-    </a>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    </nav>
-
-    <!-- Projects Hero Banner -->
-    <section class="projects-hero">
-        <div class="projects-hero-content">
-            <span class="subtitle">OUR PROJECTS</span>
-            <h1>Featured Projects</h1>
-            <p>A curated selection of residential, commercial and interior<br>projects designed with precision and creativity.</p>
-            <div class="gold-line"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Our <span class="highlight">Projects</span></h1>
+            <p>Every design tells a story. Explore our latest work and see how we transform spaces.</p>
         </div>
     </section>
 
-    <!-- Filter Bar -->
-    <section class="filter-bar">
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="residential">Residential</button>
-            <button class="filter-btn" data-filter="commercial">Commercial</button>
-            <button class="filter-btn" data-filter="interior">Interior</button>
-            <button class="filter-btn" data-filter="institutional">Institutional</button>
-            <button class="filter-btn" data-filter="retail">Retail</button>
-        </div>
-        <div class="filter-sort">
-            <select>
-                <option>Latest First</option>
-                <option>Oldest First</option>
-            </select>
+    <!-- Projects Grid (This is where your projects will display automatically) -->
+    <section class="project-section">
+        <div class="container">
+            <div class="grid" id="projects-container">
+                <!-- Projects will be loaded automatically here -->
+            </div>
         </div>
     </section>
-
-    <!-- Projects Grid -->
-    <section class="projects-grid-new" id="projectsGrid">
-
-        <div class="proj-card" data-category="residential">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Premium Residence">
-            <span class="proj-tag">RESIDENTIAL</span>
-            <div class="proj-info">
-                <div class="proj-text">
-                    <h3>Premium Residence – Siliguri</h3>
-                    <p>Contemporary 4BHK residence with open plan living, double height ceiling and seamless indoor–outdoor connection.</p>
-                    <div class="proj-meta">
-                        <span><i class="fa-solid fa-location-dot"></i> Siliguri, West Bengal</span>
-                        <span><i class="fa-regular fa-square"></i> 4,200 sq.ft</span>
-                        <span><i class="fa-regular fa-calendar"></i> 2024</span>
-                    </div>
-                </div>
-                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="proj-card" data-category="retail">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" alt="Retail Experience Store">
-            <span class="proj-tag">RETAIL</span>
-            <div class="proj-info">
-                <div class="proj-text">
-                    <h3>Retail Experience Store</h3>
-                    <p>Concept driven interior for a lifestyle brand with accent lighting, visual merchandising and efficient circulation.</p>
-                    <div class="proj-meta">
-                        <span><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal</span>
-                        <span><i class="fa-regular fa-square"></i> 1,800 sq.ft</span>
-                        <span><i class="fa-regular fa-calendar"></i> 2023</span>
-                    </div>
-                </div>
-                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="proj-card" data-category="commercial">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Corporate Workspace">
-            <span class="proj-tag">COMMERCIAL</span>
-            <div class="proj-info">
-                <div class="proj-text">
-                    <h3>Corporate Workspace</h3>
-                    <p>Modern office design focused on natural light, collaborative zones and ergonomic workstations.</p>
-                    <div class="proj-meta">
-                        <span><i class="fa-solid fa-location-dot"></i> Gurugram, Haryana</span>
-                        <span><i class="fa-regular fa-square"></i> 6,500 sq.ft</span>
-                        <span><i class="fa-regular fa-calendar"></i> 2024</span>
-                    </div>
-                </div>
-                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="proj-card" data-category="residential">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="Luxury Villa">
-            <span class="proj-tag">RESIDENTIAL</span>
-            <div class="proj-info">
-                <div class="proj-text">
-                    <h3>Luxury Villa – Goa</h3>
-                    <p>Tropical modern villa with private pool, lush landscaping and expansive outdoor living areas.</p>
-                    <div class="proj-meta">
-                        <span><i class="fa-solid fa-location-dot"></i> Goa</span>
-                        <span><i class="fa-regular fa-square"></i> 5,800 sq.ft</span>
-                        <span><i class="fa-regular fa-calendar"></i> 2023</span>
-                    </div>
-                </div>
-                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="proj-card" data-category="interior">
-            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800" alt="Boutique Hotel">
-            <span class="proj-tag">HOSPITALITY</span>
-            <div class="proj-info">
-                <div class="proj-text">
-                    <h3>Boutique Hotel Interior</h3>
-                    <p>Warm, elegant interiors with handcrafted details and a refined material palette.</p>
-                    <div class="proj-meta">
-                        <span><i class="fa-solid fa-location-dot"></i> Jaipur, Rajasthan</span>
-                        <span><i class="fa-regular fa-square"></i> 12,000 sq.ft</span>
-                        <span><i class="fa-regular fa-calendar"></i> 2024</span>
-                    </div>
-                </div>
-                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="proj-card" data-category="retail">
-            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800" alt="Airport Retail Store">
-            <span class="proj-tag">RETAIL</span>
-            <div class="proj-info">
-                <div class="proj-text">
-                    <h3>Airport Retail Store</h3>
-                    <p>Designed and executed 30+ retail stores across major airports in India.</p>
-                    <div class="proj-meta">
-                        <span><i class="fa-solid fa-location-dot"></i> Pan India</span>
-                        <span><i class="fa-regular fa-square"></i> Various</span>
-                        <span><i class="fa-regular fa-calendar"></i> 2019 – 2024</span>
-                    </div>
-                </div>
-                <a href="#" class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- View All Button -->
-    <div class="view-all-wrap">
-        <button class="btn-view-all">VIEW ALL PROJECTS</button>
-    </div>
 
     <!-- Footer -->
-    <footer class="advanced-footer">
-    <div class="footer-grid">
-        <div class="f-col">
-            <a href="index.html">
-                <img src="logo.png" alt="ADS Creative Space"
-                     style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
-            </a>
-            <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
-            <div class="socials" style="margin-top:16px;">
-                <a href="https://www.facebook.com/adscreativespace" target="_blank">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/adscreativespace" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
-                    <i class="fa-brands fa-pinterest-p"></i>
-                </a>
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>Ads Creative Space</h3>
+                    <p>Crafting elegant spaces that inspire, engage, and transform lives.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Siliguri, India</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                        <li><i class="fas fa-envelope"></i> contact@adscreativespace.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ads Creative Space. All rights reserved. | Designed with <i class="fas fa-heart"></i> by Your Team</p>
             </div>
         </div>
-        <div class="f-col">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="f-col">
-            <h4>Services</h4>
-            <a href="#">Architecture Design</a>
-            <a href="#">Interior Design</a>
-            <a href="#">Working Drawings</a>
-            <a href="#">3D Visualization</a>
-            <a href="#">Project Management</a>
-            <a href="#">BOQ & Estimation</a>
-        </div>
-        <div class="f-col contact-col">
-            <h4>Contact Us</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
-            <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
-            <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/917003071858?text=Hello%20AD%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
-       class="whatsapp-float" target="_blank">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-
-    <!-- Filter JavaScript -->
+    <!-- JavaScript block to fetch projects from GitHub -->
     <script>
-        const buttons = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.proj-card');
+        // This function fetches all your projects from GitHub and displays them
+        async function loadProjects() {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '<p><i class="fas fa-spinner fa-spin"></i> Loading projects...</p>';
 
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                cards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
+            // The API URL to your GitHub projects folder (now Public)
+            const githubApiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
+
+            try {
+                const response = await fetch(githubApiUrl);
+                const files = await response.json();
+
+                if (!Array.isArray(files)) {
+                    container.innerHTML = '<p>No projects found.</p>';
+                    return;
+                }
+
+                // Filter only markdown files
+                const projectFiles = files.filter(file => file.name.endsWith('.md'));
+
+                if (projectFiles.length === 0) {
+                    container.innerHTML = '<p>No projects have been added yet.</p>';
+                    return;
+                }
+
+                container.innerHTML = '';
+
+                // Load each project
+                for (const file of projectFiles) {
+                    try {
+                        const rawUrl = file.download_url;
+                        const fileResponse = await fetch(rawUrl);
+                        const content = await fileResponse.text();
+
+                        // Parse the markdown file
+                        const titleMatch = content.match(/title:\s*(.+)/i);
+                        const descriptionMatch = content.match(/body:\s*(.+?)(?=\n---|\nimages:|$)/is);
+                        const imagesMatch = content.match(/images:\s*\n(?:\s+-\s+image:\s*(.+?)\n)+/gi);
+
+                        const title = titleMatch ? titleMatch[1].trim() : 'Untitled Project';
+                        const description = descriptionMatch ? descriptionMatch[1].trim().replace(/"/g, '').substring(0, 150) + '...' : 'No description available';
+
+                        // Create project card
+                        const card = document.createElement('div');
+                        card.className = 'project-card';
+
+                        // Get the first image if available
+                        let imageUrl = 'default-image.jpg'; // fallback
+                        if (imagesMatch) {
+                            const firstImage = imagesMatch[0].match(/image:\s*(.+)/);
+                            if (firstImage && firstImage[1]) {
+                                imageUrl = firstImage[1].trim();
+                            }
+                        }
+
+                        card.innerHTML = `
+                            <div class="project-image">
+                                <img src="${imageUrl}" alt="${title}" onerror="this.src='default-image.jpg'">
+                            </div>
+                            <div class="project-details">
+                                <h3>${title}</h3>
+                                <p>${description}</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                        `;
+
+                        container.appendChild(card);
+                    } catch (error) {
+                        console.error('Error loading project:', file.name, error);
                     }
-                });
-            });
-        });
+                }
+
+            } catch (error) {
+                console.error('Error fetching projects:', error);
+                container.innerHTML = '<p>Error loading projects. Please try again later.</p>';
+            }
+        }
+
+        // Load the projects when page loads
+        document.addEventListener('DOMContentLoaded', loadProjects);
     </script>
 
+    <style>
+        /* Project Grid Styles */
+        .project-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-details {
+            padding: 25px;
+        }
+
+        .project-details h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #222;
+            font-size: 1.5rem;
+        }
+
+        .project-details p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #2c4690, #4a6fdc);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #1e3270, #395ac9);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </body>
 </html>
