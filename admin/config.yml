@@ -8,17 +8,31 @@ public_folder: "/images/uploads"
 collections:
   - name: "projects"
     label: "Projects"
-    folder: "projects" # This will save projects as files
+    folder: "projects"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "body", widget: "markdown" }
-      - { label: "Project Image", name: "thumbnail", widget: "image" }
+      - label: "Project Images"
+        name: "images"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
 
   - name: "gallery"
     label: "Gallery"
     folder: "gallery"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Image Title", name: "title", widget: "string" }
-      - { label: "Gallery Image", name: "image", widget: "image" }
+      - label: "Gallery Images"
+        name: "images"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
