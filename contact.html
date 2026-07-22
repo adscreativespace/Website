@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | ADS Creative Space</title>
-
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Main Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVIGATION -->
     <nav>
         <a href="index.html" class="logo">
-            <!-- Use your actual logo path -->
-            <img src="assets/logo-ads.png" alt="ADS Creative Space">
+            <img src="logo.png" alt="ADS Creative Space" style="height:52px;width:auto;">
         </a>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -36,15 +31,11 @@
             <span class="subtitle">Contact</span>
             <h1>Contact Information</h1>
             <div class="gold-line"></div>
-            <p>
-                Share a few details about your project and we’ll get back to you with
-                a tailored consultation and next steps.
-            </p>
+            <p>Share a few details about your project and we'll get back to you with a tailored consultation and next steps.</p>
         </div>
         <div class="contact-hero-right">
-            <!-- Replace with your own image if needed -->
-            <img src="https://images.unsplash.com/photo-1527698266440-12104e498bcd?w=1200"
-                 alt="Contact ADS Creative Space">
+            <!-- use any image you like here -->
+            <img src="https://images.unsplash.com/photo-1529429617124-aee63a28147d?w=1200" alt="Contact ADS Creative Space">
         </div>
     </section>
 
@@ -52,7 +43,7 @@
     <section class="contact-main">
         <div class="contact-grid">
 
-            <!-- LEFT: CONTACT INFO CARD -->
+            <!-- LEFT COLUMN: INFO -->
             <div class="contact-info-card">
                 <h2>Contact Information</h2>
 
@@ -96,41 +87,39 @@
                     </div>
                 </div>
 
-                <h4 style="margin-top: 24px;">Follow Us</h4>
+                <h4 class="contact-follow-title">Follow Us</h4>
                 <div class="social-links">
                     <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://in.pinterest.com/adscreativespace" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
                 </div>
 
-                <!-- MAP -->
                 <div class="map-container">
-                    <!-- Replace with your real map embed URL -->
+                    <!-- replace src with your actual embed when ready -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57574.84302411864!2d88.495!3d25.404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSky%20City%20Mall!5e0!3m2!1sen!2sin!4v1700000000000"
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
 
-            <!-- RIGHT: FORM CARD -->
+            <!-- RIGHT COLUMN: FORM -->
             <div class="contact-form-card">
                 <h2>Request a Quote</h2>
 
-                <!-- PACKAGE NOTICE (shown when coming from ENQUIRE NOW) -->
-                <div id="package-notice"
-                     style="display:none;background:#fdfbf8;border-left:4px solid #C59D5F;padding:14px 16px;margin-bottom:24px;border-radius:0 4px 4px 0;">
-                    <p style="margin:0;font-weight:600;color:#1a1a1a;">
+                <!-- This notice appears only when coming from ENQUIRE NOW -->
+                <div id="package-notice" style="display:none; background:#fdfbf8; border-left:4px solid #C59D5F; padding:14px 16px; margin-bottom:24px; border-radius:0 4px 4px 0;">
+                    <p style="margin:0; font-weight:600; color:#1a1a1a;">
                         Selected Package:
                         <span id="package-name" style="color:#C59D5F;"></span>
                     </p>
-                    <small style="color:#888;margin-top:4px;display:block;">
+                    <small style="color:#888; margin-top:4px; display:block;">
                         You can change this in the “Select Package” dropdown below if needed.
                     </small>
                 </div>
 
                 <form action="#" method="post">
-                    <!-- Row 1: Name / Email -->
+                    <!-- Row 1 -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="full-name">Full Name *</label>
@@ -142,7 +131,7 @@
                         </div>
                     </div>
 
-                    <!-- Row 2: Phone / Project Type -->
+                    <!-- Row 2 -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
@@ -166,7 +155,7 @@
                         </div>
                     </div>
 
-                    <!-- Row 3: Package -->
+                    <!-- Row 3: PACKAGE -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="package">Select Package *</label>
@@ -179,32 +168,26 @@
                                 <option value="complete">Complete</option>
                             </select>
                         </div>
-                        <div class="form-group"></div>
+                        <div class="form-group"><!-- empty to keep grid alignment --></div>
                     </div>
 
-                    <!-- Row 4: Message -->
+                    <!-- Row 4: MESSAGE -->
                     <div class="form-row full">
                         <div class="form-group">
                             <label for="message">Tell us about your project *</label>
-                            <textarea id="message" name="message" placeholder="Describe your project, budget, timeline, and any specific requirements..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your project, budget, timeline, and any specific requirements..." required></textarea>
                         </div>
                     </div>
 
-                    <!-- Consent -->
                     <div class="checkbox-group">
                         <input type="checkbox" id="privacy" name="privacy" required>
-                        <label for="privacy">
-                            I agree to the Privacy Policy and Terms of Service.
-                        </label>
+                        <label for="privacy">I agree to the Privacy Policy and Terms of Service.</label>
                     </div>
 
-                    <!-- Submit -->
-                    <button type="submit" class="btn-submit">
-                        SEND REQUEST
-                    </button>
+                    <button type="submit" class="btn-submit">SEND REQUEST</button>
                 </form>
 
-                <!-- BENEFITS ROW (you already have styles) -->
+                <!-- BENEFITS (uses your existing styles) -->
                 <div class="contact-benefits">
                     <div class="benefit-card">
                         <i class="fa-solid fa-tag"></i>
@@ -224,18 +207,18 @@
                     <div class="benefit-card">
                         <i class="fa-solid fa-headset"></i>
                         <h4>End-to-End Support</h4>
-                        <p>From first sketch to final handover, we’re with you.</p>
+                        <p>From first sketch to final handover, we're with you.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT CTA (BOTTOM STRIP) -->
+    <!-- CTA STRIP -->
     <section class="contact-cta">
-        <div>
+        <div class="contact-cta-left">
             <h2>Have a project in mind?</h2>
-            <p>Let’s talk about how we can collaborate and create something exceptional.</p>
+            <p>Let's talk about how we can collaborate and create something exceptional.</p>
         </div>
         <div class="cta-buttons">
             <a href="consultation.html" class="cta-btn-gold">
@@ -248,22 +231,26 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (same structure as services.html) -->
     <footer class="advanced-footer">
         <div class="footer-grid">
             <div class="f-col">
                 <a href="index.html">
-                    <img src="assets/logo-ads-white.png" alt="ADS Creative Space"
-                         style="height:48px;width:auto;margin-bottom:16px;">
+                    <img src="logo.png" alt="ADS Creative Space" style="height:48px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);">
                 </a>
                 <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
-                <div class="socials">
-                    <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://in.pinterest.com/adscreativespace" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                <div class="socials" style="margin-top:16px;">
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
                 </div>
             </div>
-
             <div class="f-col">
                 <h4>Quick Links</h4>
                 <a href="index.html">Home</a>
@@ -273,7 +260,6 @@
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
-
             <div class="f-col">
                 <h4>Services</h4>
                 <a href="services.html">Architecture Design</a>
@@ -283,7 +269,6 @@
                 <a href="services.html">Project Management</a>
                 <a href="services.html">BOQ &amp; Estimation</a>
             </div>
-
             <div class="f-col contact-col">
                 <h4>Contact Us</h4>
                 <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
@@ -291,24 +276,22 @@
                 <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>© 2025 ADS Creative Space. All Rights Reserved.</p>
+            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a class="whatsapp-float"
-       href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
-       target="_blank" aria-label="Chat on WhatsApp">
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
+       class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT: AUTO-SELECT PACKAGE FROM URL -->
+    <!-- AUTO-SELECT PACKAGE FROM URL -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(window.location.search);
-            const pkg = params.get("package");  // e.g. ?package=essential-plus
+            const pkg = params.get("package"); // e.g. ?package=essential-plus
 
             if (!pkg) return;
 
