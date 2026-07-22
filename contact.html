@@ -10,10 +10,10 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- ==================== NAVIGATION ==================== -->
     <nav>
         <a href="index.html" class="logo">
-            <img src="logo.png" alt="ADS Creative Space" style="height:52px;width:auto;">
+            <img src="logo.png" alt="ADS Creative Space" style="height:52px; width:auto;">
         </a>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,32 +25,32 @@
         </ul>
     </nav>
 
-    <!-- CONTACT HERO -->
+    <!-- ==================== HERO ==================== -->
     <section class="contact-hero">
         <div class="contact-hero-left">
-            <span class="subtitle">Contact</span>
-            <h1>Contact Information</h1>
+            <span style="color:#C59D5F; font-weight:600; text-transform:uppercase; font-size:0.8rem; letter-spacing:2px;">Contact</span>
+            <h1 style="margin-top:10px;">Contact Information</h1>
             <div class="gold-line"></div>
             <p>Share a few details about your project and we'll get back to you with a tailored consultation and next steps.</p>
         </div>
         <div class="contact-hero-right">
-            <!-- use any image you like here -->
-            <img src="https://images.unsplash.com/photo-1529429617124-aee63a28147d?w=1200" alt="Contact ADS Creative Space">
+            <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
+                alt="ADS Creative Space Interior"
+                style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
     </section>
 
-    <!-- CONTACT MAIN CONTENT -->
+    <!-- ==================== CONTACT MAIN ==================== -->
     <section class="contact-main">
         <div class="contact-grid">
 
-            <!-- LEFT COLUMN: INFO -->
+            <!-- LEFT: INFO -->
             <div class="contact-info-card">
                 <h2>Contact Information</h2>
 
                 <div class="info-item">
-                    <div class="info-item-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
+                    <div class="info-item-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="info-text">
                         <h4>Office Address</h4>
                         <p>Sky City Mall, Gangarampur, West Bengal – 733124, India</p>
@@ -58,9 +58,7 @@
                 </div>
 
                 <div class="info-item">
-                    <div class="info-item-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
+                    <div class="info-item-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div class="info-text">
                         <h4>Email Us</h4>
                         <p><a href="mailto:adscreativespace@gmail.com">adscreativespace@gmail.com</a></p>
@@ -68,9 +66,7 @@
                 </div>
 
                 <div class="info-item">
-                    <div class="info-item-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
+                    <div class="info-item-icon"><i class="fa-solid fa-phone"></i></div>
                     <div class="info-text">
                         <h4>Call Us</h4>
                         <p><a href="tel:+917003071858">+91 70030 71858</a></p>
@@ -78,116 +74,115 @@
                 </div>
 
                 <div class="info-item">
-                    <div class="info-item-icon">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
+                    <div class="info-item-icon"><i class="fa-solid fa-clock"></i></div>
                     <div class="info-text">
                         <h4>Office Hours</h4>
                         <p>Monday – Saturday, 10:00 AM – 7:00 PM IST</p>
                     </div>
                 </div>
 
-                <h4 class="contact-follow-title">Follow Us</h4>
+                <h4 style="margin-top:28px; font-family:'Playfair Display', serif; color:#111;">Follow Us</h4>
                 <div class="social-links">
                     <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://in.pinterest.com/adscreativespace/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
                 </div>
 
-                <div class="map-container">
-                    <!-- replace src with your actual embed when ready -->
+                <div class="map-container" style="margin-top:30px; border-radius:8px; overflow:hidden; height:260px;">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57574.84302411864!2d88.495!3d25.404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSky%20City%20Mall!5e0!3m2!1sen!2sin!4v1700000000000"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: FORM -->
+            <!-- RIGHT: FORM -->
             <div class="contact-form-card">
                 <h2>Request a Quote</h2>
 
-                <!-- This notice appears only when coming from ENQUIRE NOW -->
+                <!-- Package Notice Banner (only shows when coming from ENQUIRE NOW) -->
                 <div id="package-notice" style="display:none; background:#fdfbf8; border-left:4px solid #C59D5F; padding:14px 16px; margin-bottom:24px; border-radius:0 4px 4px 0;">
                     <p style="margin:0; font-weight:600; color:#1a1a1a;">
-                        Selected Package:
-                        <span id="package-name" style="color:#C59D5F;"></span>
+                        Selected Package: <span id="package-name" style="color:#C59D5F;"></span>
                     </p>
-                    <small style="color:#888; margin-top:4px; display:block;">
-                        You can change this in the “Select Package” dropdown below if needed.
-                    </small>
+                    <p style="margin:4px 0 0; font-size:0.8rem; color:#888;">You can change this in the "Select Package" dropdown below if needed.</p>
                 </div>
 
+                <!-- FORM: Connected to Formspree -->
                 <form action="https://formspree.io/f/mnjebdpy" method="POST">
-                    <!-- Row 1 -->
+
+                    <!-- Row 1: Name + Email -->
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="full-name">Full Name *</label>
-                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="Full Name" placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="Email" placeholder="Enter your email" required>
                         </div>
                     </div>
 
-                    <!-- Row 2 -->
+                    <!-- Row 2: Phone + Project Type -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <input type="tel" id="phone" name="Phone Number" placeholder="Enter your phone number" required>
                         </div>
                         <div class="form-group">
                             <label for="project-type">Project Type *</label>
-                            <select id="project-type" name="project-type" required>
+                            <select id="project-type" name="Project Type" required>
                                 <option value="">Select Project Type</option>
-                                <option value="residential">Residential</option>
-                                <option value="commercial">Commercial</option>
-                                <option value="hotel-hospitality">Hotel &amp; Hospitality</option>
-                                <option value="retail-showroom">Retail &amp; Showroom</option>
-                                <option value="office-workspace">Office &amp; Workspace</option>
-                                <option value="restaurant-cafe">Restaurant &amp; Café</option>
-                                <option value="industrial-warehouse">Industrial &amp; Warehouse</option>
-                                <option value="institutional">Institutional (School, Hospital)</option>
-                                <option value="renovation-remodeling">Renovation &amp; Remodeling</option>
-                                <option value="other">Other</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Hotel & Hospitality">Hotel &amp; Hospitality</option>
+                                <option value="Retail & Showroom">Retail &amp; Showroom</option>
+                                <option value="Office & Workspace">Office &amp; Workspace</option>
+                                <option value="Restaurant & Café">Restaurant &amp; Café</option>
+                                <option value="Industrial & Warehouse">Industrial &amp; Warehouse</option>
+                                <option value="Institutional">Institutional (School, Hospital)</option>
+                                <option value="Renovation & Remodeling">Renovation &amp; Remodeling</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Row 3: PACKAGE -->
+                    <!-- Row 3: Package -->
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="package">Select Package *</label>
-                            <select id="package" name="package" required>
+                            <label for="package-dropdown">Select Package *</label>
+                            <select id="package-dropdown" name="Selected Package" required>
                                 <option value="">Select a Package</option>
-                                <option value="building-planning">Building Planning</option>
-                                <option value="essential">Essential</option>
-                                <option value="essential-plus">Essential+</option>
-                                <option value="signature">Signature</option>
-                                <option value="complete">Complete</option>
+                                <option value="Building Planning">Building Planning</option>
+                                <option value="Essential">Essential</option>
+                                <option value="Essential+">Essential+</option>
+                                <option value="Signature">Signature</option>
+                                <option value="Complete">Complete</option>
                             </select>
                         </div>
-                        <div class="form-group"><!-- empty to keep grid alignment --></div>
+                        <div class="form-group"></div>
                     </div>
 
-                    <!-- Row 4: MESSAGE -->
-                    <div class="form-row full">
-                        <div class="form-group">
+                    <!-- Row 4: Message -->
+                    <div class="form-row">
+                        <div class="form-group" style="width:100%; flex:1 1 100%;">
                             <label for="message">Tell us about your project *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe your project, budget, timeline, and any specific requirements..." required></textarea>
+                            <textarea id="message" name="Project Details" rows="5" placeholder="Describe your project, budget, timeline, and any specific requirements..." required></textarea>
                         </div>
                     </div>
 
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="privacy" name="privacy" required>
-                        <label for="privacy">I agree to the Privacy Policy and Terms of Service.</label>
+                    <!-- Checkbox -->
+                    <div class="checkbox-group" style="margin:20px 0; display:flex; align-items:flex-start; gap:10px;">
+                        <input type="checkbox" id="privacy" name="Terms Agreement" value="Agreed" required style="margin-top:3px;">
+                        <label for="privacy" style="font-size:0.85rem; color:#666; line-height:1.5;">I agree to the Privacy Policy and Terms of Service.</label>
                     </div>
 
+                    <!-- Submit Button -->
                     <button type="submit" class="btn-submit">SEND REQUEST</button>
+
                 </form>
 
-                <!-- BENEFITS (uses your existing styles) -->
+                <!-- Benefits -->
                 <div class="contact-benefits">
                     <div class="benefit-card">
                         <i class="fa-solid fa-tag"></i>
@@ -210,45 +205,40 @@
                         <p>From first sketch to final handover, we're with you.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- CTA STRIP -->
-    <section class="contact-cta">
-        <div class="contact-cta-left">
-            <h2>Have a project in mind?</h2>
-            <p>Let's talk about how we can collaborate and create something exceptional.</p>
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="services-cta">
+        <div class="services-cta-left">
+            <h2>Have a Project in Mind?</h2>
+            <div class="gold-line-small"></div>
+            <p>Let's work together to design spaces that inspire and stand the test of time.</p>
         </div>
-        <div class="cta-buttons">
-            <a href="consultation.html" class="cta-btn-gold">
+        <div class="services-cta-right">
+            <a href="consultation.html" class="btn-solid-gold">
                 <i class="fa-regular fa-calendar"></i> BOOK CONSULTATION
             </a>
-            <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
-               target="_blank" class="cta-btn-outline">
+            <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="btn-whatsapp light">
                 <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
             </a>
         </div>
     </section>
 
-    <!-- FOOTER (same structure as services.html) -->
+    <!-- ==================== FOOTER ==================== -->
     <footer class="advanced-footer">
         <div class="footer-grid">
             <div class="f-col">
                 <a href="index.html">
-                    <img src="logo.png" alt="ADS Creative Space" style="height:48px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);">
+                    <img src="logo.png" alt="ADS Creative Space" style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
                 </a>
                 <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
                 <div class="socials" style="margin-top:16px;">
-                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
-                        <i class="fa-brands fa-pinterest-p"></i>
-                    </a>
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
                 </div>
             </div>
             <div class="f-col">
@@ -281,40 +271,47 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
+    <!-- ==================== FLOATING WHATSAPP ==================== -->
     <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
        class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- AUTO-SELECT PACKAGE FROM URL -->
+    <!-- ==================== SCRIPT: AUTO-SELECT PACKAGE ==================== -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const params = new URLSearchParams(window.location.search);
-            const pkg = params.get("package"); // e.g. ?package=essential-plus
+            const urlParams = new URLSearchParams(window.location.search);
+            const pkg = urlParams.get('package');
 
             if (!pkg) return;
 
-            const packageSelect = document.getElementById("package");
-            const notice = document.getElementById("package-notice");
-            const nameSpan = document.getElementById("package-name");
+            const dropdown = document.getElementById('package-dropdown');
+            const notice = document.getElementById('package-notice');
+            const nameSpan = document.getElementById('package-name');
 
-            if (!packageSelect) return;
+            // Map URL value to dropdown option value
+            const packageMap = {
+                'building-planning': 'Building Planning',
+                'essential': 'Essential',
+                'essential-plus': 'Essential+',
+                'signature': 'Signature',
+                'complete': 'Complete'
+            };
 
-            let matched = false;
-            for (let i = 0; i < packageSelect.options.length; i++) {
-                if (packageSelect.options[i].value === pkg) {
-                    packageSelect.selectedIndex = i;
-                    matched = true;
-                    break;
+            const matched = packageMap[pkg];
+
+            if (matched && dropdown) {
+                for (let i = 0; i < dropdown.options.length; i++) {
+                    if (dropdown.options[i].value === matched) {
+                        dropdown.selectedIndex = i;
+                        break;
+                    }
                 }
-            }
-
-            if (matched && notice && nameSpan) {
-                nameSpan.textContent = packageSelect.options[packageSelect.selectedIndex].text;
-                notice.style.display = "block";
+                if (nameSpan) nameSpan.textContent = matched;
+                if (notice) notice.style.display = 'block';
             }
         });
     </script>
+
 </body>
 </html>
