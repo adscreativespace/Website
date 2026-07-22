@@ -4,25 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | ADS Creative Space</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Confused Section Styles */
+        .confused-section {
+            padding: 70px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfbf8 0%, #f5f1eb 100%);
+            margin: 40px 0;
+        }
+
+        .confused-section-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .confused-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #111;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .confused-section p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .confused-section .divider {
+            width: 60px;
+            height: 3px;
+            background: #C59D5F;
+            margin: 20px auto;
+        }
+
+        .confused-highlight {
+            font-weight: 700;
+            color: #1a1a1a;
+            font-size: 1.1rem;
+            margin: 25px 0;
+        }
+
+        .confused-highlight span {
+            color: #C59D5F;
+        }
+
+        .btn-expert {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #C59D5F;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            margin-top: 25px;
+        }
+
+        .btn-expert:hover {
+            background: #111;
+            color: #C59D5F;
+        }
+
+        .btn-expert i {
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .confused-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .confused-section p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation -->
     <nav>
-    <a href="index.html" class="logo">
-        <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
-    </a>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Services Hero -->
@@ -35,90 +117,102 @@
     </section>
 
     <!-- Services Grid -->
-<section class="services-showcase">
-    <div class="srv-grid">
+    <section class="services-showcase">
+        <div class="srv-grid">
 
-        <div class="srv-card">
-            <div class="srv-card-img">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Architectural Design">
+            <div class="srv-card">
+                <div class="srv-card-img">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Architectural Design">
+                </div>
+                <div class="srv-card-body">
+                    <div class="srv-icon"><i class="fa-regular fa-building"></i></div>
+                    <h3>Architectural Design</h3>
+                    <div class="gold-line-small"></div>
+                    <p>Custom residential and commercial building designs that blend aesthetics, functionality, and sustainability.</p>
+                    <a href="contact.html?package=architecture" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="srv-card-body">
-                <div class="srv-icon"><i class="fa-regular fa-building"></i></div>
-                <h3>Architectural Design</h3>
-                <div class="gold-line-small"></div>
-                <p>Custom residential and commercial building designs that blend aesthetics, functionality, and sustainability.</p>
-                <a href="contact.html" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+
+            <div class="srv-card">
+                <div class="srv-card-img">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Interior Design">
+                </div>
+                <div class="srv-card-body">
+                    <div class="srv-icon"><i class="fa-solid fa-couch"></i></div>
+                    <h3>Interior Design</h3>
+                    <div class="gold-line-small"></div>
+                    <p>Elevate your spaces with bespoke interiors that reflect your style and enhance liveability.</p>
+                    <a href="contact.html?package=interior" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
+
+            <div class="srv-card">
+                <div class="srv-card-img">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="3D Visualization">
+                </div>
+                <div class="srv-card-body">
+                    <div class="srv-icon"><i class="fa-solid fa-cube"></i></div>
+                    <h3>3D Visualization</h3>
+                    <div class="gold-line-small"></div>
+                    <p>Photorealistic 3D renders that bring your project to life before construction begins.</p>
+                    <a href="contact.html?package=3d" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="srv-card">
+                <div class="srv-card-img">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Renovation">
+                </div>
+                <div class="srv-card-body">
+                    <div class="srv-icon"><i class="fa-solid fa-house-circle-check"></i></div>
+                    <h3>Renovation & Remodeling</h3>
+                    <div class="gold-line-small"></div>
+                    <p>Transform existing spaces with innovative solutions for modern living and working.</p>
+                    <a href="contact.html?package=commercial" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="srv-card">
+                <div class="srv-card-img">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" alt="Project Management">
+                </div>
+                <div class="srv-card-body">
+                    <div class="srv-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <h3>Project Management</h3>
+                    <div class="gold-line-small"></div>
+                    <p>Full-fledged supervision from concept to completion, ensuring quality and timely delivery.</p>
+                    <a href="contact.html?package=project-mgmt" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="srv-card">
+                <div class="srv-card-img">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Sustainable Design">
+                </div>
+                <div class="srv-card-body">
+                    <div class="srv-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Sustainable Design</h3>
+                    <div class="gold-line-small"></div>
+                    <p>Eco-friendly and energy efficient designs that reduce environmental impact.</p>
+                    <a href="contact.html?package=architecture" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <div class="srv-card">
-            <div class="srv-card-img">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Interior Design">
-            </div>
-            <div class="srv-card-body">
-                <div class="srv-icon"><i class="fa-solid fa-couch"></i></div>
-                <h3>Interior Design</h3>
-                <div class="gold-line-small"></div>
-                <p>Elevate your spaces with bespoke interiors that reflect your style and enhance liveability.</p>
-                <a href="contact.html" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+    <!-- Feeling Confused Section -->
+    <section class="confused-section">
+        <div class="confused-section-inner">
+            <h2>Confused about which package fits your project?</h2>
+            <p>Let's hop on a quick 15-min call with our designer. We'll figure it out together.</p>
+            <div class="divider"></div>
+            <p class="confused-highlight">No Worries!! <span>₹499</span> — totally adjustable against your project cost. No hidden stuff.</p>
+            <a href="consultation.html" class="btn-expert">
+                TALK TO OUR EXPERT <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
-
-        <div class="srv-card">
-            <div class="srv-card-img">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="3D Visualization">
-            </div>
-            <div class="srv-card-body">
-                <div class="srv-icon"><i class="fa-solid fa-cube"></i></div>
-                <h3>3D Visualization</h3>
-                <div class="gold-line-small"></div>
-                <p>Photorealistic 3D renders that bring your project to life before construction begins.</p>
-                <a href="contact.html" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="srv-card">
-            <div class="srv-card-img">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Renovation">
-            </div>
-            <div class="srv-card-body">
-                <div class="srv-icon"><i class="fa-solid fa-house-circle-check"></i></div>
-                <h3>Renovation & Remodeling</h3>
-                <div class="gold-line-small"></div>
-                <p>Transform existing spaces with innovative solutions for modern living and working.</p>
-                <a href="contact.html" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="srv-card">
-            <div class="srv-card-img">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" alt="Project Management">
-            </div>
-            <div class="srv-card-body">
-                <div class="srv-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-                <h3>Project Management</h3>
-                <div class="gold-line-small"></div>
-                <p>Full-fledged supervision from concept to completion, ensuring quality and timely delivery.</p>
-                <a href="contact.html" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="srv-card">
-            <div class="srv-card-img">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Sustainable Design">
-            </div>
-            <div class="srv-card-body">
-                <div class="srv-icon"><i class="fa-solid fa-leaf"></i></div>
-                <h3>Sustainable Design</h3>
-                <div class="gold-line-small"></div>
-                <p>Eco-friendly and energy efficient designs that reduce environmental impact.</p>
-                <a href="contact.html" class="link-gold">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
+    </section>
 
     <!-- Why Choose Us Bar -->
     <section class="why-us-bar">
@@ -155,68 +249,68 @@
             <a href="contact.html" class="btn-solid-gold">
                 <i class="fa-regular fa-calendar"></i> BOOK CONSULTATION
             </a>
-            <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
-   class="whatsapp-float" target="_blank">
-   <i class="fa-brands fa-whatsapp"></i>
-</a>
+            <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="advanced-footer">
-    <div class="footer-grid">
-        <div class="f-col">
-            <a href="index.html">
-                <img src="logo.png" alt="ADS Creative Space"
-                     style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
-            </a>
-            <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
-            <div class="socials" style="margin-top:16px;">
-                <a href="https://www.facebook.com/adscreativespace" target="_blank">
-                    <i class="fa-brands fa-facebook-f"></i>
+        <div class="footer-grid">
+            <div class="f-col">
+                <a href="index.html">
+                    <img src="logo.png" alt="ADS Creative Space" style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
                 </a>
-                <a href="https://www.instagram.com/adscreativespace" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
-                    <i class="fa-brands fa-pinterest-p"></i>
-                </a>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+                <div class="socials" style="margin-top:16px;">
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="f-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="f-col">
+                <h4>Services</h4>
+                <a href="services.html">Architecture Design</a>
+                <a href="services.html">Interior Design</a>
+                <a href="services.html">Working Drawings</a>
+                <a href="services.html">3D Visualization</a>
+                <a href="services.html">Project Management</a>
+                <a href="services.html">BOQ & Estimation</a>
+            </div>
+
+            <div class="f-col contact-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+                <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
+                <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
             </div>
         </div>
-        <div class="f-col">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
         </div>
-        <div class="f-col">
-            <h4>Services</h4>
-            <a href="#">Architecture Design</a>
-            <a href="#">Interior Design</a>
-            <a href="#">Working Drawings</a>
-            <a href="#">3D Visualization</a>
-            <a href="#">Project Management</a>
-            <a href="#">BOQ & Estimation</a>
-        </div>
-        <div class="f-col contact-col">
-            <h4>Contact Us</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
-            <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
-            <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/917003071858?text=Hello%20AD%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services."
-       class="whatsapp-float" target="_blank">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
 </body>
