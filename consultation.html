@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation | ADS Creative Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .consult-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            background: linear-gradient(135deg, #fdfbf8 0%, #f5f1eb 100%);
+            padding: 40px 20px;
+        }
+
+        .consult-breadcrumb {
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .consult-breadcrumb a {
+            color: #C59D5F;
+            text-decoration: none;
+        }
+
+        .consult-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .consult-main-box {
+            background: #fff;
+            max-width: 700px;
+            width: 100%;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border-top: 5px solid #C59D5F;
+        }
+
+        .consult-main-box h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #111;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .consult-main-box .intro {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .price-highlight {
+            background: #fdfbf8;
+            padding: 18px;
+            border: 2px dashed #C59D5F;
+            border-radius: 4px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .price-highlight p {
+            margin: 0;
+            font-weight: 700;
+            color: #1a1a1a;
+            font-size: 1.1rem;
+        }
+
+        .price-highlight span {
+            color: #C59D5F;
+            font-size: 1.3em;
+        }
+
+        .form-section {
+            margin-top: 30px;
+        }
+
+        .form-section h3 {
+            font-size: 1.1rem;
+            color: #111;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .c-form-group {
+            margin-bottom: 20px;
+        }
+
+        .c-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #111;
+        }
+
+        .c-form-group input,
+        .c-form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            background: #fff;
+            color: #333;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .c-form-group input:focus,
+        .c-form-group select:focus {
+            border-color: #C59D5F;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(197, 157, 95, 0.1);
+        }
+
+        .form-row-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .btn-pay {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            padding: 18px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 25px;
+        }
+
+        .btn-pay:hover {
+            background: #C59D5F;
+        }
+
+        .benefit-section {
+            background: #F8F6F2;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 35px;
+        }
+
+        .benefit-section h4 {
+            color: #111;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefit-list li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefit-list li:before {
+            content: "✓";
+            color: #C59D5F;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .consult-main-box {
+                padding: 30px;
+            }
+
+            .consult-main-box h1 {
+                font-size: 1.8rem;
+            }
+
+            .form-row-two {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .benefit-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ADS Creative Space" style="height: 52px; width: auto;">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Consultation Form Section -->
+    <section class="consult-hero">
+        <div class="consult-main-box">
+
+            <div class="consult-breadcrumb">
+                <a href="services.html">Services</a> / <span>Book Consultation</span>
+            </div>
+
+            <h1>Let's Figure It Out Together.</h1>
+            <p class="intro">Confused about which package fits your project? Hop on a quick 15-min video call with our designer.</p>
+
+            <!-- Price Highlight -->
+            <div class="price-highlight">
+                <p>No Worries!! <span>₹499</span> — totally adjustable against your project cost. No hidden stuff.</p>
+            </div>
+
+            <!-- Consultation Form -->
+            <form id="consultationForm">
+                <div class="form-section">
+                    <h3>Your Details</h3>
+
+                    <div class="c-form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="whatsapp">WhatsApp Number *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+91" required>
+                    </div>
+
+                    <div class="form-row-two">
+                        <div class="c-form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="c-form-group">
+                            <label for="time">Preferred Time Slot *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select Time Slot</option>
+                                <option value="10am-12pm">10:00 AM - 12:00 PM</option>
+                                <option value="12pm-3pm">12:00 PM - 03:00 PM</option>
+                                <option value="3pm-6pm">03:00 PM - 06:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-pay">PROCEED TO PAY ₹499</button>
+                </div>
+            </form>
+
+            <!-- Benefits Section -->
+            <div class="benefit-section">
+                <h4><i class="fa-solid fa-check-circle" style="color: #C59D5F; margin-right: 8px;"></i>What's Included</h4>
+                <ul class="benefit-list">
+                    <li>15-minute personalized video consultation</li>
+                    <li>Expert guidance on your project requirements</li>
+                    <li>Recommendation of the right package for you</li>
+                    <li>₹499 fee adjusted against your project if you proceed</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="advanced-footer">
+        <div class="footer-grid">
+            <div class="f-col">
+                <a href="index.html">
+                    <img src="logo.png" alt="ADS Creative Space" style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                </a>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p>
+                <div class="socials" style="margin-top:16px;">
+                    <a href="https://www.facebook.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/adscreativespace" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/adscreativespace/" target="_blank">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="f-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="f-col">
+                <h4>Services</h4>
+                <a href="services.html">Architecture Design</a>
+                <a href="services.html">Interior Design</a>
+                <a href="services.html">Working Drawings</a>
+                <a href="services.html">3D Visualization</a>
+                <a href="services.html">Project Management</a>
+                <a href="services.html">BOQ & Estimation</a>
+            </div>
+
+            <div class="f-col contact-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Sky City Mall, Gangarampur, WB</p>
+                <p><i class="fa-solid fa-phone"></i> +91 70030 71858</p>
+                <p><i class="fa-solid fa-envelope"></i> adscreativespace@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Form Submission Script -->
+    <script>
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullname = document.getElementById('fullname').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            
+            // You would integrate Razorpay payment gateway here
+            // For now, show confirmation
+            alert(`Thank you ${fullname}! Your consultation is booked for ${date} at ${time}. Payment integration coming soon!`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
