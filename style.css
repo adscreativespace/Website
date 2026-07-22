@@ -2186,3 +2186,38 @@ footer,
 .pack-card .btn-outline-dark {
     pointer-events: none;
 }
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 28px;
+    border: 2px solid #111;
+    border-radius: 4px;
+    background: transparent;
+    color: #111;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-whatsapp:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* If used on dark backgrounds */
+.btn-whatsapp.light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-whatsapp.light:hover {
+    background: #fff;
+    color: #111;
+}
