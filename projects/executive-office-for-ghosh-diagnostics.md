@@ -22,12 +22,8 @@ highlights:
     text: Every part of the office was planned to accommodate multiple functions—including administration, executive meetings and counselling—without compromising openness or workflow.
   - title: Corporate Healthcare Identity
     text: The overall design expresses a modern corporate image while supporting the day-to-day management and collaborative activities of the diagnostic centre.
-  - title: Integrated Storage & Display Units
-    text: Custom cabinetry provides organized storage for office documents, reference materials and display elements, maintaining a clean and professional workspace.
   - title: Warm Contemporary Material Palette
     text: Natural wood textures, soft neutral finishes and indirect lighting create an executive office environment that feels welcoming, calm and sophisticated.
-  - title: Dedicated Administrative Workstation
-    text: A dedicated workstation enables efficient handling of documentation, reporting, scheduling and operational management within the office.
   - title: Ambient Layered Lighting Design
     text: Layered lighting enhances visual comfort throughout the workspace while highlighting architectural elements and improving the overall working environment.
 images:
@@ -35,6 +31,4 @@ images:
   - /images/uploads/Protap Da Office_4 - Photo.jpg
 ---
 
-Designed as the executive workspace for Ghosh Diagnostics, this office supports management meetings, doctor consultations, administrative operations and discussions with healthcare partners, vendors and corporate representatives. It also serves as a private space for patient counselling when required.
-
-The design blends contemporary aesthetics with functional planning through a custom reception desk, integrated storage, executive workstations and an illuminated branding wall. Warm wood finishes, neutral tones and layered lighting create a professional yet welcoming environment that supports everyday operations while reflecting the identity of Ghosh Diagnostics.
+Designed as the executive workspace for Ghosh Diagnostics, this office brings together management, doctors and healthcare partners in a refined, functional environment. Warm materials, integrated storage and thoughtful lighting create a professional space that supports everyday operations while reflecting the organization's identity.
