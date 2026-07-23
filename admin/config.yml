@@ -1,9 +1,8 @@
 backend:
   name: github
-  repo: adscreativespace/Website
+  repo: your-github-username/your-repo
   branch: main
-  auth_scope: repo
-  base_url: https://sveltia-cms-auth.pages.dev
+  base_url: https://sveltia-auth-proxy.adscreativespace.workers.dev
   
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
