@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-github-username/your-repo
+  repo: repo: adscreativespace/Website
   branch: main
   base_url: https://sveltia-auth-proxy.adscreativespace.workers.dev
   
