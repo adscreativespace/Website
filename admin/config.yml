@@ -2,8 +2,6 @@ backend:
   name: github
   repo: adscreativespace/Website
   branch: main
-  base_url: https://decap-cms-oauth-gh-pages.vercel.app
-  auth_endpoint: /api/auth
   auth_scope: repo
 
 media_folder: "images/uploads"
@@ -21,27 +19,27 @@ collections:
     format: frontmatter
     fields:
       # --- Basic Info ---
-      - { label: "Project Title",                        name: "title",       widget: "string" }
-      - { label: "Subtitle (e.g. Soft Sage Luxury Interior)", name: "subtitle", widget: "string", required: false }
-      - { label: "Short Description (for Hero & Cards)", name: "description", widget: "text" }
+      - { label: "Project Title",                             name: "title",       widget: "string" }
+      - { label: "Subtitle",                                  name: "subtitle",    widget: "string",   required: false }
+      - { label: "Short Description (for Hero & Cards)",      name: "description", widget: "text" }
 
-      # --- Card Thumbnail (used on Projects listing page) ---
-      - { label: "Card Thumbnail Image",                 name: "thumbnail",   widget: "image",  required: false }
+      # --- Card Thumbnail (Projects listing page) ---
+      - { label: "Card Thumbnail Image",                      name: "thumbnail",   widget: "image",    required: false }
 
-      # --- Hero Image (used on Project detail page banner) ---
-      - { label: "Hero Banner Image",                    name: "hero_image",  widget: "image",  required: false }
+      # --- Hero Image (Project detail page banner) ---
+      - { label: "Hero Banner Image",                         name: "hero_image",  widget: "image",    required: false }
 
       # --- Project Meta ---
       - { label: "Category / Project Type", name: "category", widget: "select", options: ["Residential Interior", "Commercial Workspace", "Retail Interior", "Institutional", "Hospitality"] }
-      - { label: "Location",                             name: "location",    widget: "string", required: false }
-      - { label: "Area (e.g. 185 sq.ft.)",               name: "area",        widget: "string", required: false }
-      - { label: "Year",                                 name: "year",        widget: "string", required: false }
-      - { label: "Design Style (e.g. Contemporary Minimalist)", name: "style", widget: "string", required: false }
-      - { label: "Client (e.g. Private Residence)",      name: "client",      widget: "string", required: false }
+      - { label: "Location",                                  name: "location",    widget: "string",   required: false }
+      - { label: "Area (e.g. 185 sq.ft.)",                    name: "area",        widget: "string",   required: false }
+      - { label: "Year",                                      name: "year",        widget: "string",   required: false }
+      - { label: "Design Style (e.g. Contemporary Minimalist)", name: "style",     widget: "string",   required: false }
+      - { label: "Client (e.g. Private Residence)",           name: "client",      widget: "string",   required: false }
 
       # --- About Section ---
-      - { label: "About The Project (Full Text)",        name: "body",        widget: "markdown", required: false }
-      - { label: "About Section Image",                  name: "about_image", widget: "image",  required: false }
+      - { label: "About The Project (Full Text)",             name: "body",        widget: "markdown", required: false }
+      - { label: "About Section Image",                       name: "about_image", widget: "image",    required: false }
 
       # --- Feature Blocks ---
       - { label: "Feature 1 Title",  name: "f1_title", widget: "string", required: false }
@@ -52,7 +50,7 @@ collections:
       - { label: "Feature 2 Text",   name: "f2_text",  widget: "text",   required: false }
       - { label: "Feature 2 Image",  name: "f2_image", widget: "image",  required: false }
 
-      # --- Design Highlights List ---
+      # --- Design Highlights ---
       - label: "Design Highlights"
         name: "highlights"
         widget: "list"
@@ -80,4 +78,4 @@ collections:
       - { label: "Title",    name: "title",    widget: "string" }
       - { label: "Category", name: "category", widget: "select", options: ["Residential", "Commercial", "Interior", "Exterior", "3D Render"] }
       - { label: "Image",    name: "image",    widget: "image" }
-      - { label: "Alt Text (for accessibility)", name: "alt", widget: "string", required: false }
+      - { label: "Alt Text", name: "alt",      widget: "string", required: false }
