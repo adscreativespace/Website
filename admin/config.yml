@@ -3,6 +3,7 @@ backend:
   repo: adscreativespace/Website
   branch: main
   auth_scope: repo
+  base_url: https://sveltia-cms-auth.pages.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
