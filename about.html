@@ -16,7 +16,7 @@
             grid-template-columns: 1fr 1fr;
             align-items: center;
             gap: 60px;
-            padding:碰80px 5%;
+            padding: 80px 5%; /* fixed syntax error */
             min-height: 70vh;
             background: #ffffff;
         }
@@ -231,7 +231,7 @@
             overflow: hidden;
             border-radius: 6px;
             background: #fff;
-            box-shadow: 0 8px \(18px\) rgba(0,0,0,0.05);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05); /* fixed syntax */
         }
         .process-card img {
             width: 100%;
@@ -522,11 +522,11 @@
         <div class="quote-cta">
             <p>Let's build something extraordinary together.</p>
             <a href="consultation.html" class="btn-solid-gold">
-    <i class="fa-regular fa-calendar"></i> BOOK CONSULTATION
-</a>
-<a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="btn-whatsapp light">
-    <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
-</a>
+                <i class="fa-regular fa-calendar"></i> BOOK CONSULTATION
+            </a>
+            <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="btn-whatsapp light">
+                <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
+            </a>
         </div>
     </section>
 
@@ -567,7 +567,7 @@
                 <a href="#">Working Drawings</a>
                 <a href="#">3D Visualization</a>
                 <a href="#">Project Management</a>
-                <a href="#">BOQ & Estimation</a>
+                <a href="#">BOQ &amp; Estimation</a>
             </div>
             <div class="f-col contact-col">
     <h4>Contact Us</h4>
@@ -586,6 +586,48 @@
        class="whatsapp-float" target="_blank">
        <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- MOBILE NAV SCRIPT (robust) -->
+    <script>
+      (function initMobileNav(){
+        function attach(){
+          const toggle = document.querySelector('.nav-toggle');
+          const navList = document.querySelector('nav ul');
+          if(!toggle || !navList) return;
+
+          // Toggle open/close
+          toggle.addEventListener('click', function(e){
+            e.preventDefault();
+            navList.classList.toggle('open');
+            toggle.classList.toggle('open');
+          });
+
+          // Close when a link is clicked
+          navList.querySelectorAll('a').forEach(function(link){
+            link.addEventListener('click', function(){
+              navList.classList.remove('open');
+              toggle.classList.remove('open');
+            });
+          });
+
+          // Close when clicking outside the menu
+          document.addEventListener('click', function(e){
+            if(!navList.classList.contains('open')) return;
+            const target = e.target;
+            if(!navList.contains(target) && !toggle.contains(target)){
+              navList.classList.remove('open');
+              toggle.classList.remove('open');
+            }
+          });
+        }
+
+        if(document.readyState === 'loading'){
+          document.addEventListener('DOMContentLoaded', attach);
+        } else {
+          attach();
+        }
+      })();
+    </script>
 
 </body>
 </html>
