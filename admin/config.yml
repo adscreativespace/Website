@@ -3,7 +3,6 @@ backend:
   repo: adscreativespace/Website
   branch: main
   auth_scope: repo
-  auth_type: pkce
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
