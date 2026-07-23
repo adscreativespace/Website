@@ -35,6 +35,6 @@ images:
   - /images/uploads/Protap Da Office_4 - Photo.jpg
 ---
 
-**Designed as the executive workspace for Ghosh Diagnostics, this office supports management meetings, doctor consultations, administrative operations and discussions with healthcare partners, vendors and corporate representatives. It also serves as a private space for patient counselling when required.**
+Designed as the executive workspace for Ghosh Diagnostics, this office supports management meetings, doctor consultations, administrative operations and discussions with healthcare partners, vendors and corporate representatives. It also serves as a private space for patient counselling when required.
 
-**The design blends contemporary aesthetics with functional planning through a custom reception desk, integrated storage, executive workstations and an illuminated branding wall. Warm wood finishes, neutral tones and layered lighting create a professional yet welcoming environment that supports everyday operations while reflecting the identity of Ghosh Diagnostics.**
+The design blends contemporary aesthetics with functional planning through a custom reception desk, integrated storage, executive workstations and an illuminated branding wall. Warm wood finishes, neutral tones and layered lighting create a professional yet welcoming environment that supports everyday operations while reflecting the identity of Ghosh Diagnostics.
