@@ -785,6 +785,24 @@
     <a href="https://wa.me/917003071858?text=Hello%20ADS%20Creative%20Space%2C%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggle = document.querySelector(".nav-toggle");
+    var navList = document.querySelector("nav ul");
+    if (toggle && navList) {
+      toggle.addEventListener("click", function () {
+        navList.classList.toggle("open");
+        toggle.classList.toggle("open");
+      });
+      navList.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function () {
+          navList.classList.remove("open");
+          toggle.classList.remove("open");
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
