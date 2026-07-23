@@ -3,7 +3,7 @@ backend:
   repo: adscreativespace/Website
   branch: main
   base_url: https://sveltia-auth-proxy.adscreativespace.workers.dev
-  
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
@@ -41,14 +41,15 @@ collections:
       - { label: "About The Project (Full Text)",             name: "body",        widget: "markdown", required: false }
       - { label: "About Section Image",                       name: "about_image", widget: "image",    required: false }
 
-      # --- Feature Blocks ---
-      - { label: "Feature 1 Title",  name: "f1_title", widget: "string", required: false }
-      - { label: "Feature 1 Text",   name: "f1_text",  widget: "text",   required: false }
-      - { label: "Feature 1 Image",  name: "f1_image", widget: "image",  required: false }
-
-      - { label: "Feature 2 Title",  name: "f2_title", widget: "string", required: false }
-      - { label: "Feature 2 Text",   name: "f2_text",  widget: "text",   required: false }
-      - { label: "Feature 2 Image",  name: "f2_image", widget: "image",  required: false }
+      # --- Feature Blocks (Flexible List) ---
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title",  name: "title", widget: "string" }
+          - { label: "Text",   name: "text",  widget: "text" }
+          - { label: "Image",  name: "image", widget: "image", required: false }
 
       # --- Design Highlights ---
       - label: "Design Highlights"
