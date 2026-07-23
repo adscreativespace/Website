@@ -218,9 +218,15 @@
           </div>
         `;
 
-        if (cur.f1_title) h += `<div class="pd-feature"><div><img src="${fixImg(cur.f1_image)}"></div><div class="pd-feature-text-wrap"><div class="pd-feature-title">${cur.f1_title}</div><div class="pd-feature-desc">${cur.f1_text}</div></div></div>`;
-        if (cur.f2_title) h += `<div class="pd-feature flip"><div class="pd-feature-text-wrap"><div class="pd-feature-title">${cur.f2_title}</div><div class="pd-feature-desc">${cur.f2_text}</div></div><div><img src="${fixImg(cur.f2_image)}"></div></div>`;
-
+        if (cur.features?.length) {
+  cur.features.forEach((f, i) => {
+    if (i % 2 === 0) {
+      h += `<div class="pd-feature"><div><img src="${fixImg(f.image)}"></div><div class="pd-feature-text-wrap"><div class="pd-feature-title">${f.title}</div><div class="pd-feature-desc">${f.text}</div></div></div>`;
+    } else {
+      h += `<div class="pd-feature flip"><div class="pd-feature-text-wrap"><div class="pd-feature-title">${f.title}</div><div class="pd-feature-desc">${f.text}</div></div><div><img src="${fixImg(f.image)}"></div></div>`;
+    }
+  });
+}
         if (cur.highlights?.length) h += `<div class="pd-highlights"><div class="pd-section-label" style="max-width:1300px;margin:0 auto;">Highlights</div><div class="pd-hl-grid">${cur.highlights.map(x => `<div class="pd-hl-item"><i class="fas fa-check-circle"></i><div class="pd-hl-title">${x.title}</div><div class="pd-hl-text">${x.text}</div></div>`).join('')}</div></div>`;
 
         const imgs = (cur.images||[]).map(x => fixImg(x.image||x));
