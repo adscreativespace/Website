@@ -1,15 +1,15 @@
 ---
 title: RARE PLANET Souvenir Stores
-subtitle: Rashtrapati Nilayam, Srinagar, Ayodhya, Nagpur, Trivandrum & More – Retail Store Design
+subtitle: Rashtrapati Nilayam & Airport Stores Across India – Retail Store Design
 description: Retail interior design for RARE PLANET souvenir stores across India, including the
   Rashtrapati Nilayam store in Secunderabad, inaugurated by the Hon'ble President of India, Smt.
-  Droupadi Murmu, in December 2024, airport stores at Srinagar and Ayodhya, and 2M Minimart stores at
-  Nagpur and Trivandrum airports. ADS Creative Space has designed 34 RARE PLANET stores.
+  Droupadi Murmu, in December 2024, airport stores at Srinagar, Ayodhya and Ranchi, and 2M Minimart
+  stores at Nagpur and Trivandrum airports. ADS Creative Space has designed 34 RARE PLANET stores.
 thumbnail: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg
 hero_image: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg
 order: 1
 category: Retail Interior
-location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum & more
+location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi & more
 area: ""
 year: "2024"
 style: Contemporary Retail
@@ -82,13 +82,20 @@ features:
       card rack and a rotating gondola give travellers quick access to snacks, drinks and essentials.
     image: /images/uploads/2m-minimart-trivandrum-airport-three-quarter-view-lightbox-sign-chiller.jpg
     alt: 2M Minimart at Trivandrum Airport with a yellow icon-printed portal, green shelving, lightbox sign and drinks chiller
+  - title: Ranchi Airport Kiosk
+    text: At Ranchi Airport, the RARE PLANET kiosk is framed by two full-height copper-finish jaali
+      pillars, each built from a stack of different laser-cut patterns, from fretwork and lattice to
+      scrolls and stepped geometry, that glow as light passes through. A backlit timber fascia sits
+      above black metal racks with lit timber shelves, a grid wall and a central counter.
+    image: /images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg
+    alt: RARE PLANET kiosk at Ranchi Airport with copper laser-cut jaali pillars, black racks and lit timber shelving
 highlights:
   - title: Presidential Inauguration
     text: Inaugurated by the Hon'ble President of India in December 2024.
   - title: Part of 34 RARE PLANET Stores
     text: One of 34 RARE PLANET souvenir stores designed by ADS Creative Space.
   - title: Heritage & Airport Retail
-    text: Stores at Rashtrapati Nilayam and at Srinagar, Ayodhya, Nagpur and Trivandrum airports, among others.
+    text: Stores at Rashtrapati Nilayam and at Srinagar, Ayodhya, Nagpur, Trivandrum and Ranchi airports, among others.
   - title: Multiple Brands
     text: Stores for RARE PLANET and its convenience brand, 2M Minimart.
   - title: Modular Display Shelving
@@ -132,10 +139,14 @@ gallery:
     alt: 2M Minimart Trivandrum Airport with lightbox sign and chiller
   - image: /images/uploads/2m-minimart-trivandrum-airport-interior-green-shelving-aisle.jpg
     alt: 2M Minimart Trivandrum Airport green shelving aisle
+  - image: /images/uploads/rare-planet-ranchi-airport-kiosk-front-elevation-copper-jaali.jpg
+    alt: RARE PLANET Ranchi Airport kiosk front elevation with copper jaali pillars
+  - image: /images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg
+    alt: RARE PLANET Ranchi Airport kiosk interior between copper jaali pillars
 seo:
   meta_title: RARE PLANET Souvenir Store Design | ADS Creative Space
   meta_description: Retail store design for RARE PLANET and 2M Minimart, from Rashtrapati Nilayam
-    to Srinagar, Ayodhya, Nagpur and Trivandrum airports. 34 stores by ADS Creative Space.
+    to airports across India. 34 stores designed by ADS Creative Space.
 ---
 ADS Creative Space designed the interior of the RARE PLANET souvenir shop at Rashtrapati Nilayam, Secunderabad, the President of India's southern retreat. The store was inaugurated by the Hon'ble President of India, Smt. Droupadi Murmu, in December 2024.
 
@@ -151,4 +162,6 @@ For 2M Minimart, RARE PLANET's convenience brand, the Nagpur Airport store takes
 
 At Trivandrum Airport, a second 2M Minimart pairs a yellow icon-printed portal with light oak and bright green shelving, a double-sided lightbox sign and a drinks chiller, giving the brand a cheerful, high-visibility presence in the terminal.
 
-These are five of the 34 RARE PLANET stores designed by ADS Creative Space.
+At Ranchi Airport, the RARE PLANET kiosk is framed by two copper-finish jaali pillars, each a stack of different laser-cut patterns that glow as light passes through them, turning a compact kiosk into a striking landmark in the terminal.
+
+These are six of the 34 RARE PLANET stores designed by ADS Creative Space.
