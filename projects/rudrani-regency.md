@@ -6,7 +6,7 @@ thumbnail: /images/uploads/Card Thumbnail.png
 hero_image: /images/uploads/hero image.png
 category: Hospitality
 location: Ratanamala, Gangarampur, Dakshin Dinajpur, West Bengal, India – 733124
-area: '22160'
+area: 4452 Sqft/ Floor
 year: '2025'
 style: Contemporary Modern
 client: Rudrani Regency
