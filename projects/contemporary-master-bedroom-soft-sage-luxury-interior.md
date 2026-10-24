@@ -33,7 +33,7 @@ highlights:
 - title: Premium Material Palette
   text: Carefully selected finishes including wallpaper, marble flooring, textured upholstery, and warm
     metallic accents.
-thumbnail: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard.jpg
+thumbnail: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg
 gallery:
 - image: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard.jpg
   alt: Upholstered headboard against peacock chinoiserie wallpaper, with geometric wall art and fitted

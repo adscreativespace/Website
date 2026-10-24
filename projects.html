@@ -114,73 +114,12 @@
     </a>
 
     <script>
-        const demoProjects = [
-            {
-                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
-                tag: "RESIDENTIAL",
-                category: "residential",
-                title: "Premium Residence – Siliguri",
-                desc: "Contemporary 4BHK residence with open plan living, double height ceiling and seamless indoor–outdoor connection.",
-                location: "Siliguri, West Bengal",
-                area: "4,200 sq.ft",
-                year: "2024",
-                slug: "#"
-            },
-            {
-                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
-                tag: "RETAIL",
-                category: "retail",
-                title: "Retail Experience Store",
-                desc: "Concept driven interior for a lifestyle brand with accent lighting, visual merchandising and efficient circulation.",
-                location: "Kolkata, West Bengal",
-                area: "1,800 sq.ft",
-                year: "2023",
-                slug: "#"
-            },
-            {
-                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
-                tag: "COMMERCIAL",
-                category: "commercial",
-                title: "Corporate Workspace",
-                desc: "Modern office design focused on natural light, collaborative zones and ergonomic workstations.",
-                location: "Gurugram, Haryana",
-                area: "6,500 sq.ft",
-                year: "2024",
-                slug: "#"
-            },
-            {
-                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
-                tag: "RESIDENTIAL",
-                category: "residential",
-                title: "Luxury Villa – Goa",
-                desc: "Tropical modern villa with private pool, lush landscaping and expansive outdoor living areas.",
-                location: "Goa",
-                area: "5,800 sq.ft",
-                year: "2023",
-                slug: "#"
-            },
-            {
-                image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
-                tag: "HOSPITALITY",
-                category: "hospitality",
-                title: "Boutique Hotel Interior",
-                desc: "Warm, elegant interiors with handcrafted details and a refined material palette.",
-                location: "Jaipur, Rajasthan",
-                area: "12,000 sq.ft",
-                year: "2024",
-                slug: "#"
-            },
-            {
-                image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800",
-                tag: "RETAIL",
-                category: "retail",
-                title: "Airport Retail Store",
-                desc: "Designed and executed 30+ retail stores across major airports in India.",
-                location: "Pan India",
-                area: "Various",
-                year: "2019 – 2024",
-                slug: "#"
-            }
+        // Fallback shown only if the GitHub API can't be reached (e.g. rate limit). Real projects only.
+        const fallbackProjects = [
+            { image: "images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "The Pastel Suite | Contemporary Bedroom Interior", desc: "A multi-zone bedroom suite with sleeping, lounge, study and walk-in dressing zones.", location: "—", area: "—", year: "2026", slug: "pastel-suite-contemporary-bedroom-interior" },
+            { image: "images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg", tag: "HOSPITALITY", category: "Hospitality", title: "Rudrani Regency", desc: "A contemporary G+5 hospitality project with a sculptural façade and complete interiors.", location: "Gangarampur, West Bengal", area: "4452 Sqft/ Floor", year: "2025", slug: "rudrani-regency" },
+            { image: "images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg", tag: "INSTITUTIONAL", category: "Institutional", title: "Executive Office for Ghosh Diagnostics", desc: "An executive consultation and administrative workspace for a diagnostic centre.", location: "Gangarampur, West Bengal", area: "Approx. 320 sq.ft.", year: "2026", slug: "executive-office-for-ghosh-diagnostics" },
+            { image: "images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "Contemporary Master Bedroom | Luxury Interior", desc: "A contemporary master bedroom in soft sage tones with bespoke joinery.", location: "Balurghat, West Bengal", area: "200 sq.ft.", year: "2026", slug: "contemporary-master-bedroom-soft-sage-luxury-interior" }
         ];
 
         let allProjects = [];
@@ -189,7 +128,7 @@
             const projectLink = data.slug && data.slug !== "#" ? `project.html?slug=${encodeURIComponent(data.slug)}` : "#";
 
             const imgHtml = data.image
-                ? `<img src="${data.image}" alt="${data.title}" onerror="this.src='https://placehold.co/800x500?text=Image+Loading';">`
+                ? `<img src="${data.image}" alt="${data.title}" loading="lazy">`
                 : `<div style="width:100%;height:220px;background:#f3f0ea;display:flex;align-items:center;justify-content:center;color:#b0a79a;">No Image</div>`;
 
             return `
@@ -295,16 +234,7 @@
                 console.error('Error loading CMS projects:', err);
             }
 
-            const totalSlots = Math.max(6, realProjects.length);
-            allProjects = [];
-
-            for (let i = 0; i < totalSlots; i++) {
-                if (i < realProjects.length) {
-                    allProjects.push(realProjects[i]);
-                } else {
-                    allProjects.push(demoProjects[i]);
-                }
-            }
+            allProjects = realProjects.length ? realProjects : fallbackProjects;
 
             renderProjects();
 
