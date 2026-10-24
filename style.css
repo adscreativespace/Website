@@ -2484,3 +2484,10 @@ footer,
         font-size: 1.2rem;
     }
 }
+
+/* Services grid: centre an incomplete last row (desktop) */
+@media (min-width: 1201px) {
+    .srv-grid { grid-template-columns: repeat(6, 1fr); }
+    .srv-grid > .srv-card { grid-column: span 2; }
+    .srv-grid > .srv-card:nth-child(3n+1):nth-last-child(2) { grid-column: 2 / span 2; }
+}
