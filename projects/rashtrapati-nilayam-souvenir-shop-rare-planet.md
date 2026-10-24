@@ -4,13 +4,13 @@ subtitle: Rashtrapati Nilayam & Airport Stores Across India – Retail Store Des
 description: Retail interior design for RARE PLANET souvenir stores across India, including the
   Rashtrapati Nilayam store in Secunderabad, inaugurated by the Hon'ble President of India, Smt.
   Droupadi Murmu, in December 2024, airport stores at Srinagar, Ayodhya, Ranchi, Vizag, Vijayawada,
-  Mangalore and Pune, and 2M Minimart stores at Nagpur, Trivandrum and Bhopal airports. ADS Creative Space has
+  Mangalore, Pune and Mumbai, and 2M Minimart stores at Nagpur, Trivandrum and Bhopal airports. ADS Creative Space has
   designed 34 RARE PLANET stores.
 thumbnail: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg
 hero_image: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg
 order: 1
 category: Retail Interior
-location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag, Vijayawada, Bhopal, Mangalore, Pune & more
+location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag, Vijayawada, Bhopal, Mangalore, Pune, Mumbai & more
 area: ""
 year: "2024"
 style: Contemporary Retail
@@ -104,13 +104,21 @@ features:
       a warm multi-tone timber floor.
     image: /images/uploads/rare-planet-vijayawada-airport-store-front-brass-jaali-timber-floor.jpg
     alt: RARE PLANET Vijayawada Airport store front with brass jaali pillars, lit shelving and timber floor
+  - title: Mumbai Airport – A Carved Gateway
+    text: At Mumbai Airport, RARE PLANET becomes an open island kiosk entered through a monumental
+      timber gateway. The portal is layered with white lattice borders, a row of carved bell motifs
+      and sculpted timber bases, framing a backlit RARE PLANET sign over the cash counter. Around it,
+      a curved arc of timber-and-glass display cabinets with carved corner brackets, turned legs and
+      relief-carved panels gives the kiosk the feel of a heritage craft pavilion.
+    image: /images/uploads/rare-planet-mumbai-airport-carved-gateway-kiosk-front-view.jpg
+    alt: RARE PLANET Mumbai Airport kiosk with a carved timber gateway, lattice borders and curved carved display cabinets
 highlights:
   - title: Presidential Inauguration
     text: Inaugurated by the Hon'ble President of India in December 2024.
   - title: Part of 34 RARE PLANET Stores
     text: One of 34 RARE PLANET souvenir stores designed by ADS Creative Space.
   - title: Heritage & Airport Retail
-    text: Stores at Rashtrapati Nilayam and at eleven airports across India, from Srinagar to Trivandrum.
+    text: Stores at Rashtrapati Nilayam and at twelve airports across India, from Srinagar to Trivandrum.
   - title: Multiple Brands
     text: Stores for RARE PLANET and its convenience brand, 2M Minimart.
   - title: Modular Display Shelving
@@ -178,6 +186,12 @@ gallery:
     alt: RARE PLANET Pune Airport store front with backlit timber fascia and jaali pillars
   - image: /images/uploads/rare-planet-pune-airport-interior-lit-shelving-glass-display-units.jpg
     alt: RARE PLANET Pune Airport store interior with lit shelving and glass display units
+  - image: /images/uploads/rare-planet-mumbai-airport-carved-gateway-kiosk-front-view.jpg
+    alt: RARE PLANET Mumbai Airport carved gateway kiosk, front view
+  - image: /images/uploads/rare-planet-mumbai-airport-carved-gateway-kiosk-three-quarter-view.jpg
+    alt: RARE PLANET Mumbai Airport kiosk, three-quarter view with track-lit timber frame
+  - image: /images/uploads/rare-planet-mumbai-airport-carved-display-cabinets-cash-counter.jpg
+    alt: RARE PLANET Mumbai Airport curved carved display cabinets around the cash counter
 seo:
   meta_title: RARE PLANET Souvenir Store Design | ADS Creative Space
   meta_description: Retail store design for RARE PLANET and 2M Minimart, from Rashtrapati Nilayam
@@ -209,4 +223,6 @@ At Mangalore Airport, copper jaali pillars frame a lighter store with grey metal
 
 At Pune Airport, a wide open-front store pairs a deep backlit timber fascia and timber jaali pillars with black racks and lit shelving on three sides, a grid display wall and a central counter flanked by glass display units.
 
-These are eleven of the 34 RARE PLANET stores designed by ADS Creative Space.
+At Mumbai Airport, the brand takes its most expressive form: an open island kiosk entered through a carved timber gateway with lattice borders and bell motifs, surrounded by a curved arc of carved timber-and-glass display cabinets.
+
+These are twelve of the 34 RARE PLANET stores designed by ADS Creative Space.
