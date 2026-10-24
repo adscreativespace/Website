@@ -1,15 +1,15 @@
 ---
 title: RARE PLANET Souvenir Stores
-subtitle: Rashtrapati Nilayam, Srinagar Airport & More – Retail Store Design
+subtitle: Rashtrapati Nilayam, Srinagar, Ayodhya & More – Retail Store Design
 description: Retail interior design for RARE PLANET souvenir stores across India, including the
   Rashtrapati Nilayam store in Secunderabad, inaugurated by the Hon'ble President of India, Smt.
-  Droupadi Murmu, in December 2024, and the Srinagar Airport store. ADS Creative Space has designed
-  34 RARE PLANET stores.
+  Droupadi Murmu, in December 2024, and airport stores at Srinagar and Ayodhya. ADS Creative Space
+  has designed 34 RARE PLANET stores.
 thumbnail: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg
 hero_image: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg
 order: 1
 category: Retail Interior
-location: Pan India – Secunderabad, Srinagar & more
+location: Pan India – Secunderabad, Srinagar, Ayodhya & more
 area: ""
 year: "2024"
 style: Contemporary Retail
@@ -54,13 +54,21 @@ features:
       souvenirs, and allow the layout to change with the product range.
     image: /images/uploads/rare-planet-srinagar-airport-interior-pegboard-gondola-shelving.jpg
     alt: RARE PLANET Srinagar store interior with pegboard wall, gondola tower, grid display and lit timber shelving
+  - title: Ayodhya Airport Kiosk
+    text: At Ayodhya Airport, RARE PLANET takes the form of a compact open kiosk themed around the
+      city's identity. A backlit timber fascia carries the "Jai Shree Ram" greeting, the side
+      elevation features large-format artwork of Lord Rama with the RARE PLANET brand above, and
+      white pillars carry lit diya motifs. Inside, black metal racks with lit timber shelves, a
+      grid-mesh wall and a central counter keep the small footprint efficient.
+    image: /images/uploads/rare-planet-ayodhya-airport-kiosk-3d-view-ram-artwork.jpg
+    alt: RARE PLANET kiosk at Ayodhya Airport with a timber fascia, Lord Rama artwork and diya motif pillars
 highlights:
   - title: Presidential Inauguration
     text: Inaugurated by the Hon'ble President of India in December 2024.
   - title: Part of 34 RARE PLANET Stores
     text: One of 34 RARE PLANET souvenir stores designed by ADS Creative Space.
   - title: Heritage & Airport Retail
-    text: Stores at Rashtrapati Nilayam and Srinagar Airport, among others.
+    text: Stores at Rashtrapati Nilayam and at Srinagar and Ayodhya airports, among others.
   - title: Modular Display Shelving
     text: Open, reconfigurable shelving for a changing product range.
   - title: Backlit Line-Art Fascia
@@ -82,10 +90,16 @@ gallery:
     alt: RARE PLANET Srinagar Airport store interior with pegboard and gondola
   - image: /images/uploads/rare-planet-srinagar-airport-interior-lit-shelving-patterned-backing.jpg
     alt: RARE PLANET Srinagar Airport store lit timber shelving and patterned backing
+  - image: /images/uploads/rare-planet-ayodhya-airport-kiosk-3d-view-ram-artwork.jpg
+    alt: RARE PLANET Ayodhya Airport kiosk, 3D view
+  - image: /images/uploads/rare-planet-ayodhya-airport-kiosk-front-elevation-diya-panels.jpg
+    alt: RARE PLANET Ayodhya Airport kiosk front elevation with diya motif panels
+  - image: /images/uploads/rare-planet-ayodhya-airport-kiosk-interior-grid-wall-lit-shelving.jpg
+    alt: RARE PLANET Ayodhya Airport kiosk interior with grid wall and lit timber shelving
 seo:
   meta_title: RARE PLANET Souvenir Store Design | ADS Creative Space
   meta_description: Retail interior design for RARE PLANET souvenir stores, including Rashtrapati
-    Nilayam, Secunderabad, and Srinagar Airport. 34 stores designed by ADS Creative Space.
+    Nilayam, Srinagar Airport and Ayodhya Airport. 34 stores designed by ADS Creative Space.
 ---
 ADS Creative Space designed the interior of the RARE PLANET souvenir shop at Rashtrapati Nilayam, Secunderabad, the President of India's southern retreat. The store was inaugurated by the Hon'ble President of India, Smt. Droupadi Murmu, in December 2024.
 
@@ -95,4 +109,6 @@ Inside, light timber shelving within slim white frames and warm concealed lighti
 
 At Srinagar Airport, the same brand is adapted for travel retail: a deep blue portal with white jaali pillars inspired by Kashmiri patterns, a backlit timber fascia, and black metal racks with lit timber shelves against a patterned back panel. Pegboard walls, a gondola tower and grid-mesh units give the compact store flexible ways to display small souvenirs.
 
-These are two of the 34 RARE PLANET souvenir stores designed by ADS Creative Space.
+At Ayodhya Airport, the brand becomes a compact, themed kiosk: a backlit timber fascia with the "Jai Shree Ram" greeting, large-format artwork of Lord Rama on the side elevation and lit diya motifs on the pillars, reflecting the city's identity for arriving visitors.
+
+These are three of the 34 RARE PLANET souvenir stores designed by ADS Creative Space.
