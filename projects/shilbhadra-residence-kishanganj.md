@@ -1,6 +1,6 @@
 ---
 title: Shilbhadra Residence
-subtitle: G+2 Contemporary Residence with Rooftop Pool & Terrace Lounge
+subtitle: G+2 Contemporary Residence with Pool Deck & Rooftop Lounge
 description: A G+2 residence in Kishanganj, Bihar, designed on a narrow 26'-7" wide plot with
   1,450 sq.ft. per floor. It features a layered contemporary façade, covered parking beneath the
   cantilevered upper floors, a second-floor swimming pool behind a terracotta jaali, and a rooftop
@@ -71,7 +71,7 @@ gallery:
   - image: /images/uploads/shilbhadra-residence-floor-plans-ground-first-second.jpg
     alt: Ground, first and second floor plans of the Shilbhadra Residence
 seo:
-  meta_title: G+2 House Design with Rooftop Pool, Kishanganj | ADS Creative Space
+  meta_title: G+2 House Design with Pool, Kishanganj | ADS Creative Space
   meta_description: Shilbhadra Residence, a G+2 contemporary home in Kishanganj, Bihar, with a
     second-floor pool, rooftop lounge and solar panels, by ADS Creative Space.
 ---
