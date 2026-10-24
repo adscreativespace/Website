@@ -82,6 +82,25 @@ collections:
         required: false
         field: { label: "Image", name: "image", widget: "image" }
 
+      # --- More Stores / Related Work (optional section under the project) ---
+      - label: "More Stores / Related Work"
+        name: "more_stores"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Section Title", name: "title", widget: "string", required: false }
+          - { label: "Intro Line", name: "intro", widget: "text", required: false }
+          - label: "Items"
+            name: "stores"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Short Text", name: "text", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+
       # --- SEO ---
       - label: "SEO"
         name: "seo"

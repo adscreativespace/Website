@@ -65,6 +65,15 @@
 
     /* ── GALLERY ── */
     .pd-gallery { padding: 60px 6%; max-width: 1300px; margin: 0 auto; }
+    /* ── MORE STORES (secondary list under the main project) ── */
+    .pd-more { padding: 60px 6%; max-width: 1300px; margin: 0 auto; border-top: 1px solid #EAEAEA; }
+    .pd-more-intro { color: #666; font-size: 0.92rem; line-height: 1.7; max-width: 760px; margin: 10px 0 30px; }
+    .pd-more-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .pd-more-card img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #F1EEE8; border-radius: 4px; display: block; cursor: zoom-in; }
+    .pd-more-card h4 { font-family: 'Playfair Display', serif; font-size: 1.02rem; margin: 12px 0 4px; color: #111; }
+    .pd-more-card p { font-size: 0.82rem; line-height: 1.55; color: #666; margin: 0; }
+    @media (max-width: 960px) { .pd-more-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .pd-more-grid { grid-template-columns: 1fr; } }
     .pd-gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin-top: 25px; }
     .pd-gal-grid img { width: 100%; aspect-ratio: 16/9; object-fit: contain; background: #F1EEE8; display: block; border-radius: 4px; }
 
@@ -89,7 +98,7 @@
     }
   
     /* ── LIGHTBOX ── */
-    #pd-root .pd-hero-right img, #pd-root .pd-about-img img, #pd-root .pd-feature img, #pd-root .pd-gal-grid img { cursor: zoom-in; }
+    #pd-root .pd-hero-right img, #pd-root .pd-about-img img, #pd-root .pd-feature img, #pd-root .pd-gal-grid img, #pd-root .pd-more-card img { cursor: zoom-in; }
     .lb { position: fixed; inset: 0; z-index: 10000; background: rgba(10,10,10,0.95); display: none; align-items: center; justify-content: center; flex-direction: column; touch-action: pan-y; }
     .lb.open { display: flex; }
     .lb-img { max-width: 92vw; max-height: 82vh; object-fit: contain; border-radius: 4px; user-select: none; -webkit-user-drag: none; }
@@ -199,7 +208,7 @@
   <script>
     // Fullscreen image viewer for project images (hero, about, features, gallery)
     function initLightbox() {
-      const sel = '#pd-root .pd-hero-right img, #pd-root .pd-about-img img, #pd-root .pd-feature img, #pd-root .pd-gal-grid img';
+      const sel = '#pd-root .pd-hero-right img, #pd-root .pd-about-img img, #pd-root .pd-feature img, #pd-root .pd-gal-grid img, #pd-root .pd-more-card img';
       const seen = new Set(); const items = [];
       document.querySelectorAll(sel).forEach(img => {
         const src = img.getAttribute('src');
@@ -321,6 +330,11 @@
         const gal = (cur.gallery?.length ? cur.gallery : (cur.images || []))
           .map((x, i) => ({ src: fixImg(x.image || x), alt: x.alt || `${cur.title} – view ${i + 1}`, cap: x.caption || '' }));
         if (gal.length) h += `<div class="pd-gallery"><div class="pd-section-label">Gallery</div><div class="pd-gal-grid">${gal.map(g => `<img src="${g.src}" alt="${esc(g.alt)}" title="${esc(g.cap || g.alt)}" loading="lazy">`).join('')}</div></div>`;
+
+        if (cur.more_stores?.stores?.length) {
+          const ms = cur.more_stores;
+          h += `<div class="pd-more"><div class="pd-section-label">${esc(ms.title || 'More Projects')}</div>${ms.intro ? `<p class="pd-more-intro">${esc(ms.intro)}</p>` : ''}<div class="pd-more-grid">${ms.stores.map(x => `<div class="pd-more-card"><img src="${fixImg(x.image)}" alt="${esc(x.alt || x.name)}" loading="lazy"><h4>${esc(x.name)}</h4><p>${esc(x.text || '')}</p></div>`).join('')}</div></div>`;
+        }
 
         if (prev || next) h += `<div class="pd-project-nav">${prev?`<a href="project.html?slug=${prev.slug}"><small>Previous</small><strong>${prev.title}</strong></a>`:'<div></div>'}${next?`<a href="project.html?slug=${next.slug}" style="text-align:right;"><small>Next</small><strong>${next.title}</strong></a>`:'<div></div>'}</div>`;
 
