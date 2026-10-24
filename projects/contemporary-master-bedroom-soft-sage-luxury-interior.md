@@ -12,17 +12,18 @@ year: "2026"
 style: Contemporary Minimalist
 client: Dr. Sukanta Manna
 about_image: /images/uploads/mbr_12-photo.jpg
-f1_title: Intelligent Space Planning
-f1_text: Every inch of the bedroom has been carefully planned to maximize
-  comfort and functionality. Integrated storage, seamless furniture detailing,
-  and clear circulation create a spacious environment without compromising the
-  minimalist design language.
-f1_image: /images/uploads/mbr_11-photo.jpg
-f2_title: Comfort Meets Elegance
-f2_text: The custom window seating, layered ambient lighting, and carefully
-  selected materials create a warm and relaxing atmosphere. Soft textures and
-  elegant detailing transform the bedroom into a luxurious personal retreat.
-f2_image: /images/uploads/mbr_10-photo.jpg
+features:
+  - title: Intelligent Space Planning
+    text: Every inch of the bedroom has been carefully planned to maximize
+      comfort and functionality. Integrated storage, seamless furniture detailing,
+      and clear circulation create a spacious environment without compromising the
+      minimalist design language.
+    image: /images/uploads/mbr_11-photo.jpg
+  - title: Comfort Meets Elegance
+    text: The custom window seating, layered ambient lighting, and carefully
+      selected materials create a warm and relaxing atmosphere. Soft textures and
+      elegant detailing transform the bedroom into a luxurious personal retreat.
+    image: /images/uploads/mbr_10-photo.jpg
 highlights:
   - title: Soft Sage Colour Palette
     text: A calm and elegant colour scheme that creates a peaceful atmosphere.

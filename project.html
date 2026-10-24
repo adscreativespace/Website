@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Details | ADS Creative Space</title>
+  <meta name="description" id="meta-desc" content="Architecture and interior design project by Atish Dipankar's Creative Space, West Bengal.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -169,6 +170,7 @@
 </footer>
 
   <script>
+    function esc(s) { return String(s ?? '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
     function fixImg(p) { return p ? (String(p).trim().startsWith('/') ? p.slice(1) : p) : ''; }
 
     async function loadPage() {
@@ -197,6 +199,14 @@
         const prev = all[idx-1]; const next = all[idx+1];
         const rel = all.filter(p => p.slug !== slug).slice(0,3);
 
+        if (!cur) return;
+
+        // --- SEO: page title and meta description (fallbacks for older projects) ---
+        const seo = cur.seo || {};
+        document.title = seo.meta_title || `${cur.title} | ADS Creative Space`;
+        const md = document.getElementById('meta-desc');
+        if (md) md.setAttribute('content', seo.meta_description || cur.description || '');
+
         const hImg = fixImg(cur.hero_image || cur.thumbnail || (cur.images?.[0]?.image || cur.images?.[0]));
         const aImg = fixImg(cur.about_image || (cur.images?.[1]?.image || cur.images?.[1]));
         const body = cur._body ? cur._body.split(/\n{2,}/).map(p => `<p>${p.trim()}</p>`).join('') : `<p>${cur.description}</p>`;
@@ -209,7 +219,7 @@
               <div class="pd-hero-subtitle">${cur.subtitle || ''}</div>
               <p class="pd-hero-desc">${cur.description}</p>
             </div>
-            <div class="pd-hero-right"><img src="${hImg}"></div>
+            <div class="pd-hero-right"><img src="${hImg}" alt="${esc(cur.title)}"></div>
           </div>
           <div class="pd-stats">
             <div class="pd-stat"><i class="fas fa-map-marker-alt"></i><div class="pd-stat-label">Location</div><div class="pd-stat-val">${cur.location||'—'}</div></div>
@@ -221,27 +231,29 @@
           </div>
           <div class="pd-about">
             <div><div class="pd-section-label">About</div><div class="pd-body-text">${body}</div></div>
-            <div class="pd-about-img"><img src="${aImg}"></div>
+            <div class="pd-about-img"><img src="${aImg}" alt="${esc((cur.subtitle || cur.title) + ' – interior view')}" loading="lazy"></div>
           </div>
         `;
 
         if (cur.features?.length) {
   cur.features.forEach((f, i) => {
     if (i % 2 === 0) {
-      h += `<div class="pd-feature"><div><img src="${fixImg(f.image)}"></div><div class="pd-feature-text-wrap"><div class="pd-feature-title">${f.title}</div><div class="pd-feature-desc">${f.text}</div></div></div>`;
+      h += `<div class="pd-feature"><div><img src="${fixImg(f.image)}" alt="${esc(f.alt || f.title)}" loading="lazy"></div><div class="pd-feature-text-wrap"><div class="pd-feature-title">${f.title}</div><div class="pd-feature-desc">${f.text}</div></div></div>`;
     } else {
-      h += `<div class="pd-feature flip"><div class="pd-feature-text-wrap"><div class="pd-feature-title">${f.title}</div><div class="pd-feature-desc">${f.text}</div></div><div><img src="${fixImg(f.image)}"></div></div>`;
+      h += `<div class="pd-feature flip"><div class="pd-feature-text-wrap"><div class="pd-feature-title">${f.title}</div><div class="pd-feature-desc">${f.text}</div></div><div><img src="${fixImg(f.image)}" alt="${esc(f.alt || f.title)}" loading="lazy"></div></div>`;
     }
   });
 }
         if (cur.highlights?.length) h += `<div class="pd-highlights"><div class="pd-section-label" style="max-width:1300px;margin:0 auto;">Highlights</div><div class="pd-hl-grid">${cur.highlights.map(x => `<div class="pd-hl-item"><i class="fas fa-check-circle"></i><div class="pd-hl-title">${x.title}</div><div class="pd-hl-text">${x.text}</div></div>`).join('')}</div></div>`;
 
-        const imgs = (cur.images||[]).map(x => fixImg(x.image||x));
-        if (imgs.length) h += `<div class="pd-gallery"><div class="pd-section-label">Gallery</div><div class="pd-gal-grid">${imgs.map(x => `<img src="${x}">`).join('')}</div></div>`;
+        // New "gallery" field (with alt text) takes priority; old "images" list still works
+        const gal = (cur.gallery?.length ? cur.gallery : (cur.images || []))
+          .map((x, i) => ({ src: fixImg(x.image || x), alt: x.alt || `${cur.title} – view ${i + 1}`, cap: x.caption || '' }));
+        if (gal.length) h += `<div class="pd-gallery"><div class="pd-section-label">Gallery</div><div class="pd-gal-grid">${gal.map(g => `<img src="${g.src}" alt="${esc(g.alt)}" title="${esc(g.cap || g.alt)}" loading="lazy">`).join('')}</div></div>`;
 
         if (prev || next) h += `<div class="pd-project-nav">${prev?`<a href="project.html?slug=${prev.slug}"><small>Previous</small><strong>${prev.title}</strong></a>`:'<div></div>'}${next?`<a href="project.html?slug=${next.slug}" style="text-align:right;"><small>Next</small><strong>${next.title}</strong></a>`:'<div></div>'}</div>`;
 
-        if (rel.length) h += `<div class="pd-related"><div style="max-width:1300px;margin:0 auto;"><div class="pd-section-label">Related</div><div class="pd-related-grid">${rel.map(p => `<a href="project.html?slug=${p.slug}" class="rel-card"><img src="${fixImg(p.thumbnail||p.hero_image)}"><div class="rel-info"><strong>${p.title}</strong><small>${p.category}</small></div></a>`).join('')}</div></div></div>`;
+        if (rel.length) h += `<div class="pd-related"><div style="max-width:1300px;margin:0 auto;"><div class="pd-section-label">Related</div><div class="pd-related-grid">${rel.map(p => `<a href="project.html?slug=${p.slug}" class="rel-card"><img src="${fixImg(p.thumbnail||p.hero_image)}" alt="${esc(p.title)}" loading="lazy"><div class="rel-info"><strong>${p.title}</strong><small>${p.category}</small></div></a>`).join('')}</div></div></div>`;
 
         root.innerHTML = h;
       } catch(e) { console.error(e); }
