@@ -10,7 +10,7 @@ order: 12
 category: Residential Interior
 location: Gangarampur, West Bengal
 area: 120 sq.ft.
-year: ""
+year: "2025"
 style: Contemporary Traditional
 client: Private Residence
 about_image: /images/uploads/shiva-temple-lotus-cutout-temple-door-scalloped-arch-crop.jpg
