@@ -153,7 +153,8 @@
                                 <option value="Office & Workspace">Office &amp; Workspace</option>
                                 <option value="Restaurant & Café">Restaurant &amp; Café</option>
                                 <option value="Industrial & Warehouse">Industrial &amp; Warehouse</option>
-                                <option value="Institutional">Institutional (School, Hospital)</option>
+                                <option value="Healthcare">Healthcare (Hospital, Clinic, Diagnostics)</option>
+                                <option value="Institutional">Institutional (School, Office)</option>
                                 <option value="Renovation & Remodeling">Renovation &amp; Remodeling</option>
                                 <option value="Other">Other</option>
                             </select>
@@ -265,8 +266,10 @@
             </div>
             <div class="f-col">
                 <h4>Services</h4>
-                <a href="services.html">Architecture Design</a>
+                <a href="services.html">Architectural Design</a>
                 <a href="services.html">Interior Design</a>
+                <a href="services.html">Commercial &amp; Retail Design</a>
+                <a href="services.html">Healthcare Planning</a>
                 <a href="services.html">Working Drawings</a>
                 <a href="services.html">3D Visualization</a>
             </div>
@@ -308,6 +311,11 @@
                 'signature': 'Signature',
                 'complete': 'Complete'
             };
+
+            // Service links (from the Services page) pre-select the project type
+            const typeMap = { 'healthcare': 'Healthcare', 'commercial': 'Commercial' };
+            const typeSel = document.getElementById('project-type');
+            if (typeMap[pkg] && typeSel) typeSel.value = typeMap[pkg];
 
             const matched = packageMap[pkg];
 
