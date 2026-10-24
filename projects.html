@@ -178,20 +178,36 @@
             });
         }
 
+
+        // Project list: read from the site itself (no GitHub rate limit), and merge in the
+        // GitHub API listing when it is reachable so brand-new CMS projects still appear.
+        async function listProjectFiles() {
+          const names = new Set();
+          try {
+            const r = await fetch('projects/index.json', { cache: 'no-cache' });
+            if (r.ok) { const j = await r.json(); if (Array.isArray(j)) j.forEach(n => names.add(n)); }
+          } catch (e) {}
+          try {
+            const r = await fetch('https://api.github.com/repos/adscreativespace/Website/contents/projects', { cache: 'no-cache' });
+            if (r.ok) { const j = await r.json(); if (Array.isArray(j)) j.forEach(f => names.add(f.name)); }
+          } catch (e) {}
+          return [...names].filter(n => n.endsWith('.md')).map(n => ({ name: n, download_url: 'projects/' + n }));
+        }
+        async function fetchText(url) { const r = await fetch(url, { cache: 'no-cache' }); return r.ok ? r.text() : ''; }
         async function loadProjects() {
             const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
             let realProjects = [];
 
             try {
-                const res = await fetch(apiUrl);
-                const files = await res.json();
+                const files = await listProjectFiles();
 
-                if (Array.isArray(files)) {
-                    const mdFiles = files.filter(f => f.name.endsWith('.md'));
+                if (files.length) {
+                    const mdFiles = files;
+                    const texts = await Promise.all(mdFiles.map(f => fetchText(f.download_url)));
 
-                    for (const file of mdFiles) {
-                        const fr = await fetch(file.download_url);
-                        const text = await fr.text();
+                    for (const [k, file] of mdFiles.entries()) {
+                        const text = texts[k];
+                        if (!text) continue;
 
                         const slug = file.name.replace('.md', '');
                         const title = text.match(/title:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'Untitled';

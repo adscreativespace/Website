@@ -253,19 +253,35 @@
     function esc(s) { return String(s ?? '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
     function fixImg(p) { return p ? (String(p).trim().startsWith('/') ? p.slice(1) : p) : ''; }
 
+
+    // Project list: read from the site itself (no GitHub rate limit), and merge in the
+    // GitHub API listing when it is reachable so brand-new CMS projects still appear.
+    async function listProjectFiles() {
+      const names = new Set();
+      try {
+        const r = await fetch('projects/index.json', { cache: 'no-cache' });
+        if (r.ok) { const j = await r.json(); if (Array.isArray(j)) j.forEach(n => names.add(n)); }
+      } catch (e) {}
+      try {
+        const r = await fetch('https://api.github.com/repos/adscreativespace/Website/contents/projects', { cache: 'no-cache' });
+        if (r.ok) { const j = await r.json(); if (Array.isArray(j)) j.forEach(f => names.add(f.name)); }
+      } catch (e) {}
+      return [...names].filter(n => n.endsWith('.md')).map(n => ({ name: n, download_url: 'projects/' + n }));
+    }
+    async function fetchText(url) { const r = await fetch(url, { cache: 'no-cache' }); return r.ok ? r.text() : ''; }
     async function loadPage() {
       const root = document.getElementById('pd-root');
       const slug = new URLSearchParams(window.location.search).get('slug');
       if (!slug) return;
 
       try {
-        const res = await fetch('https://api.github.com/repos/adscreativespace/Website/contents/projects');
-        const files = await res.json();
+        const files = await listProjectFiles();
+        const texts = await Promise.all(files.map(f => fetchText(f.download_url)));
         let all = []; let cur = null;
 
-        for (const f of files.filter(x => x.name.endsWith('.md'))) {
-          const r = await fetch(f.download_url);
-          const raw = await r.text();
+        for (const [k, f] of files.entries()) {
+          const raw = texts[k];
+          if (!raw) continue;
           const parts = raw.split(/^---\s*$/m);
           let d = jsyaml.load(parts[1]) || {};
           d.slug = f.name.replace('.md', '');
