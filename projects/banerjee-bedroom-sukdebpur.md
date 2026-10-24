@@ -4,8 +4,8 @@ subtitle: Compact Bedroom with Built-In Study & Wardrobe
 description: A 150 sq.ft. bedroom in Sukdebpur that fits a queen bed, full-height wardrobe and
   built-in study into a compact footprint, using a soft teal, white and light oak palette, a
   wall-to-wall upholstered headboard and layered cove lighting to keep the room calm and open.
-thumbnail: /images/uploads/banerjee-bedroom-teal-panel-headboard-front-view-web.jpg
-hero_image: /images/uploads/banerjee-bedroom-teal-panel-headboard-front-view-hero.jpg
+thumbnail: /images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view-web.jpg
+hero_image: /images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view-hero.jpg
 order: 12
 category: Residential Interior
 location: Sukdebpur
