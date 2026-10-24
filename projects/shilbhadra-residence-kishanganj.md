@@ -6,7 +6,7 @@ description: A G+2 residence in Kishanganj, Bihar, designed on a narrow 26'-7" w
   cantilevered upper floors, a second-floor swimming pool behind a terracotta jaali, and a rooftop
   lounge with circular skylights and solar panels.
 thumbnail: /images/uploads/shilbhadra-residence-g-plus-2-three-quarter-front-view-web.jpg
-hero_image: /images/uploads/shilbhadra-residence-rooftop-lounge-circular-skylights-hero.jpg
+hero_image: /images/uploads/shilbhadra-residence-corner-view-side-staircase-hero.jpg
 order: 5
 category: Residential Architecture
 location: Kishanganj, Bihar
