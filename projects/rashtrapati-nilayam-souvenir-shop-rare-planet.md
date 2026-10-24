@@ -196,18 +196,18 @@ seo:
   meta_description: Retail store design for RARE PLANET and 2M Minimart, from Rashtrapati Nilayam to airports across India. 34 stores designed by ADS Creative Space.
 ---
 
-### **Rashtrapati Nilayam Souvenir Shop, Secunderabad**
+Rashtrapati Nilayam Souvenir Shop, Secunderabad
 
 ADS Creative Space designed the interior of the RARE PLANET souvenir shop at Rashtrapati Nilayam, the President of India’s southern retreat. The store was inaugurated by the Hon’ble President of India, Smt. Droupadi Murmu, in December 2024.
 
 The compact retail space features a full-height glass shopfront, a backlit fascia with a line drawing of Rashtrapati Nilayam, patterned wall panels, light timber shelving and warm concealed lighting. Its modular display system combines visual clarity with flexibility, creating a contemporary retail environment within a heritage setting.
 
-### **RARE PLANET | Airport Stores**
+RARE PLANET | Airport Stores
 
-ADS Creative Space has also designed RARE PLANET souvenir stores at **Srinagar, Ayodhya, Ranchi, Vizag, Vijayawada, Mangalore, Pune, Mumbai, Varanasi and Bangalore airports**. The designs combine adaptable display systems, integrated lighting and distinctive materials, with regional motifs incorporated where appropriate.
+ADS Creative Space has also designed RARE PLANET souvenir stores at Srinagar, Ayodhya, Ranchi, Vizag, Vijayawada, Mangalore, Pune, Mumbai, Varanasi and Bangalore airports. The designs combine adaptable display systems, integrated lighting and distinctive materials, with regional motifs incorporated where appropriate.
 
-### **2M Minimart | Airport Stores**
+2M Minimart | Airport Stores
 
-For RARE PLANET’s convenience-retail brand, 2M Minimart, ADS Creative Space designed stores at **Nagpur, Trivandrum and Bhopal airports**. Bright brand colours, functional shelving, gondola displays and integrated beverage chillers support efficient product display and grab-and-go shopping.
+For RARE PLANET’s convenience-retail brand, 2M Minimart, ADS Creative Space designed stores at Nagpur, Trivandrum and Bhopal airports. Bright brand colours, functional shelving, gondola displays and integrated beverage chillers support efficient product display and grab-and-go shopping.
 
 Together, these projects demonstrate ADS Creative Space’s approach to adaptable retail interiors, balancing brand identity, spatial efficiency and location-specific design.
