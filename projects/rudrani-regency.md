@@ -10,7 +10,7 @@ area: '22160'
 year: '2025'
 style: Contemporary Modern
 client: Rudrani Regency
-about_image: ''
+about_image: /images/uploads/Card Thumbnail.png
 features:
   - title: Under the Stars — Rooftop Dining
     text: An atmospheric rooftop dining destination where contemporary design meets warm, ambient lighting. Textured stone finishes, sculptural screens, pergola detailing, and thoughtfully arranged seating create an inviting setting for relaxed dining and evening gatherings. A balanced palette of natural textures and modern elements defines the space, transforming the rooftop into a distinctive hospitality experience.
