@@ -7,7 +7,7 @@ description: A conceptual café interior inspired by the Babu culture of old Cal
   folk-style mural.
 thumbnail: /images/uploads/babu-culture-cafe-dining-hall-gramophone-niche-photo-collage-web.jpg
 hero_image: /images/uploads/babu-culture-cafe-dining-hall-gramophone-niche-photo-collage-hero.jpg
-order: 13
+order: 14
 category: Hospitality
 location: ""
 area: ""
