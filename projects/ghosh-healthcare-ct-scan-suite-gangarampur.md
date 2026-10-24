@@ -11,7 +11,7 @@ order: 7
 category: Healthcare
 location: Gangarampur, West Bengal
 area: 600 sq.ft.
-year: ""
+year: "2026"
 style: Contemporary Healthcare
 client: Ghosh Healthcare
 about_image: /images/uploads/ghosh-healthcare-ct-scan-front-view-gantry-patient-couch.jpg

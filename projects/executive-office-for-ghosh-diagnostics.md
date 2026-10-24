@@ -6,7 +6,7 @@ description: An executive consultation and administrative workspace designed for
 thumbnail: /images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg
 hero_image: /images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg
 order: 9
-category: Institutional
+category: Healthcare
 location: Gangarampur, West Bengal, India
 area: Approx. 320 sq.ft.
 year: '2026'
