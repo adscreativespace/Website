@@ -7,7 +7,7 @@ description: A G+2 residence in Kishanganj, Bihar, designed on a narrow 26'-7" w
   lounge with circular skylights and solar panels.
 thumbnail: /images/uploads/shilbhadra-residence-g-plus-2-three-quarter-front-view-web.jpg
 hero_image: /images/uploads/shilbhadra-residence-corner-view-side-staircase-hero.jpg
-order: 5
+order: 6
 category: Residential Architecture
 location: Kishanganj, Bihar
 area: 1450 sq.ft. / floor
