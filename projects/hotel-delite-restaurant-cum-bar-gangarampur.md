@@ -6,7 +6,7 @@ description: A compact hotel entrance, reception and lobby for Hotel Delite in G
   bright, welcoming arrival experience that leads guests to the hotel and its restaurant cum bar.
 thumbnail: /images/uploads/hotel-delite-entrance-staircase-brass-bird-wall-web.jpg
 hero_image: /images/uploads/hotel-delite-entrance-staircase-brass-bird-wall-hero.jpg
-order: 5
+order: 6
 category: Hospitality
 location: Gangarampur, West Bengal
 area: 750 sq.ft.
