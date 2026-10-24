@@ -32,6 +32,13 @@ features:
       and white walls keep the compact space bright and uncluttered.
     image: /images/uploads/hotel-delite-lobby-wood-portal-reception.jpg
     alt: Hotel lobby with a rounded wood-finish portal leading to the reception desk
+  - title: A Sculpted Reception Desk
+    text: The white reception desk steps down in a soft curve, with a circular cut-out and slatted
+      wood detailing echoing the vertical wood-and-white panelling behind it. A brass globe pendant
+      hangs above, and Hotel Deilte lettering sits on the panelled backdrop beside the
+      terrazzo-clad lift.
+    image: /images/uploads/hotel-delite-reception-desk-circular-cutout.jpg
+    alt: Curved white reception desk with a circular cut-out, slatted wood detail and globe pendant
   - title: Waiting Lounge & Restaurant Wayfinding
     text: A grey upholstered sofa, a brass-and-marble side table and botanical art prints form a
       quiet waiting corner. Sculpted wood fins wrap the column, while a stacked-stone wall with a
@@ -60,6 +67,12 @@ gallery:
     alt: Hotel lobby with a rounded wood-finish portal leading to the reception desk
   - image: /images/uploads/hotel-delite-waiting-lounge-restaurant-signage.jpg
     alt: Waiting lounge with a grey sofa and stacked-stone restaurant cum bar signage by the lift
+  - image: /images/uploads/hotel-delite-reception-lift-lobby.jpg
+    alt: Hotel reception with a panelled backdrop beside the terrazzo-clad lift lobby
+  - image: /images/uploads/hotel-delite-reception-desk-circular-cutout.jpg
+    alt: Curved white reception desk with a circular cut-out, slatted wood detail and globe pendant
+  - image: /images/uploads/hotel-delite-reception-globe-pendant-signage.jpg
+    alt: Brass globe pendant above the reception with wood-and-white panelling and brass lettering
 seo:
   meta_title: Hotel Delite Interior, Gangarampur | ADS Creative Space
   meta_description: Entrance, reception and lobby interior for Hotel Delite restaurant cum bar in
