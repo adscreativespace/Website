@@ -33,7 +33,7 @@ collections:
       - { label: "Display Order (1 = shown first)", name: "order", widget: "number", value_type: "int", min: 1, required: false, hint: "Strongest projects first. Leave empty to place at the end." }
 
       # --- Project Meta ---
-      - { label: "Category / Project Type", name: "category", widget: "select", options: ["Residential Interior", "Residential Architecture", "Commercial Workspace", "Retail Interior", "Institutional", "Hospitality"] }
+      - { label: "Category / Project Type", name: "category", widget: "select", options: ["Residential Interior", "Residential Architecture", "Healthcare", "Commercial Workspace", "Retail Interior", "Institutional", "Hospitality"] }
       - { label: "Location",                                  name: "location",    widget: "string",   required: false }
       - { label: "Area (e.g. 185 sq.ft.)",                    name: "area",        widget: "string",   required: false }
       - { label: "Year",                                      name: "year",        widget: "string",   required: false }

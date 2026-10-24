@@ -4,7 +4,7 @@ subtitle: Warm Wood, Marble & Sage Living Room with Pooja Niche
 description: A 230 sq.ft. living room in Gangarampur that brings together a flowing wave ceiling, marble-finish feature walls, chevron wood panelling with ICA polyester coating, and a sage-grey palette, with an integrated TV unit, a backlit pooja niche and a black steel-framed glass entry.
 thumbnail: /images/uploads/niresh-paul-living-room-sofa-wall-floral-art-mandir-web.jpg
 hero_image: /images/uploads/niresh-paul-living-room-sofa-wall-floral-art-mandir-hero.jpg
-order: 10
+order: 11
 category: Residential Interior
 location: Gangarampur, West Bengal
 area: 230 sq.ft.
