@@ -4,13 +4,13 @@ subtitle: Rashtrapati Nilayam & Airport Stores Across India – Retail Store Des
 description: Retail interior design for RARE PLANET souvenir stores across India, including the
   Rashtrapati Nilayam store in Secunderabad, inaugurated by the Hon'ble President of India, Smt.
   Droupadi Murmu, in December 2024, airport stores at Srinagar, Ayodhya, Ranchi, Vizag, Vijayawada,
-  Mangalore, Pune, Mumbai and Varanasi, and 2M Minimart stores at Nagpur, Trivandrum and Bhopal airports. ADS Creative Space has
+  Mangalore, Pune, Mumbai, Varanasi and Bangalore, and 2M Minimart stores at Nagpur, Trivandrum and Bhopal airports. ADS Creative Space has
   designed 34 RARE PLANET stores.
 thumbnail: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg
 hero_image: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg
 order: 1
 category: Retail Interior
-location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag, Vijayawada, Bhopal, Mangalore, Pune, Mumbai, Varanasi & more
+location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag, Vijayawada, Bhopal, Mangalore, Pune, Mumbai, Varanasi, Bangalore & more
 area: ""
 year: "2024"
 style: Contemporary Retail
@@ -118,7 +118,7 @@ highlights:
   - title: Part of 34 RARE PLANET Stores
     text: One of 34 RARE PLANET souvenir stores designed by ADS Creative Space.
   - title: Heritage & Airport Retail
-    text: Stores at Rashtrapati Nilayam and at thirteen airports across India, from Srinagar to Trivandrum.
+    text: Stores at Rashtrapati Nilayam and at fourteen airports across India, from Srinagar to Trivandrum.
   - title: Multiple Brands
     text: Stores for RARE PLANET and its convenience brand, 2M Minimart.
   - title: Modular Display Shelving
@@ -196,6 +196,8 @@ gallery:
     alt: RARE PLANET Varanasi Airport store front with light oak shelving, copper jaali pillars and perforated metal counter
   - image: /images/uploads/rare-planet-varanasi-airport-store-front-walnut-copper-jaali-option.jpg
     alt: RARE PLANET Varanasi Airport store, walnut finish design option
+  - image: /images/uploads/rare-planet-bangalore-airport-t1-stocked-store-front-category-signage.jpg
+    alt: RARE PLANET Bangalore Airport Terminal 1 store front with category signage and stocked shelving
 seo:
   meta_title: RARE PLANET Souvenir Store Design | ADS Creative Space
   meta_description: Retail store design for RARE PLANET and 2M Minimart, from Rashtrapati Nilayam
@@ -231,4 +233,6 @@ At Mumbai Airport, the brand takes its most expressive form: an open island kios
 
 At Varanasi Airport, copper jaali pillars frame a compact store of light oak shelving with soft backlit arches, a cluster of pendant lights and a perforated metal cash counter. Finish options in light oak and dark walnut were developed for the client.
 
-These are thirteen of the 34 RARE PLANET stores designed by ADS Creative Space.
+At Bangalore Airport Terminal 1, a wide open-front store under a patterned fascia organises a full product range into clearly signed categories, from yoga and stationery to toys, snacks and chocolates, with vertical timber fins and a digital display panel at the entrance.
+
+These are fourteen of the 34 RARE PLANET stores designed by ADS Creative Space.
