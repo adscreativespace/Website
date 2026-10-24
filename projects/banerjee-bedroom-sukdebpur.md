@@ -6,7 +6,7 @@ description: A 150 sq.ft. bedroom in Sukdebpur that fits a queen bed, full-heigh
   wall-to-wall upholstered headboard and layered cove lighting to keep the room calm and open.
 thumbnail: /images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view-web.jpg
 hero_image: /images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view-hero.jpg
-order: 14
+order: 15
 category: Residential Interior
 location: Sukdebpur
 area: 150 sq.ft.
