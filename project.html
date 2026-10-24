@@ -268,7 +268,12 @@
       } catch (e) {}
       return [...names].filter(n => n.endsWith('.md')).map(n => ({ name: n, download_url: 'projects/' + n }));
     }
-    async function fetchText(url) { const r = await fetch(url, { cache: 'no-cache' }); return r.ok ? r.text() : ''; }
+    async function fetchText(url) {
+      // Same-origin first; if the host doesn't serve raw .md, use GitHub's raw file
+      try { const r = await fetch(url, { cache: 'no-cache' }); if (r.ok) { const t = await r.text(); if (/^---/.test(t.trim())) return t; } } catch (e) {}
+      try { const r = await fetch('https://raw.githubusercontent.com/adscreativespace/Website/main/' + url); if (r.ok) return r.text(); } catch (e) {}
+      return '';
+    }
     async function loadPage() {
       const root = document.getElementById('pd-root');
       const slug = new URLSearchParams(window.location.search).get('slug');

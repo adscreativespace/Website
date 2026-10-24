@@ -117,10 +117,102 @@
     <script>
         // Fallback shown only if the GitHub API can't be reached (e.g. rate limit). Real projects only.
         const fallbackProjects = [
-            { image: "images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "The Pastel Suite | Contemporary Bedroom Interior", desc: "A multi-zone bedroom suite with sleeping, lounge, study and walk-in dressing zones.", location: "—", area: "—", year: "2026", order: 6, slug: "pastel-suite-contemporary-bedroom-interior" },
-            { image: "images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg", tag: "HOSPITALITY", category: "Hospitality", title: "Rudrani Regency", desc: "A contemporary G+5 hospitality project with a sculptural façade and complete interiors.", location: "Gangarampur, West Bengal", area: "4452 Sqft/ Floor", year: "2025", order: 2, slug: "rudrani-regency" },
-            { image: "images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg", tag: "OFFICE INTERIOR", category: "Office Interior", title: "Executive Office for Ghosh Diagnostics", desc: "An executive consultation and administrative workspace for a diagnostic centre.", location: "Gangarampur, West Bengal", area: "Approx. 320 sq.ft.", year: "2026", order: 12, slug: "executive-office-for-ghosh-diagnostics" },
-            { image: "images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "Contemporary Master Bedroom | Luxury Interior", desc: "A contemporary master bedroom in soft sage tones with bespoke joinery.", location: "Balurghat, West Bengal", area: "200 sq.ft.", year: "2026", order: 13, slug: "contemporary-master-bedroom-soft-sage-luxury-interior" }
+            {
+                        "image": "images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg",
+                        "tag": "RETAIL INTERIOR",
+                        "category": "Retail Interior",
+                        "title": "Rashtrapati Nilayam Souvenir Shop",
+                        "desc": "Retail interior design for the RARE PLANET souvenir shop at Rashtrapati Nilayam, Secunderabad, inaugurated by the Hon'ble President of India, Smt. Droupadi Murm",
+                        "location": "Rashtrapati Nilayam, Secunderabad, Telangana",
+                        "area": "—",
+                        "year": "2024",
+                        "order": 1,
+                        "slug": "rashtrapati-nilayam-souvenir-shop-rare-planet"
+            },
+            {
+                        "image": "images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg",
+                        "tag": "HOSPITALITY",
+                        "category": "Hospitality",
+                        "title": "Rudrani Regency",
+                        "desc": "A contemporary G+5 hospitality project featuring a sculptural exterior façade, warm and sophisticated restaurant interiors, coordinated material palettes, and t",
+                        "location": "Ratanamala, Gangarampur, Dakshin Dinajpur, West Bengal, India – 733124",
+                        "area": "4452 Sqft/ Floor",
+                        "year": "2025",
+                        "order": 2,
+                        "slug": "rudrani-regency"
+            },
+            {
+                        "image": "images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch-web.jpg",
+                        "tag": "RESIDENTIAL INTERIOR",
+                        "category": "Residential Interior",
+                        "title": "Dey Sarkar Residence",
+                        "desc": "A complete 3,000 sq.ft. home interior in Balurghat, from a sculptural foyer with a water wall and vertical garden to formal and family living rooms, a prayer ni",
+                        "location": "Balurghat, West Bengal",
+                        "area": "3000 sq.ft.",
+                        "year": "2025",
+                        "order": 3,
+                        "slug": "dey-sarkar-residence-balurghat"
+            },
+            {
+                        "image": "images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks-web.jpg",
+                        "tag": "RESIDENTIAL INTERIOR",
+                        "category": "Residential Interior",
+                        "title": "Agarwal Residence",
+                        "desc": "A 2,500 sq.ft. complete home interior in Balurghat, designed as one continuous open-plan living, dining and kitchen space in soft sage and light oak, with a bra",
+                        "location": "Balurghat, West Bengal",
+                        "area": "2500 sq.ft.",
+                        "year": "2024",
+                        "order": 4,
+                        "slug": "agarwal-residence-balurghat"
+            },
+            {
+                        "image": "images/uploads/riyas-makeover-parlour-arched-mirror-styling-stations-web.jpg",
+                        "tag": "RETAIL INTERIOR",
+                        "category": "Retail Interior",
+                        "title": "Riyas Makeover",
+                        "desc": "A 450 sq.ft. beauty destination in Kaliaganj that brings a ladies parlour, a bridal makeup studio and a private spa room under one brand, with arched styling mi",
+                        "location": "Kaliaganj, West Bengal",
+                        "area": "450 sq.ft.",
+                        "year": "2025",
+                        "order": 5,
+                        "slug": "riyas-makeover-parlour-kaliaganj"
+            },
+            {
+                        "image": "images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg",
+                        "tag": "RESIDENTIAL INTERIOR",
+                        "category": "Residential Interior",
+                        "title": "The Pastel Suite | Contemporary Bedroom Interior",
+                        "desc": "A bedroom suite that holds four functions in one room. A sleeping area, lounge nook, study and walk-in dressing zone are separated by light and material rather ",
+                        "location": "High School para, Gangarampur",
+                        "area": "350 Sq.Ft.",
+                        "year": "2026",
+                        "order": 6,
+                        "slug": "pastel-suite-contemporary-bedroom-interior"
+            },
+            {
+                        "image": "images/uploads/shilbhadra-residence-g-plus-2-three-quarter-front-view-web.jpg",
+                        "tag": "RESIDENTIAL ARCHITECTURE",
+                        "category": "Residential Architecture",
+                        "title": "Shilbhadra Residence",
+                        "desc": "A G+2 residence in Kishanganj, Bihar, designed on a narrow 26'-7\" wide plot with 1,450 sq.ft. per floor. It features a layered contemporary façade, covered park",
+                        "location": "Kishanganj, Bihar",
+                        "area": "1450 sq.ft. / floor",
+                        "year": "—",
+                        "order": 7,
+                        "slug": "shilbhadra-residence-kishanganj"
+            },
+            {
+                        "image": "images/uploads/hotel-delite-entrance-staircase-brass-bird-wall-web.jpg",
+                        "tag": "HOSPITALITY",
+                        "category": "Hospitality",
+                        "title": "Hotel Delite | Restaurant Cum Bar",
+                        "desc": "A compact hotel entrance, reception and lobby for Hotel Delite in Gangarampur, combining warm wood, illuminated arches, brass accents and terrazzo-finish surfac",
+                        "location": "Gangarampur, West Bengal",
+                        "area": "750 sq.ft.",
+                        "year": "2025",
+                        "order": 8,
+                        "slug": "hotel-delite-restaurant-cum-bar-gangarampur"
+            }
         ];
 
         let allProjects = [];
@@ -193,7 +285,12 @@
           } catch (e) {}
           return [...names].filter(n => n.endsWith('.md')).map(n => ({ name: n, download_url: 'projects/' + n }));
         }
-        async function fetchText(url) { const r = await fetch(url, { cache: 'no-cache' }); return r.ok ? r.text() : ''; }
+        async function fetchText(url) {
+      // Same-origin first; if the host doesn't serve raw .md, use GitHub's raw file
+      try { const r = await fetch(url, { cache: 'no-cache' }); if (r.ok) { const t = await r.text(); if (/^---/.test(t.trim())) return t; } } catch (e) {}
+      try { const r = await fetch('https://raw.githubusercontent.com/adscreativespace/Website/main/' + url); if (r.ok) return r.text(); } catch (e) {}
+      return '';
+    }
         async function loadProjects() {
             const apiUrl = 'https://api.github.com/repos/adscreativespace/Website/contents/projects';
             let realProjects = [];
