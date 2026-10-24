@@ -54,10 +54,8 @@ images:
   - /images/uploads/Hotel Room_21 - Photo.jpg
 ---
 
-Rudrani Regency is a hospitality project in Gangarampur, West Bengal, where the design journey began with an existing structural framework of columns, beams and roof. From that stage, ADS Creative Space developed the floor plan, exterior façade and interior spaces, bringing the different elements together into a cohesive design.
+Rudrani Regency is a G+5 hospitality project in Gangarampur, West Bengal, developed by ADS Creative Space from an existing structural framework. The scope covered floor planning, exterior façade design and complete interior design, transforming the unfinished structure into a cohesive hospitality destination.
 
-The project includes a banquet hall, restaurant, rooftop restaurant, reception and lobby areas, corridors, standard guest rooms and a suite. Each space has its own character, while a considered combination of materials, furniture, lighting and finishes maintains a sense of continuity throughout the building.
+The project brings together a banquet hall, restaurants, rooftop dining, reception, guest rooms and suites, each designed with its own character while maintaining a consistent architectural identity. Contemporary forms, warm wood finishes, contrasting materials and layered lighting define the overall design.
 
-The design brings together contemporary forms, warm wood finishes, contrasting surfaces and layered lighting to create interiors that feel distinctive without losing sight of their intended use. Attention was also given to the smaller details, including furniture and crockery selection, to ensure consistency across the hospitality experience.
-
-From the building's exterior identity to the individual guest spaces, the aim was to create a well-coordinated environment where planning, aesthetics and functionality work together. Rudrani Regency reflects ADS Creative Space's approach to hospitality design, with involvement spanning floor planning, façade development, interior design and detailed 3D visualisation.
+From spatial planning and furniture selection to lighting, finishes and even crockery, attention was given to every detail, creating a balance of functionality, comfort and visual appeal throughout the property.
