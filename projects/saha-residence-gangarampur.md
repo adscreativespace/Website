@@ -6,7 +6,7 @@ description: A 2,200 sq.ft. contemporary home in Gangarampur with a bold layered
   black steel pergola terrace and a car porch with a sculpted LED ceiling.
 thumbnail: /images/uploads/saha-residence-elevation-three-quarter-front-view-web.jpg
 hero_image: /images/uploads/saha-residence-elevation-three-quarter-front-view-hero.jpg
-order: 9
+order: 10
 category: Residential Architecture
 location: Gangarampur, West Bengal
 area: 2200 sq.ft.

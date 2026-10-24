@@ -62,7 +62,7 @@ images: []
 seo:
   meta_title: Bedroom Interiors, Manna Residence, Balurghat | ADS Creative Space
   meta_description: Two contemporary bedrooms in Balurghat, a sage master bedroom with peacock wallpaper and a blue bedroom with built-in study, by ADS Creative Space.
-order: 12
+order: 13
 ---
 
 Designed for Dr. Sukanta Manna's residence in Balurghat, this project covers two bedrooms, each with its own palette and personality, unified by clean contemporary detailing, premium finishes and well-planned built-in storage.

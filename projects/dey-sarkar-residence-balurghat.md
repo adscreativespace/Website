@@ -6,7 +6,7 @@ description: A complete 3,000 sq.ft. home interior in Balurghat, from a sculptur
   bedrooms, each with its own character within a warm palette of timber, marble, sage and soft neutrals.
 thumbnail: /images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch-web.jpg
 hero_image: /images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch-hero.jpg
-order: 2
+order: 3
 category: Residential Interior
 location: Balurghat, West Bengal
 area: 3000 sq.ft.

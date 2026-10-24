@@ -6,7 +6,7 @@ description: A contemporary G+5 hospitality project featuring a sculptural exter
   by ADS Creative Space to create a distinctive architectural identity and an inviting guest experience.
 thumbnail: /images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg
 hero_image: /images/uploads/rudrani-regency-hotel-facade-night-view-hero.jpg
-order: 1
+order: 2
 category: Hospitality
 location: Ratanamala, Gangarampur, Dakshin Dinajpur, West Bengal, India – 733124
 area: 4452 Sqft/ Floor
