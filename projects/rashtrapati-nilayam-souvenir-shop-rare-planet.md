@@ -3,13 +3,14 @@ title: RARE PLANET Souvenir Stores
 subtitle: Rashtrapati Nilayam & Airport Stores Across India – Retail Store Design
 description: Retail interior design for RARE PLANET souvenir stores across India, including the
   Rashtrapati Nilayam store in Secunderabad, inaugurated by the Hon'ble President of India, Smt.
-  Droupadi Murmu, in December 2024, airport stores at Srinagar, Ayodhya and Ranchi, and 2M Minimart
-  stores at Nagpur and Trivandrum airports. ADS Creative Space has designed 34 RARE PLANET stores.
+  Droupadi Murmu, in December 2024, airport stores at Srinagar, Ayodhya, Ranchi and Vizag, and 2M
+  Minimart stores at Nagpur and Trivandrum airports. ADS Creative Space has designed 34 RARE PLANET
+  stores.
 thumbnail: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg
 hero_image: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg
 order: 1
 category: Retail Interior
-location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi & more
+location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag & more
 area: ""
 year: "2024"
 style: Contemporary Retail
@@ -89,13 +90,20 @@ features:
       above black metal racks with lit timber shelves, a grid wall and a central counter.
     image: /images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg
     alt: RARE PLANET kiosk at Ranchi Airport with copper laser-cut jaali pillars, black racks and lit timber shelving
+  - title: Vizag Airport Store
+    text: At Visakhapatnam (Vizag) Airport, the RARE PLANET store combines copper laser-cut jaali
+      panels at both ends with a softly lit paisley-pattern back wall behind black metal racks and
+      timber shelves. Two black-framed glass display tables with lit edges and a central rotating
+      gondola sit in the middle of the floor, with a timber cash counter tucked into one corner.
+    image: /images/uploads/rare-planet-vizag-airport-interior-glass-display-tables-gondola.jpg
+    alt: RARE PLANET Vizag Airport store with paisley back wall, glass display tables, gondola and copper jaali panels
 highlights:
   - title: Presidential Inauguration
     text: Inaugurated by the Hon'ble President of India in December 2024.
   - title: Part of 34 RARE PLANET Stores
     text: One of 34 RARE PLANET souvenir stores designed by ADS Creative Space.
   - title: Heritage & Airport Retail
-    text: Stores at Rashtrapati Nilayam and at Srinagar, Ayodhya, Nagpur, Trivandrum and Ranchi airports, among others.
+    text: Stores at Rashtrapati Nilayam and at Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi and Vizag airports, among others.
   - title: Multiple Brands
     text: Stores for RARE PLANET and its convenience brand, 2M Minimart.
   - title: Modular Display Shelving
@@ -143,6 +151,10 @@ gallery:
     alt: RARE PLANET Ranchi Airport kiosk front elevation with copper jaali pillars
   - image: /images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg
     alt: RARE PLANET Ranchi Airport kiosk interior between copper jaali pillars
+  - image: /images/uploads/rare-planet-vizag-airport-store-front-copper-jaali-paisley-backing.jpg
+    alt: RARE PLANET Vizag Airport store front with backlit timber fascia and copper jaali panels
+  - image: /images/uploads/rare-planet-vizag-airport-interior-glass-display-tables-gondola.jpg
+    alt: RARE PLANET Vizag Airport store interior with glass display tables
 seo:
   meta_title: RARE PLANET Souvenir Store Design | ADS Creative Space
   meta_description: Retail store design for RARE PLANET and 2M Minimart, from Rashtrapati Nilayam
@@ -164,4 +176,6 @@ At Trivandrum Airport, a second 2M Minimart pairs a yellow icon-printed portal w
 
 At Ranchi Airport, the RARE PLANET kiosk is framed by two copper-finish jaali pillars, each a stack of different laser-cut patterns that glow as light passes through them, turning a compact kiosk into a striking landmark in the terminal.
 
-These are six of the 34 RARE PLANET stores designed by ADS Creative Space.
+At Vizag Airport, copper jaali panels and a softly lit paisley back wall frame black-framed glass display tables and a central gondola, giving the store a warm, decorative character.
+
+These are seven of the 34 RARE PLANET stores designed by ADS Creative Space.
