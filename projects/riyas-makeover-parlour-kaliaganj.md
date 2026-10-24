@@ -6,6 +6,7 @@ description: A 450 sq.ft. beauty destination in Kaliaganj that brings a ladies p
   makeup studio and a calm, textured spa, each zone given its own character.
 thumbnail: /images/uploads/riyas-makeover-parlour-arched-mirror-styling-stations-web.jpg
 hero_image: /images/uploads/riyas-makeover-parlour-arched-mirror-styling-stations.jpg
+order: 3
 category: Retail Interior
 location: Kaliaganj, West Bengal
 area: 450 sq.ft.

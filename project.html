@@ -265,10 +265,10 @@
           if (d.slug === slug) cur = d;
         }
 
-        all.sort((a,b) => a.slug.localeCompare(b.slug));
+        all.sort((a,b) => ((a.order||999) - (b.order||999)) || a.slug.localeCompare(b.slug));
         const idx = all.findIndex(p => p.slug === slug);
         const prev = all[idx-1]; const next = all[idx+1];
-        const rel = all.filter(p => p.slug !== slug).slice(0,3);
+        const rel = all.filter(p => p.slug !== slug).slice(0,3); // top-ranked other projects
 
         if (!cur) return;
 

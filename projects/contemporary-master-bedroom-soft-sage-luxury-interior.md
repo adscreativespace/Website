@@ -4,6 +4,7 @@ subtitle: Soft Sage Luxury Interior
 description: A contemporary master bedroom featuring soft sage tones, bespoke furniture, ambient lighting,
   and elegant finishes designed for modern comfort and timeless sophistication.
 hero_image: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard.jpg
+order: 8
 category: Residential Interior
 location: Balurghat, West Bengal
 area: 200 sq.ft.

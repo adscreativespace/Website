@@ -52,6 +52,7 @@
         </div>
         <div class="filter-sort">
             <select id="sortProjects">
+                <option value="featured">Featured First</option>
                 <option value="latest">Latest First</option>
                 <option value="oldest">Oldest First</option>
             </select>
@@ -115,10 +116,10 @@
     <script>
         // Fallback shown only if the GitHub API can't be reached (e.g. rate limit). Real projects only.
         const fallbackProjects = [
-            { image: "images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "The Pastel Suite | Contemporary Bedroom Interior", desc: "A multi-zone bedroom suite with sleeping, lounge, study and walk-in dressing zones.", location: "—", area: "—", year: "2026", slug: "pastel-suite-contemporary-bedroom-interior" },
-            { image: "images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg", tag: "HOSPITALITY", category: "Hospitality", title: "Rudrani Regency", desc: "A contemporary G+5 hospitality project with a sculptural façade and complete interiors.", location: "Gangarampur, West Bengal", area: "4452 Sqft/ Floor", year: "2025", slug: "rudrani-regency" },
-            { image: "images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg", tag: "INSTITUTIONAL", category: "Institutional", title: "Executive Office for Ghosh Diagnostics", desc: "An executive consultation and administrative workspace for a diagnostic centre.", location: "Gangarampur, West Bengal", area: "Approx. 320 sq.ft.", year: "2026", slug: "executive-office-for-ghosh-diagnostics" },
-            { image: "images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "Contemporary Master Bedroom | Luxury Interior", desc: "A contemporary master bedroom in soft sage tones with bespoke joinery.", location: "Balurghat, West Bengal", area: "200 sq.ft.", year: "2026", slug: "contemporary-master-bedroom-soft-sage-luxury-interior" }
+            { image: "images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "The Pastel Suite | Contemporary Bedroom Interior", desc: "A multi-zone bedroom suite with sleeping, lounge, study and walk-in dressing zones.", location: "—", area: "—", year: "2026", order: 4, slug: "pastel-suite-contemporary-bedroom-interior" },
+            { image: "images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg", tag: "HOSPITALITY", category: "Hospitality", title: "Rudrani Regency", desc: "A contemporary G+5 hospitality project with a sculptural façade and complete interiors.", location: "Gangarampur, West Bengal", area: "4452 Sqft/ Floor", year: "2025", order: 1, slug: "rudrani-regency" },
+            { image: "images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg", tag: "INSTITUTIONAL", category: "Institutional", title: "Executive Office for Ghosh Diagnostics", desc: "An executive consultation and administrative workspace for a diagnostic centre.", location: "Gangarampur, West Bengal", area: "Approx. 320 sq.ft.", year: "2026", order: 6, slug: "executive-office-for-ghosh-diagnostics" },
+            { image: "images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg", tag: "RESIDENTIAL INTERIOR", category: "Residential Interior", title: "Contemporary Master Bedroom | Luxury Interior", desc: "A contemporary master bedroom in soft sage tones with bespoke joinery.", location: "Balurghat, West Bengal", area: "200 sq.ft.", year: "2026", order: 8, slug: "contemporary-master-bedroom-soft-sage-luxury-interior" }
         ];
 
         let allProjects = [];
@@ -150,7 +151,7 @@
             `;
         }
 
-        function renderProjects(filter = 'all', sort = 'latest') {
+        function renderProjects(filter = 'all', sort = 'featured') {
             const grid = document.getElementById('projectsGrid');
             grid.innerHTML = '';
 
@@ -161,6 +162,7 @@
             }
 
             filtered.sort((a, b) => {
+                if (sort === 'featured') return (a.order || 999) - (b.order || 999);
                 const yearA = parseInt((a.year || '').toString()) || 0;
                 const yearB = parseInt((b.year || '').toString()) || 0;
                 return sort === 'latest' ? yearB - yearA : yearA - yearB;
@@ -195,6 +197,7 @@
                         const category = text.match(/category:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || 'interior';
                         const location = text.match(/location:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
                         const area = text.match(/area:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
+                        const order = parseInt(text.match(/^order:\s*["']?(\d+)/m)?.[1]) || 999;
                         const year = text.match(/year:\s*["']?(.+?)["']?\s*\n/)?.[1]?.trim() || '—';
                         const description = text.match(/description:\s*["']?([\s\S]*?)["']?\s*\n(?:\w+:|$)/)?.[1]?.trim();
 
@@ -225,6 +228,7 @@
                             location,
                             area,
                             year,
+                            order,
                             slug
                         });
                     }
