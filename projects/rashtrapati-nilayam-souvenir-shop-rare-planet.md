@@ -4,13 +4,13 @@ subtitle: Rashtrapati Nilayam & Airport Stores Across India – Retail Store Des
 description: Retail interior design for RARE PLANET souvenir stores across India, including the
   Rashtrapati Nilayam store in Secunderabad, inaugurated by the Hon'ble President of India, Smt.
   Droupadi Murmu, in December 2024, airport stores at Srinagar, Ayodhya, Ranchi, Vizag and
-  Vijayawada, and 2M Minimart stores at Nagpur and Trivandrum airports. ADS Creative Space has
+  Vijayawada, and 2M Minimart stores at Nagpur, Trivandrum and Bhopal airports. ADS Creative Space has
   designed 34 RARE PLANET stores.
 thumbnail: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg
 hero_image: /images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg
 order: 1
 category: Retail Interior
-location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag, Vijayawada & more
+location: Pan India – Secunderabad, Srinagar, Ayodhya, Nagpur, Trivandrum, Ranchi, Vizag, Vijayawada, Bhopal & more
 area: ""
 year: "2024"
 style: Contemporary Retail
@@ -110,7 +110,7 @@ highlights:
   - title: Part of 34 RARE PLANET Stores
     text: One of 34 RARE PLANET souvenir stores designed by ADS Creative Space.
   - title: Heritage & Airport Retail
-    text: Stores at Rashtrapati Nilayam and at eight airports across India, from Srinagar to Trivandrum.
+    text: Stores at Rashtrapati Nilayam and at nine airports across India, from Srinagar to Trivandrum.
   - title: Multiple Brands
     text: Stores for RARE PLANET and its convenience brand, 2M Minimart.
   - title: Modular Display Shelving
@@ -166,6 +166,10 @@ gallery:
     alt: RARE PLANET Vijayawada Airport store front
   - image: /images/uploads/rare-planet-vijayawada-airport-interior-lit-shelving-track-lights.jpg
     alt: RARE PLANET Vijayawada Airport store interior with lit shelving and track lights
+  - image: /images/uploads/2m-minimart-bhopal-airport-store-front-yellow-fascia-gondola.jpg
+    alt: 2M Minimart Bhopal Airport store front with yellow icon-printed fascia
+  - image: /images/uploads/2m-minimart-bhopal-airport-interior-lit-shelving-gondola-chiller.jpg
+    alt: 2M Minimart Bhopal Airport interior with lit shelving, gondola and chiller
 seo:
   meta_title: RARE PLANET Souvenir Store Design | ADS Creative Space
   meta_description: Retail store design for RARE PLANET and 2M Minimart, from Rashtrapati Nilayam
@@ -191,4 +195,6 @@ At Vizag Airport, copper jaali panels and a softly lit paisley back wall frame b
 
 At Vijayawada Airport, a deep, narrow unit is organised around one central aisle, with brass jaali pillars at the entrance, lit shelving along both walls and glass display units down the middle.
 
-These are eight of the 34 RARE PLANET stores designed by ADS Creative Space.
+At Bhopal Airport, a third 2M Minimart pairs a backlit yellow icon fascia with warm timber shelving, black uprights with LED strips, a slatted gondola and a drinks chiller.
+
+These are nine of the 34 RARE PLANET stores designed by ADS Creative Space.
