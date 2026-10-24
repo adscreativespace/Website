@@ -3,7 +3,7 @@ title: Manna Residence | Bedroom Interiors
 subtitle: Sage Master Bedroom & Blue Study Bedroom
 description: Two contemporary bedrooms for the Manna residence in Balurghat, a soft sage master bedroom with peacock wallpaper and a custom window seat, and a calm blue-and-white bedroom with a built-in study, gold leaf wall art and botanical Roman blinds.
 thumbnail: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg
-hero_image: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard.jpg
+hero_image: /images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-hero.jpg
 category: Residential Interior
 location: Balurghat, West Bengal
 area: 350 sq.ft.

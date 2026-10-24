@@ -6,7 +6,7 @@ description: A 2,500 sq.ft. complete home interior in Balurghat, designed as one
   feature wall, glass-block partitions, a calm master suite, a playful kids' room and two
   distinctly styled bathrooms.
 thumbnail: /images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks-web.jpg
-hero_image: /images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks.jpg
+hero_image: /images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks-hero.jpg
 order: 2
 category: Residential Interior
 location: Balurghat, West Bengal

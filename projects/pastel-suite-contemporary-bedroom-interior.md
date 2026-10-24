@@ -3,7 +3,7 @@ title: The Pastel Suite | Contemporary Bedroom Interior
 subtitle: Multi-Zone Bedroom with Lounge, Study & Walk-in Dressing
 description: A bedroom suite that holds four functions in one room. A sleeping area, lounge nook, study and walk-in dressing zone are separated by light and material rather than walls, in a soft palette of powder blue, warm white and concrete grey with rose-gold and brass details.
 thumbnail: /images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg
-hero_image: /images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition.jpg
+hero_image: /images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-hero.jpg
 order: 4
 category: Residential Interior
 location: High School para, Gangarampur
