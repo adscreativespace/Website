@@ -10,7 +10,7 @@ order: 10
 category: Residential Interior
 location: Kardaha, West Bengal
 area: 1500 sq.ft.
-year: "2023"
+year: "2024"
 style: Contemporary Classic
 client: Private Residence
 about_image: /images/uploads/kardaha-residence-entry-passage-wainscot-console-chevron-doors.jpg
