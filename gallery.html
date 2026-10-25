@@ -7,6 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gal-card img { cursor: zoom-in; }
+        .gal-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #c59d5f; text-decoration: none; transition: gap .25s ease, color .25s ease; }
+        .gal-link:hover, .gal-link:focus-visible { gap: 12px; color: #111; }
+        .lb { position: fixed; inset: 0; z-index: 10000; background: rgba(10,10,10,0.95); display: none; align-items: center; justify-content: center; flex-direction: column; touch-action: pan-y; }
+        .lb.open { display: flex; }
+        .lb-img { max-width: 92vw; max-height: 78vh; object-fit: contain; border-radius: 4px; user-select: none; -webkit-user-drag: none; }
+        .lb-cap { color: #ddd; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; margin-top: 14px; text-align: center; max-width: 80vw; line-height: 1.5; }
+        .lb-proj { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 10px 22px; border: 1px solid #c59d5f; border-radius: 30px; color: #fff; background: rgba(197,157,95,0.15); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+        .lb-proj:hover, .lb-proj:focus-visible { background: #c59d5f; outline: none; }
+        .lb-count { position: absolute; top: 22px; left: 24px; color: #aaa; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 1px; }
+        .lb-btn { position: absolute; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+        .lb-btn:hover, .lb-btn:focus-visible { background: rgba(196,155,92,0.85); outline: none; }
+        .lb-close { top: 16px; right: 18px; }
+        .lb-prev { left: 18px; top: 50%; transform: translateY(-50%); }
+        .lb-next { right: 18px; top: 50%; transform: translateY(-50%); }
+        @media (max-width: 768px) {
+            .lb-prev, .lb-next { top: auto; bottom: 20px; transform: none; }
+            .lb-prev { left: calc(50% - 60px); } .lb-next { right: calc(50% - 60px); }
+            .lb-img { max-height: 62vh; }
+        }
+    </style>
 </head>
 <body>
 
@@ -65,543 +87,543 @@
     <section class="gallery-new" id="galleryGrid">
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg" alt="Rashtrapati Nilayam Souvenir Shop – RARE PLANET" loading="lazy">
+            <img src="images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg" data-full="images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day.jpg" tabindex="0" role="button" alt="Rashtrapati Nilayam Souvenir Shop – RARE PLANET" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rashtrapati Nilayam Souvenir Shop</h3>
                     <p>RARE PLANET store, inaugurated by the President of India.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View Rashtrapati Nilayam Souvenir Shop project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View Rashtrapati Nilayam Souvenir Shop project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch-web.jpg" alt="Dey Sarkar Residence – Foyer" loading="lazy">
+            <img src="images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch-web.jpg" data-full="images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch.jpg" tabindex="0" role="button" alt="Dey Sarkar Residence – Foyer" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Dey Sarkar Residence – Foyer</h3>
                     <p>Water wall, vertical garden and timber arched portal.</p>
+                    <a href="project.html?slug=dey-sarkar-residence-balurghat" class="gal-link" aria-label="View Dey Sarkar Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=dey-sarkar-residence-balurghat" class="proj-arrow" aria-label="View Dey Sarkar Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg" alt="Rudrani Regency – Hotel Façade" loading="lazy">
+            <img src="images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg" data-full="images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg" tabindex="0" role="button" alt="Rudrani Regency – Hotel Façade" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rudrani Regency – Hotel Façade</h3>
                     <p>Sculptural curved façade for a G+5 hotel in Gangarampur.</p>
+                    <a href="project.html?slug=rudrani-regency" class="gal-link" aria-label="View Rudrani Regency project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rudrani-regency" class="proj-arrow" aria-label="View Rudrani Regency project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks-web.jpg" alt="Agarwal Residence – Living Room" loading="lazy">
+            <img src="images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks-web.jpg" data-full="images/uploads/agarwal-residence-living-sofa-wall-brass-lattice-glass-blocks.jpg" tabindex="0" role="button" alt="Agarwal Residence – Living Room" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Agarwal Residence – Living Room</h3>
                     <p>Brass lattice wall and aqua glass-block partition.</p>
+                    <a href="project.html?slug=agarwal-residence-balurghat" class="gal-link" aria-label="View Agarwal Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=agarwal-residence-balurghat" class="proj-arrow" aria-label="View Agarwal Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg" alt="The Pastel Suite – Bedroom" loading="lazy">
+            <img src="images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition-web.jpg" data-full="images/uploads/pastel-suite-bedroom-rose-gold-fluted-glass-partition.jpg" tabindex="0" role="button" alt="The Pastel Suite – Bedroom" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>The Pastel Suite – Bedroom</h3>
                     <p>Rose-gold fluted-glass partition zoning a bedroom suite.</p>
+                    <a href="project.html?slug=pastel-suite-contemporary-bedroom-interior" class="gal-link" aria-label="View The Pastel Suite project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=pastel-suite-contemporary-bedroom-interior" class="proj-arrow" aria-label="View The Pastel Suite project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/rudrani-regency-reception-desk-signage-wall-web.jpg" alt="Rudrani Regency – Reception" loading="lazy">
+            <img src="images/uploads/rudrani-regency-reception-desk-signage-wall-web.jpg" data-full="images/uploads/rudrani-regency-reception-desk-signage-wall.jpg" tabindex="0" role="button" alt="Rudrani Regency – Reception" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rudrani Regency – Reception</h3>
                     <p>Curved ivory desk with wood slats and a signature brand wall.</p>
+                    <a href="project.html?slug=rudrani-regency" class="gal-link" aria-label="View Rudrani Regency project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rudrani-regency" class="proj-arrow" aria-label="View Rudrani Regency project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/dey-sarkar-residence-formal-living-curved-sofa-chandelier-fan.jpg" alt="Dey Sarkar Residence – Formal Living" loading="lazy">
+            <img src="images/uploads/dey-sarkar-residence-formal-living-curved-sofa-chandelier-fan.jpg" data-full="images/uploads/dey-sarkar-residence-formal-living-curved-sofa-chandelier-fan.jpg" tabindex="0" role="button" alt="Dey Sarkar Residence – Formal Living" loading="lazy">
             <span class="proj-tag">INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Dey Sarkar Residence – Formal Living</h3>
                     <p>Curved sofa, damask wall and teal chandelier fan.</p>
+                    <a href="project.html?slug=dey-sarkar-residence-balurghat" class="gal-link" aria-label="View Dey Sarkar Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=dey-sarkar-residence-balurghat" class="proj-arrow" aria-label="View Dey Sarkar Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/riyas-makeover-parlour-arched-mirror-styling-stations-web.jpg" alt="Riyas Makeover – Parlour" loading="lazy">
+            <img src="images/uploads/riyas-makeover-parlour-arched-mirror-styling-stations-web.jpg" data-full="images/uploads/riyas-makeover-parlour-arched-mirror-styling-stations.jpg" tabindex="0" role="button" alt="Riyas Makeover – Parlour" loading="lazy">
             <span class="proj-tag">INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Riyas Makeover – Parlour</h3>
                     <p>Arched styling mirrors with backlit product niches.</p>
+                    <a href="project.html?slug=riyas-makeover-parlour-kaliaganj" class="gal-link" aria-label="View Riyas Makeover project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=riyas-makeover-parlour-kaliaganj" class="proj-arrow" aria-label="View Riyas Makeover project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/rudrani-regency-banquet-hall-onyx-columns-web.jpg" alt="Rudrani Regency – Banquet Hall" loading="lazy">
+            <img src="images/uploads/rudrani-regency-banquet-hall-onyx-columns-web.jpg" data-full="images/uploads/rudrani-regency-banquet-hall-onyx-columns.jpg" tabindex="0" role="button" alt="Rudrani Regency – Banquet Hall" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rudrani Regency – Banquet Hall</h3>
                     <p>Backlit onyx columns and circular ceiling features.</p>
+                    <a href="project.html?slug=rudrani-regency" class="gal-link" aria-label="View Rudrani Regency project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rudrani-regency" class="proj-arrow" aria-label="View Rudrani Regency project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/dey-sarkar-residence-master-bedroom-relief-wall-side-view.jpg" alt="Dey Sarkar Residence – Master Bedroom" loading="lazy">
+            <img src="images/uploads/dey-sarkar-residence-master-bedroom-relief-wall-side-view.jpg" data-full="images/uploads/dey-sarkar-residence-master-bedroom-relief-wall-side-view.jpg" tabindex="0" role="button" alt="Dey Sarkar Residence – Master Bedroom" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Dey Sarkar Residence – Master Bedroom</h3>
                     <p>Backlit relief wall under a walnut wave ceiling.</p>
+                    <a href="project.html?slug=dey-sarkar-residence-balurghat" class="gal-link" aria-label="View Dey Sarkar Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=dey-sarkar-residence-balurghat" class="proj-arrow" aria-label="View Dey Sarkar Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/pastel-suite-boucle-loveseat-marble-table-relief-art-web.jpg" alt="The Pastel Suite – Lounge Nook" loading="lazy">
+            <img src="images/uploads/pastel-suite-boucle-loveseat-marble-table-relief-art-web.jpg" data-full="images/uploads/pastel-suite-boucle-loveseat-marble-table-relief-art.jpg" tabindex="0" role="button" alt="The Pastel Suite – Lounge Nook" loading="lazy">
             <span class="proj-tag">INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>The Pastel Suite – Lounge Nook</h3>
                     <p>Bouclé loveseat under a backlit sculptural relief.</p>
+                    <a href="project.html?slug=pastel-suite-contemporary-bedroom-interior" class="gal-link" aria-label="View The Pastel Suite project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=pastel-suite-contemporary-bedroom-interior" class="proj-arrow" aria-label="View The Pastel Suite project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/hotel-delite-entrance-staircase-brass-bird-wall-web.jpg" alt="Hotel Delite – Entrance Staircase" loading="lazy">
+            <img src="images/uploads/hotel-delite-entrance-staircase-brass-bird-wall-web.jpg" data-full="images/uploads/hotel-delite-entrance-staircase-brass-bird-wall.jpg" tabindex="0" role="button" alt="Hotel Delite – Entrance Staircase" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Hotel Delite – Entrance Staircase</h3>
                     <p>Backlit textured wall with brass bird sculptures.</p>
+                    <a href="project.html?slug=hotel-delite-restaurant-cum-bar-gangarampur" class="gal-link" aria-label="View Hotel Delite project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=hotel-delite-restaurant-cum-bar-gangarampur" class="proj-arrow" aria-label="View Hotel Delite project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/shilbhadra-residence-g-plus-2-three-quarter-front-view-web.jpg" alt="Shilbhadra Residence – G+2 Elevation" loading="lazy">
+            <img src="images/uploads/shilbhadra-residence-g-plus-2-three-quarter-front-view-web.jpg" data-full="images/uploads/shilbhadra-residence-g-plus-2-three-quarter-front-view.jpg" tabindex="0" role="button" alt="Shilbhadra Residence – G+2 Elevation" loading="lazy">
             <span class="proj-tag">ARCHITECTURE</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Shilbhadra Residence – Kishanganj</h3>
                     <p>G+2 home with rooftop lounge and second-floor pool.</p>
+                    <a href="project.html?slug=shilbhadra-residence-kishanganj" class="gal-link" aria-label="View Shilbhadra Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=shilbhadra-residence-kishanganj" class="proj-arrow" aria-label="View Shilbhadra Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="architecture">
-            <img src="images/uploads/chalantika-temple-gangarampur-front-elevation-twin-stairs-pietra-dura-web.jpg" alt="Chalantika Matri Mandir – Gangarampur" loading="lazy">
+            <img src="images/uploads/chalantika-temple-gangarampur-front-elevation-twin-stairs-pietra-dura-web.jpg" data-full="images/uploads/chalantika-temple-gangarampur-front-elevation-twin-stairs-pietra-dura.jpg" tabindex="0" role="button" alt="Chalantika Matri Mandir – Gangarampur" loading="lazy">
             <span class="proj-tag">ARCHITECTURE</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Chalantika Matri Mandir – Gangarampur</h3>
                     <p>Five gilded shikharas, twin stairs and pietra dura inlay.</p>
+                    <a href="project.html?slug=chalantika-temple-gangarampur" class="gal-link" aria-label="View Chalantika Matri Mandir project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=chalantika-temple-gangarampur" class="proj-arrow" aria-label="View Chalantika Matri Mandir project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/rudrani-regency-restaurant-geometric-wood-ceiling-web.jpg" alt="Rudrani Regency – Restaurant" loading="lazy">
+            <img src="images/uploads/rudrani-regency-restaurant-geometric-wood-ceiling-web.jpg" data-full="images/uploads/rudrani-regency-restaurant-geometric-wood-ceiling.jpg" tabindex="0" role="button" alt="Rudrani Regency – Restaurant" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rudrani Regency – Restaurant</h3>
                     <p>Geometric wood ceiling with warm, layered lighting.</p>
+                    <a href="project.html?slug=rudrani-regency" class="gal-link" aria-label="View Rudrani Regency project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rudrani-regency" class="proj-arrow" aria-label="View Rudrani Regency project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/agarwal-residence-kids-room-balloon-wallpaper-cloud-wall.jpg" alt="Agarwal Residence – Kids' Room" loading="lazy">
+            <img src="images/uploads/agarwal-residence-kids-room-balloon-wallpaper-cloud-wall.jpg" data-full="images/uploads/agarwal-residence-kids-room-balloon-wallpaper-cloud-wall.jpg" tabindex="0" role="button" alt="Agarwal Residence – Kids' Room" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Agarwal Residence – Kids' Room</h3>
                     <p>Balloon wallpaper, backlit clouds and a moon panel.</p>
+                    <a href="project.html?slug=agarwal-residence-balurghat" class="gal-link" aria-label="View Agarwal Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=agarwal-residence-balurghat" class="proj-arrow" aria-label="View Agarwal Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/riyas-makeover-makeup-studio-hollywood-mirrors-peacock-mural-web.jpg" alt="Riyas Makeover – Makeup Studio" loading="lazy">
+            <img src="images/uploads/riyas-makeover-makeup-studio-hollywood-mirrors-peacock-mural-web.jpg" data-full="images/uploads/riyas-makeover-makeup-studio-hollywood-mirrors-peacock-mural.jpg" tabindex="0" role="button" alt="Riyas Makeover – Makeup Studio" loading="lazy">
             <span class="proj-tag">INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Riyas Makeover – Makeup Studio</h3>
                     <p>Hollywood mirrors, velvet chairs and a peacock mural.</p>
+                    <a href="project.html?slug=riyas-makeover-parlour-kaliaganj" class="gal-link" aria-label="View Riyas Makeover project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=riyas-makeover-parlour-kaliaganj" class="proj-arrow" aria-label="View Riyas Makeover project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-mumbai-airport-carved-gateway-kiosk-front-view.jpg" alt="RARE PLANET – Mumbai Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-mumbai-airport-carved-gateway-kiosk-front-view.jpg" data-full="images/uploads/rare-planet-mumbai-airport-carved-gateway-kiosk-front-view.jpg" tabindex="0" role="button" alt="RARE PLANET – Mumbai Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Mumbai Airport</h3>
                     <p>Carved timber gateway kiosk with heritage display cabinets.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/pastel-suite-walk-in-dressing-organic-mirror-vanity-web.jpg" alt="The Pastel Suite – Dressing" loading="lazy">
+            <img src="images/uploads/pastel-suite-walk-in-dressing-organic-mirror-vanity-web.jpg" data-full="images/uploads/pastel-suite-walk-in-dressing-organic-mirror-vanity.jpg" tabindex="0" role="button" alt="The Pastel Suite – Dressing" loading="lazy">
             <span class="proj-tag">INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>The Pastel Suite – Dressing</h3>
                     <p>Organic mirror, curved vanity and fluted glass storage.</p>
+                    <a href="project.html?slug=pastel-suite-contemporary-bedroom-interior" class="gal-link" aria-label="View The Pastel Suite project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=pastel-suite-contemporary-bedroom-interior" class="proj-arrow" aria-label="View The Pastel Suite project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/kardaha-residence-dining-teal-glass-chandelier-crockery-unit-web.jpg" alt="Kardaha Residence – Dining" loading="lazy">
+            <img src="images/uploads/kardaha-residence-dining-teal-glass-chandelier-crockery-unit-web.jpg" data-full="images/uploads/kardaha-residence-dining-teal-glass-chandelier-crockery-unit.jpg" tabindex="0" role="button" alt="Kardaha Residence – Dining" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Kardaha Residence – Dining</h3>
                     <p>Teal glass chandelier over an open-plan dining area.</p>
+                    <a href="project.html?slug=kardaha-residence-apartment-interior" class="gal-link" aria-label="View Kardaha Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=kardaha-residence-apartment-interior" class="proj-arrow" aria-label="View Kardaha Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/rudrani-regency-rooftop-dining-pergola-night-web.jpg" alt="Rudrani Regency – Rooftop Dining" loading="lazy">
+            <img src="images/uploads/rudrani-regency-rooftop-dining-pergola-night-web.jpg" data-full="images/uploads/rudrani-regency-rooftop-dining-pergola-night.jpg" tabindex="0" role="button" alt="Rudrani Regency – Rooftop Dining" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rudrani Regency – Rooftop Dining</h3>
                     <p>Timber pergolas, stone walls and laser-cut screens.</p>
+                    <a href="project.html?slug=rudrani-regency" class="gal-link" aria-label="View Rudrani Regency project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rudrani-regency" class="proj-arrow" aria-label="View Rudrani Regency project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg" alt="Manna Residence – Sage Master Bedroom" loading="lazy">
+            <img src="images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg" data-full="images/uploads/sage-master-bedroom-peacock-wallpaper-headboard.jpg" tabindex="0" role="button" alt="Manna Residence – Sage Master Bedroom" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Manna Residence – Sage Master Bedroom</h3>
                     <p>Peacock wallpaper, upholstered headboard and fitted wardrobe.</p>
+                    <a href="project.html?slug=contemporary-master-bedroom-soft-sage-luxury-interior" class="gal-link" aria-label="View Manna Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=contemporary-master-bedroom-soft-sage-luxury-interior" class="proj-arrow" aria-label="View Manna Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="healthcare">
-            <img src="images/uploads/ghosh-healthcare-ct-scan-room-three-quarter-view-control-window-web.jpg" alt="Ghosh Healthcare – CT Scan Suite" loading="lazy">
+            <img src="images/uploads/ghosh-healthcare-ct-scan-room-three-quarter-view-control-window-web.jpg" data-full="images/uploads/ghosh-healthcare-ct-scan-room-three-quarter-view-control-window.jpg" tabindex="0" role="button" alt="Ghosh Healthcare – CT Scan Suite" loading="lazy">
             <span class="proj-tag">HEALTHCARE</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Ghosh Healthcare – CT Scan Suite</h3>
                     <p>Patient-calming beach mural and control room viewing window.</p>
+                    <a href="project.html?slug=ghosh-healthcare-ct-scan-suite-gangarampur" class="gal-link" aria-label="View CT Scan Suite project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=ghosh-healthcare-ct-scan-suite-gangarampur" class="proj-arrow" aria-label="View CT Scan Suite project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/shiva-temple-sanctum-blue-onyx-om-niche-shivling-web.jpg" alt="Shiva Temple – Luxury Home Temple" loading="lazy">
+            <img src="images/uploads/shiva-temple-sanctum-blue-onyx-om-niche-shivling-web.jpg" data-full="images/uploads/shiva-temple-sanctum-blue-onyx-om-niche-shivling.jpg" tabindex="0" role="button" alt="Shiva Temple – Luxury Home Temple" loading="lazy">
             <span class="proj-tag">INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Shiva Temple – Luxury Home Temple</h3>
                     <p>Backlit blue onyx, travertine and a lotus cut-out door.</p>
+                    <a href="project.html?slug=shiva-temple-luxury-home-temple-gangarampur" class="gal-link" aria-label="View Shiva Temple project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=shiva-temple-luxury-home-temple-gangarampur" class="proj-arrow" aria-label="View Shiva Temple project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/hotel-delite-lobby-wood-portal-reception-web.jpg" alt="Hotel Delite – Lobby" loading="lazy">
+            <img src="images/uploads/hotel-delite-lobby-wood-portal-reception-web.jpg" data-full="images/uploads/hotel-delite-lobby-wood-portal-reception.jpg" tabindex="0" role="button" alt="Hotel Delite – Lobby" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Hotel Delite – Lobby</h3>
                     <p>Rounded wood portal leading to the reception.</p>
+                    <a href="project.html?slug=hotel-delite-restaurant-cum-bar-gangarampur" class="gal-link" aria-label="View Hotel Delite project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=hotel-delite-restaurant-cum-bar-gangarampur" class="proj-arrow" aria-label="View Hotel Delite project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/rudrani-regency-suite-room-bed-feature-wall-web.jpg" alt="Rudrani Regency – Suite Room" loading="lazy">
+            <img src="images/uploads/rudrani-regency-suite-room-bed-feature-wall-web.jpg" data-full="images/uploads/rudrani-regency-suite-room-bed-feature-wall.jpg" tabindex="0" role="button" alt="Rudrani Regency – Suite Room" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Rudrani Regency – Suite Room</h3>
                     <p>Dark wood framing, pendant lights and an accent wall.</p>
+                    <a href="project.html?slug=rudrani-regency" class="gal-link" aria-label="View Rudrani Regency project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rudrani-regency" class="proj-arrow" aria-label="View Rudrani Regency project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/saha-residence-elevation-three-quarter-front-view-web.jpg" alt="Saha Residence – Elevation" loading="lazy">
+            <img src="images/uploads/saha-residence-elevation-three-quarter-front-view-web.jpg" data-full="images/uploads/saha-residence-elevation-three-quarter-front-view.jpg" tabindex="0" role="button" alt="Saha Residence – Elevation" loading="lazy">
             <span class="proj-tag">ARCHITECTURE</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Saha Residence – Elevation</h3>
                     <p>Horizontal cladding, glazed stair core and steel pergola.</p>
+                    <a href="project.html?slug=saha-residence-gangarampur" class="gal-link" aria-label="View Saha Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=saha-residence-gangarampur" class="proj-arrow" aria-label="View Saha Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
                 <div class="gal-card" data-category="residential">
-            <img src="images/uploads/nandi-residence-kaliaganj-exterior-elevation-design-concept-web.jpg" alt="Nandi Residence – Kaliaganj" loading="lazy">
+            <img src="images/uploads/nandi-residence-kaliaganj-exterior-elevation-design-concept-web.jpg" data-full="images/uploads/nandi-residence-kaliaganj-exterior-elevation-design-concept.jpg" tabindex="0" role="button" alt="Nandi Residence – Kaliaganj" loading="lazy">
             <span class="proj-tag">ARCHITECTURE</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Nandi Residence – Kaliaganj</h3>
                     <p>G+2 home: planning, structure and elevation concept.</p>
+                    <a href="project.html?slug=nandi-residence-kaliaganj" class="gal-link" aria-label="View Nandi Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=nandi-residence-kaliaganj" class="proj-arrow" aria-label="View Nandi Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/niresh-paul-living-room-sofa-wall-floral-art-mandir-web.jpg" alt="Contemporary Living Room – Gangarampur" loading="lazy">
+            <img src="images/uploads/niresh-paul-living-room-sofa-wall-floral-art-mandir-web.jpg" data-full="images/uploads/niresh-paul-living-room-sofa-wall-floral-art-mandir.jpg" tabindex="0" role="button" alt="Contemporary Living Room – Gangarampur" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Contemporary Living Room – Gangarampur</h3>
                     <p>Chevron wood, marble walls and a backlit pooja niche.</p>
+                    <a href="project.html?slug=living-room-niresh-paul-gangarampur" class="gal-link" aria-label="View living room project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=living-room-niresh-paul-gangarampur" class="proj-arrow" aria-label="View living room project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/manna-residence-blue-bedroom-gold-leaf-headboard-study-web.jpg" alt="Manna Residence – Blue Study Bedroom" loading="lazy">
+            <img src="images/uploads/manna-residence-blue-bedroom-gold-leaf-headboard-study-web.jpg" data-full="images/uploads/manna-residence-blue-bedroom-gold-leaf-headboard-study.jpg" tabindex="0" role="button" alt="Manna Residence – Blue Study Bedroom" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Manna Residence – Blue Study Bedroom</h3>
                     <p>Gold leaf wall art, tufted headboard and built-in study.</p>
+                    <a href="project.html?slug=contemporary-master-bedroom-soft-sage-luxury-interior" class="gal-link" aria-label="View Manna Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=contemporary-master-bedroom-soft-sage-luxury-interior" class="proj-arrow" aria-label="View Manna Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg" alt="Ghosh Diagnostics – Executive Office" loading="lazy">
+            <img src="images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg" data-full="images/uploads/ghosh-diagnostics-office-consultation-desk-lounge-seating.jpg" tabindex="0" role="button" alt="Ghosh Diagnostics – Executive Office" loading="lazy">
             <span class="proj-tag">OFFICE INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Ghosh Diagnostics – Executive Office</h3>
                     <p>Consultation desk, lounge seating and track lighting.</p>
+                    <a href="project.html?slug=executive-office-for-ghosh-diagnostics" class="gal-link" aria-label="View Ghosh Diagnostics project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=executive-office-for-ghosh-diagnostics" class="proj-arrow" aria-label="View Ghosh Diagnostics project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="residential">
-            <img src="images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view-web.jpg" alt="Banerjee Residence – Teal Study Bedroom" loading="lazy">
+            <img src="images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view-web.jpg" data-full="images/uploads/banerjee-bedroom-teal-headboard-study-three-quarter-view.jpg" tabindex="0" role="button" alt="Banerjee Residence – Teal Study Bedroom" loading="lazy">
             <span class="proj-tag">RESIDENTIAL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Banerjee Residence – Teal Study Bedroom</h3>
                     <p>Wall-to-wall headboard with built-in wardrobe and study.</p>
+                    <a href="project.html?slug=banerjee-bedroom-sukdebpur" class="gal-link" aria-label="View Banerjee Residence project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=banerjee-bedroom-sukdebpur" class="proj-arrow" aria-label="View Banerjee Residence project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-vijayawada-airport-store-front-brass-jaali-timber-floor.jpg" alt="RARE PLANET – Vijayawada Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-vijayawada-airport-store-front-brass-jaali-timber-floor.jpg" data-full="images/uploads/rare-planet-vijayawada-airport-store-front-brass-jaali-timber-floor.jpg" tabindex="0" role="button" alt="RARE PLANET – Vijayawada Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Vijayawada Airport</h3>
                     <p>Brass jaali pillars and a single lit aisle.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="hospitality">
-            <img src="images/uploads/babu-culture-cafe-dining-hall-gramophone-niche-photo-collage-web.jpg" alt="Bengali Babu Culture Café – Concept" loading="lazy">
+            <img src="images/uploads/babu-culture-cafe-dining-hall-gramophone-niche-photo-collage-web.jpg" data-full="images/uploads/babu-culture-cafe-dining-hall-gramophone-niche-photo-collage.jpg" tabindex="0" role="button" alt="Bengali Babu Culture Café – Concept" loading="lazy">
             <span class="proj-tag">HOSPITALITY</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Bengali Babu Culture Café – Concept</h3>
                     <p>Gramophone niche, old Calcutta photographs and folk mural.</p>
+                    <a href="project.html?slug=bengali-babu-culture-themed-cafe-concept" class="gal-link" aria-label="View Babu Culture Café project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=bengali-babu-culture-themed-cafe-concept" class="proj-arrow" aria-label="View Babu Culture Café project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg" alt="RARE PLANET – Ranchi Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg" data-full="images/uploads/rare-planet-ranchi-airport-kiosk-interior-copper-jaali-pillars-shelving.jpg" tabindex="0" role="button" alt="RARE PLANET – Ranchi Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Ranchi Airport</h3>
                     <p>Copper laser-cut jaali pillars framing the kiosk.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/ghosh-diagnostics-admin-workspace-display-shelving.jpg" alt="Ghosh Diagnostics – Admin Workspace" loading="lazy">
+            <img src="images/uploads/ghosh-diagnostics-admin-workspace-display-shelving.jpg" data-full="images/uploads/ghosh-diagnostics-admin-workspace-display-shelving.jpg" tabindex="0" role="button" alt="Ghosh Diagnostics – Admin Workspace" loading="lazy">
             <span class="proj-tag">OFFICE INTERIOR</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>Ghosh Diagnostics – Admin Workspace</h3>
                     <p>Integrated file storage and display niches.</p>
+                    <a href="project.html?slug=executive-office-for-ghosh-diagnostics" class="gal-link" aria-label="View Ghosh Diagnostics project">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=executive-office-for-ghosh-diagnostics" class="proj-arrow" aria-label="View Ghosh Diagnostics project"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-pune-airport-store-front-timber-fascia-jaali-pillars.jpg" alt="RARE PLANET – Pune Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-pune-airport-store-front-timber-fascia-jaali-pillars.jpg" data-full="images/uploads/rare-planet-pune-airport-store-front-timber-fascia-jaali-pillars.jpg" tabindex="0" role="button" alt="RARE PLANET – Pune Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Pune Airport</h3>
                     <p>Backlit timber fascia and timber jaali pillars.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-srinagar-airport-shopfront-elevation-jaali-pillars.jpg" alt="RARE PLANET – Srinagar Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-srinagar-airport-shopfront-elevation-jaali-pillars.jpg" data-full="images/uploads/rare-planet-srinagar-airport-shopfront-elevation-jaali-pillars.jpg" tabindex="0" role="button" alt="RARE PLANET – Srinagar Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Srinagar Airport</h3>
                     <p>Blue portal with jaali pillars and lit timber shelving.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/2m-minimart-nagpur-airport-interior-teal-shelving-gondola-counter.jpg" alt="2M Minimart – Nagpur Airport" loading="lazy">
+            <img src="images/uploads/2m-minimart-nagpur-airport-interior-teal-shelving-gondola-counter.jpg" data-full="images/uploads/2m-minimart-nagpur-airport-interior-teal-shelving-gondola-counter.jpg" tabindex="0" role="button" alt="2M Minimart – Nagpur Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>2M Minimart – Nagpur Airport</h3>
                     <p>Teal and white convenience store for RARE PLANET.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/2m-minimart-trivandrum-airport-three-quarter-view-lightbox-sign-chiller.jpg" alt="2M Minimart – Trivandrum Airport" loading="lazy">
+            <img src="images/uploads/2m-minimart-trivandrum-airport-three-quarter-view-lightbox-sign-chiller.jpg" data-full="images/uploads/2m-minimart-trivandrum-airport-three-quarter-view-lightbox-sign-chiller.jpg" tabindex="0" role="button" alt="2M Minimart – Trivandrum Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>2M Minimart – Trivandrum Airport</h3>
                     <p>Yellow portal, green shelving and a lightbox sign.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-varanasi-airport-store-front-light-oak-copper-jaali.jpg" alt="RARE PLANET – Varanasi Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-varanasi-airport-store-front-light-oak-copper-jaali.jpg" data-full="images/uploads/rare-planet-varanasi-airport-store-front-light-oak-copper-jaali.jpg" tabindex="0" role="button" alt="RARE PLANET – Varanasi Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Varanasi Airport</h3>
                     <p>Light oak shelving framed by copper jaali pillars.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-ayodhya-airport-kiosk-3d-view-ram-artwork.jpg" alt="RARE PLANET – Ayodhya Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-ayodhya-airport-kiosk-3d-view-ram-artwork.jpg" data-full="images/uploads/rare-planet-ayodhya-airport-kiosk-3d-view-ram-artwork.jpg" tabindex="0" role="button" alt="RARE PLANET – Ayodhya Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Ayodhya Airport</h3>
                     <p>Themed kiosk with timber fascia and Lord Rama artwork.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-mangalore-airport-store-front-copper-jaali-patterned-walls.jpg" alt="RARE PLANET – Mangalore Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-mangalore-airport-store-front-copper-jaali-patterned-walls.jpg" data-full="images/uploads/rare-planet-mangalore-airport-store-front-copper-jaali-patterned-walls.jpg" tabindex="0" role="button" alt="RARE PLANET – Mangalore Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Mangalore Airport</h3>
                     <p>Copper jaali pillars and pale timber shelving.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/rare-planet-vizag-airport-store-front-copper-jaali-paisley-backing.jpg" alt="RARE PLANET – Vizag Airport" loading="lazy">
+            <img src="images/uploads/rare-planet-vizag-airport-store-front-copper-jaali-paisley-backing.jpg" data-full="images/uploads/rare-planet-vizag-airport-store-front-copper-jaali-paisley-backing.jpg" tabindex="0" role="button" alt="RARE PLANET – Vizag Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>RARE PLANET – Vizag Airport</h3>
                     <p>Copper jaali panels and a lit paisley back wall.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="gal-card" data-category="interior">
-            <img src="images/uploads/2m-minimart-bhopal-airport-interior-lit-shelving-gondola-chiller.jpg" alt="2M Minimart – Bhopal Airport" loading="lazy">
+            <img src="images/uploads/2m-minimart-bhopal-airport-interior-lit-shelving-gondola-chiller.jpg" data-full="images/uploads/2m-minimart-bhopal-airport-interior-lit-shelving-gondola-chiller.jpg" tabindex="0" role="button" alt="2M Minimart – Bhopal Airport" loading="lazy">
             <span class="proj-tag">RETAIL</span>
             <div class="gal-info">
                 <div class="gal-text">
                     <h3>2M Minimart – Bhopal Airport</h3>
                     <p>Warm timber shelving with LED strips and a gondola.</p>
+                    <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="gal-link" aria-label="View RARE PLANET stores">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <a href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet" class="proj-arrow" aria-label="View RARE PLANET stores"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -730,5 +752,67 @@
   });
 </script>
 
+    <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <div class="lb-count" id="lbCount"></div>
+        <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <img class="lb-img" id="lbImg" alt="">
+        <div class="lb-cap" id="lbCap"></div>
+        <a class="lb-proj" id="lbProj" href="#">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="lb-btn lb-next" id="lbNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script>
+        // Lightbox: images open on their own; "View Project" opens the project page
+        (function () {
+            const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'),
+                  cap = document.getElementById('lbCap'), cnt = document.getElementById('lbCount'),
+                  proj = document.getElementById('lbProj');
+            const allCards = Array.from(document.querySelectorAll('.gal-card'));
+            let items = [], i = 0, lastFocus = null;
+            function collect() {
+                items = allCards.filter(c => c.style.display !== 'none').map(c => {
+                    const img = c.querySelector('img'), a = c.querySelector('.gal-link'), h = c.querySelector('h3');
+                    return { card: c, src: img.dataset.full || img.src, alt: img.alt, title: h ? h.textContent : img.alt, href: a ? a.getAttribute('href') : '' };
+                });
+            }
+            function show(n) {
+                i = (n + items.length) % items.length;
+                const it = items[i];
+                lbImg.src = it.src; lbImg.alt = it.alt; cap.textContent = it.title;
+                proj.style.display = it.href ? '' : 'none'; proj.href = it.href;
+                cnt.textContent = (i + 1) + ' / ' + items.length;
+                [i - 1, i + 1].forEach(k => { const p = new Image(); p.src = items[(k + items.length) % items.length].src; });
+            }
+            function open(card) {
+                collect();
+                const n = items.findIndex(it => it.card === card);
+                lastFocus = document.activeElement; show(Math.max(0, n));
+                lb.classList.add('open'); document.body.style.overflow = 'hidden'; document.getElementById('lbClose').focus();
+            }
+            function close() { lb.classList.remove('open'); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+            allCards.forEach(card => {
+                const img = card.querySelector('img');
+                img.addEventListener('click', () => open(card));
+                img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); } });
+            });
+            document.getElementById('lbClose').onclick = close;
+            document.getElementById('lbPrev').onclick = e => { e.stopPropagation(); show(i - 1); };
+            document.getElementById('lbNext').onclick = e => { e.stopPropagation(); show(i + 1); };
+            lb.addEventListener('click', e => { if (e.target === lb) close(); });
+            document.addEventListener('keydown', e => {
+                if (!lb.classList.contains('open')) return;
+                if (e.key === 'Escape') close();
+                else if (e.key === 'ArrowLeft') show(i - 1);
+                else if (e.key === 'ArrowRight') show(i + 1);
+            });
+            let x0 = null;
+            lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+            lb.addEventListener('touchend', e => {
+                if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+                if (Math.abs(dx) > 50) show(dx < 0 ? i + 1 : i - 1);
+            });
+        })();
+    </script>
 </body>
 </html>
