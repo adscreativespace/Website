@@ -84,7 +84,7 @@ gallery:
 images: []
 seo:
   meta_title: Pastel Bedroom Suite Interior Design | ADS Creative Space
-  meta_description: A multi-zone bedroom suite with a sleeping area, lounge, study and walk-in dressing, designed by Atish Dipankar's Creative Space, West Bengal.
+  meta_description: A multi-zone bedroom suite with a sleeping area, lounge, study and walk-in dressing, designed by Atish Dipankar'S Creative Space, West Bengal.
 ---
 
 This bedroom was planned as a self-contained suite for living, working and getting ready, not just for sleeping. Instead of building solid walls, we used a rose-gold framed fluted-glass partition to divide the room. It screens the dressing zone and still lets light and views pass through.
