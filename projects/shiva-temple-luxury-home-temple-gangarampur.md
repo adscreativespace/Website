@@ -6,7 +6,7 @@ description: A 120 sq.ft. luxury home temple in Gangarampur, finished in Italian
   lotus cut-outs and bells, built around a Shivling and an arched Om niche.
 thumbnail: /images/uploads/shiva-temple-sanctum-blue-onyx-om-niche-shivling-web.jpg
 hero_image: /images/uploads/shiva-temple-sanctum-blue-onyx-om-niche-shivling-hero.jpg
-order: 16
+order: 17
 category: Residential Interior
 location: Gangarampur, West Bengal
 area: 120 sq.ft.
