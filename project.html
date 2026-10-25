@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Details | ADS Creative Space</title>
-  <meta name="description" id="meta-desc" content="Architecture and interior design project by Atish Dipankar's Creative Space, West Bengal.">
+  <title>Project | ADS Creative Space, Architect in Gangarampur</title>
+  <meta name="description" id="meta-desc" content="Architecture and interior design project by ADS Creative Space, an architecture studio in Gangarampur serving North Bengal, Bihar and all of India.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" id="meta-canonical" href="https://adscreativespace.com/projects.html">
+  <meta name="geo.region" content="IN-WB">
+  <meta name="geo.placename" content="Gangarampur, Dakshin Dinajpur, West Bengal">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ADS Creative Space">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" id="og-title" content="Project | ADS Creative Space">
+  <meta property="og:description" id="og-desc" content="Architecture and interior design project by ADS Creative Space, Gangarampur.">
+  <meta property="og:url" id="og-url" content="https://adscreativespace.com/projects.html">
+  <meta property="og:image" id="og-image" content="https://adscreativespace.com/images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#c59d5f">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -193,6 +209,7 @@
   </div>
   <div class="footer-bottom">
       <p>&copy; 2026 ADS Creative Space. All Rights Reserved.</p>
+      <p class="footer-areas">Architects &amp; interior designers serving Gangarampur, Balurghat, Malda, Raiganj, Kaliaganj, Katihar, Siliguri, North Bengal, Bihar and all of India.</p>
   </div>
 </footer>
 
@@ -307,6 +324,29 @@
         document.title = seo.meta_title || `${cur.title} | ADS Creative Space`;
         const md = document.getElementById('meta-desc');
         if (md) md.setAttribute('content', seo.meta_description || cur.description || '');
+        try {
+          const SITE = 'https://adscreativespace.com/';
+          const pageUrl = SITE + 'project.html?slug=' + encodeURIComponent(slug);
+          const ogImg = SITE + fixImg(cur.hero_image || cur.thumbnail || '');
+          const setA = (id, a, v) => { const el = document.getElementById(id); if (el && v) el.setAttribute(a, v); };
+          setA('meta-canonical', 'href', pageUrl);
+          setA('og-title', 'content', document.title);
+          setA('og-desc', 'content', seo.meta_description || cur.description || '');
+          setA('og-url', 'content', pageUrl);
+          if (cur.hero_image || cur.thumbnail) setA('og-image', 'content', ogImg);
+          const ld = document.createElement('script');
+          ld.type = 'application/ld+json';
+          ld.textContent = JSON.stringify({
+            '@context': 'https://schema.org', '@type': 'CreativeWork',
+            name: cur.title, headline: cur.subtitle || cur.title,
+            description: seo.meta_description || cur.description || '',
+            url: pageUrl, image: ogImg, genre: cur.category || undefined,
+            dateCreated: /^\d{4}$/.test(String(cur.year || '').replace(/['"]/g, '')) ? String(cur.year).replace(/['"]/g, '') : undefined,
+            locationCreated: cur.location ? { '@type': 'Place', name: cur.location } : undefined,
+            creator: { '@type': 'ProfessionalService', '@id': SITE + '#studio', name: 'ADS Creative Space' }
+          });
+          document.head.appendChild(ld);
+        } catch (e) {}
 
         const hImg = fixImg(cur.hero_image || cur.thumbnail || (cur.images?.[0]?.image || cur.images?.[0]));
         const aImg = fixImg(cur.about_image || (cur.images?.[1]?.image || cur.images?.[1]));

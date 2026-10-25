@@ -20,12 +20,14 @@ jobs:
           names = sorted(n for n in os.listdir('projects') if n.endswith('.md'))
           open('projects/index.json', 'w').write(json.dumps(names, indent=1) + '\n')
           PY
+      - name: Build sitemap
+        run: python3 scripts/build_sitemap.py
       - name: Commit if changed
         run: |
-          if ! git diff --quiet projects/index.json; then
+          if ! git diff --quiet projects/index.json sitemap.xml; then
             git config user.name "github-actions[bot]"
             git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-            git add projects/index.json
-            git commit -m "Update project index"
+            git add projects/index.json sitemap.xml
+            git commit -m "Update project index and sitemap"
             git push
           fi
