@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | ADS Creative Space</title>
+    <meta name="description" content="ADS Creative Space is a founder-led architecture, planning and interior design studio in Gangarampur, West Bengal, delivering residential, healthcare, hospitality and airport retail projects across India.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -337,6 +338,14 @@
                 margin-bottom: 30px;
             }
         }
+        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; padding-top: 26px; border-top: 1px solid #e4ddd2; }
+        .about-stats strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #c59d5f; line-height: 1.1; }
+        .about-stats span { display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: #777; margin-top: 6px; }
+        a.process-card { display: block; text-decoration: none; }
+        .process-card h4 span { display: block; font-weight: 500; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; color: #c59d5f; margin-top: 4px; }
+        .selected-all { display: inline-flex; align-items: center; gap: 8px; margin-top: 36px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #c59d5f; text-decoration: none; transition: gap .25s; }
+        .selected-all:hover { gap: 12px; color: #111; }
+        @media (max-width: 480px) { .about-stats { grid-template-columns: repeat(2, 1fr); row-gap: 20px; } }
     </style>
 </head>
 <body>
@@ -369,10 +378,10 @@
         <div class="about-hero-content">
             <span class="subtitle">ABOUT</span>
             <h1>Designing Spaces.<br>Creating Experiences.</h1>
-            <p>Based in Gangarampur, we are a team of passionate architects and designers dedicated to creating spaces that inspire.</p>
+            <p>A founder-led architecture, planning and interior design studio based in Gangarampur, West Bengal, delivering projects across India.</p>
         </div>
         <div class="about-hero-image">
-            <img src="images/uploads/sage-master-bedroom-peacock-wallpaper-headboard-web.jpg" alt="Sage master bedroom designed by ADS Creative Space">
+            <img src="images/uploads/rudrani-regency-hotel-exterior-facade-sunset.jpg" alt="Rudrani Regency hotel façade at sunset, designed by ADS Creative Space">
         </div>
     </section>
 
@@ -380,34 +389,36 @@
     <section class="philosophy-section">
         <div class="philosophy-left">
             <h2>Our Philosophy</h2>
-            <p>We believe that architecture is not just about buildings, but about the people who inhabit them.</p>
-            <p>Every project we undertake is a unique blend of our client's vision and our expertise in functional, modern design.</p>
-            <p>With years of experience in the North Bengal region, we understand the local climate, culture, and materials, allowing us to deliver sustainable and beautiful results.</p>
-            <div class="founder-sig">
-                <h4>Atish Dipankar Basak</h4>
-                <p>Founder</p>
+            <p>We believe good design starts with the people who will use a space, and only works if it can be built well, on budget and on time.</p>
+            <p>Our work covers homes, hotels, healthcare facilities, temples and airport retail stores. Each project is planned from concept to execution-ready drawings, with architecture, structure and interiors coordinated in one place.</p>
+            <p>Rooted in North Bengal, we understand the local climate, materials and craftsmanship, and bring the same rigour to projects across India.</p>
+            <div class="about-stats">
+                <div><strong>75+</strong><span>Projects</span></div>
+                <div><strong>2017</strong><span>Practising since</span></div>
+                <div><strong>13</strong><span>Airports</span></div>
+                <div><strong>5</strong><span>Sectors</span></div>
             </div>
         </div>
         <div class="philosophy-right">
             <div class="phil-card">
                 <i class="fa-regular fa-user"></i>
-                <h4>Client First</h4>
-                <p>We listen, understand and create spaces that truly reflect our clients.</p>
+                <h4>Personally Overseen</h4>
+                <p>Every project is led by the founder, from the first meeting to the final handover.</p>
             </div>
             <div class="phil-card">
-                <i class="fa-solid fa-cube"></i>
-                <h4>Functional Design</h4>
-                <p>We create beautiful spaces that are practical and efficient.</p>
+                <i class="fa-solid fa-helmet-safety"></i>
+                <h4>Architect + Engineer</h4>
+                <p>Design and structural thinking under one roof, so ideas stay buildable.</p>
             </div>
             <div class="phil-card">
-                <i class="fa-regular fa-eye"></i>
-                <h4>Timeless Aesthetics</h4>
-                <p>Our designs are elegant, enduring and made to stand the test of time.</p>
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h4>Execution-Ready Drawings</h4>
+                <p>Detailed working drawings that contractors can build from without guesswork.</p>
             </div>
             <div class="phil-card">
                 <i class="fa-solid fa-leaf"></i>
-                <h4>Sustainable Approach</h4>
-                <p>We choose materials and solutions that are environmentally responsible.</p>
+                <h4>Climate & Context</h4>
+                <p>Materials and planning suited to local weather, budgets and maintenance.</p>
             </div>
         </div>
     </section>
@@ -421,7 +432,8 @@
             <span class="subtitle">FOUNDER</span>
             <h3>Atish Dipankar Basak</h3>
             <p class="founder-title">Founder & Principal Designer</p>
-            <p>With a strong foundation in architecture, engineering and interior design, I founded ADS Creative Space with a vision to deliver thoughtful, innovative and timeless spaces. Every project is personally overseen to ensure the perfect balance of creativity, functionality and buildability.</p>
+            <p>With a foundation in architecture, civil engineering and interior design, I founded ADS Creative Space in 2020 to deliver spaces that are thoughtful, practical and built to last. Notable work includes the Rashtrapati Nilayam Souvenir Shop in Secunderabad and RARE PLANET stores at 13 airports across India.</p>
+            <p>Every project is personally overseen, with a planning assistant supporting drawings and documentation.</p>
             <div class="credentials">
                 <div class="cred-item">
                     <i class="fa-solid fa-medal"></i>
@@ -452,7 +464,7 @@
                 <div class="timeline-marker"><i class="fa-solid fa-flag"></i></div>
                 <div class="timeline-content">
                     <h4>2017</h4>
-                    <p>Started our professional journey</p>
+                    <p>Started professional practice</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -463,55 +475,56 @@
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-marker"><i class="fa-solid fa-home"></i></div>
+                <div class="timeline-marker"><i class="fa-solid fa-plane"></i></div>
                 <div class="timeline-content">
                     <h4>2021</h4>
-                    <p>Completed several landmark residential projects</p>
+                    <p>First airport retail store for RARE PLANET</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-marker"><i class="fa-solid fa-store"></i></div>
+                <div class="timeline-marker"><i class="fa-solid fa-landmark"></i></div>
                 <div class="timeline-content">
-                    <h4>2023</h4>
-                    <p>Expanded into Airport Retail & Commercial Projects</p>
+                    <h4>2024</h4>
+                    <p>Rashtrapati Nilayam Souvenir Shop, Secunderabad</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-marker"><i class="fa-solid fa-globe"></i></div>
                 <div class="timeline-content">
                     <h4>Today</h4>
-                    <p>Delivering innovative architecture & interiors across India</p>
+                    <p>75+ projects across homes, hotels, healthcare, temples and retail</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Behind the Design -->
+    <!-- Selected Work -->
     <section class="process-section">
-        <h2>Behind Every Design</h2>
+        <h2>Selected Work</h2>
         <div class="gold-line-small" style="margin: 20px auto;"></div>
         <div class="process-grid">
-            <div class="process-card">
-                <img src="images/uploads/pastel-suite-wardrobe-fluted-arch-design-display-niches-web.jpg" alt="Concept: wardrobe elevation with a fluted arch motif" loading="lazy">
-                <h4>Concept & Sketch</h4>
-            </div>
-            <div class="process-card">
-                <img src="images/uploads/pastel-suite-boucle-loveseat-marble-table-relief-art-web.jpg" alt="Material selection: bouclé, marble and brass lounge nook" loading="lazy">
-                <h4>Material Selection</h4>
-            </div>
-            <div class="process-card">
-                <img src="images/uploads/ghosh-diagnostics-admin-workstation-file-storage.jpg" alt="Planning and detailing: administrative workstation with integrated storage" loading="lazy">
-                <h4>Planning & Detailing</h4>
-            </div>
-            <div class="process-card">
-                <img src="images/uploads/rudrani-regency-bar-counter-fluted-front-web.jpg" alt="Site supervision: Rudrani Regency bar counter detailing" loading="lazy">
-                <h4>Site Supervision</h4>
-            </div>
-            <div class="process-card">
-                <img src="images/uploads/rudrani-regency-hotel-facade-night-view.jpg" alt="Project completion: Rudrani Regency hotel façade at night" loading="lazy">
-                <h4>Project Completion</h4>
-            </div>
+            <a class="process-card" href="project.html?slug=rashtrapati-nilayam-souvenir-shop-rare-planet">
+                <img src="images/uploads/rashtrapati-nilayam-souvenir-shop-shopfront-opening-day-web.jpg" alt="Rashtrapati Nilayam Souvenir Shop" loading="lazy">
+                <h4>Rashtrapati Nilayam Souvenir Shop<span>Retail</span></h4>
+            </a>
+            <a class="process-card" href="project.html?slug=dey-sarkar-residence-balurghat">
+                <img src="images/uploads/dey-sarkar-residence-foyer-water-wall-vertical-garden-timber-arch-web.jpg" alt="Dey Sarkar Residence" loading="lazy">
+                <h4>Dey Sarkar Residence<span>Residential</span></h4>
+            </a>
+            <a class="process-card" href="project.html?slug=chalantika-temple-gangarampur">
+                <img src="images/uploads/chalantika-temple-gangarampur-three-quarter-view-shikhara-tower.jpg" alt="Chalantika Matri Mandir" loading="lazy">
+                <h4>Chalantika Matri Mandir<span>Religious</span></h4>
+            </a>
+            <a class="process-card" href="project.html?slug=ghosh-healthcare-ct-scan-suite-gangarampur">
+                <img src="images/uploads/ghosh-healthcare-ct-scan-room-three-quarter-view-control-window-web.jpg" alt="Ghosh Healthcare CT Suite" loading="lazy">
+                <h4>Ghosh Healthcare CT Suite<span>Healthcare</span></h4>
+            </a>
+            <a class="process-card" href="project.html?slug=chatterjee-residence-gangarampur">
+                <img src="images/uploads/chatterjee-residence-study-bedroom-arched-leaf-headboard-desk-web.jpg" alt="Chatterjee Residence" loading="lazy">
+                <h4>Chatterjee Residence<span>Residential</span></h4>
+            </a>
         </div>
+        <a href="projects.html" class="selected-all">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
     </section>
 
     <!-- Quote -->
@@ -577,7 +590,7 @@
 </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 ADS Creative Space. All Rights Reserved.</p>
+            <p>&copy; 2026 ADS Creative Space. All Rights Reserved.</p>
         </div>
     </footer>
 
