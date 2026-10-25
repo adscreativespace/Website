@@ -259,7 +259,7 @@
             </div>
 
             <h1>Let's Figure It Out Together.</h1>
-            <p class="intro">Confused about which package fits your project? Hop on a quick 15-min video call with our designer.</p>
+            <p class="intro">Not sure which package fits your project? Book a consultation with our architect, at our Sky City Mall studio or by video call.</p>
 
             <!-- Price Highlight -->
             <div class="price-highlight">
@@ -283,9 +283,39 @@
 
                     <div class="form-row-two">
                         <div class="c-form-group">
+                            <label for="location">Project Location *</label>
+                            <input type="text" id="location" name="location" placeholder="e.g. Balurghat" required>
+                        </div>
+                        <div class="c-form-group">
+                            <label for="ptype">Project Type *</label>
+                            <select id="ptype" name="ptype" required>
+                                <option value="">Select Project Type</option>
+                                <option>New house / building plan</option>
+                                <option>Home interior</option>
+                                <option>Exterior / 3D elevation</option>
+                                <option>Clinic / hospital</option>
+                                <option>Shop / showroom / office</option>
+                                <option>Hotel / restaurant</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row-two">
+                        <div class="c-form-group">
+                            <label for="mode">Consultation Mode *</label>
+                            <select id="mode" name="mode" required>
+                                <option value="At studio (Sky City Mall)">At studio (Sky City Mall)</option>
+                                <option value="Video call">Video call</option>
+                            </select>
+                        </div>
+                        <div class="c-form-group">
                             <label for="date">Preferred Date *</label>
                             <input type="date" id="date" name="date" required>
                         </div>
+                    </div>
+
+                    <div class="form-row-two">
                         <div class="c-form-group">
                             <label for="time">Preferred Time Slot *</label>
                             <select id="time" name="time" required>
@@ -297,7 +327,8 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn-pay">PROCEED TO PAY ₹1,499</button>
+                    <button type="submit" class="btn-pay"><i class="fa-brands fa-whatsapp"></i> REQUEST CONSULTATION ON WHATSAPP</button>
+                    <p style="font-size:13px;color:#777;margin-top:10px;text-align:center;">We confirm your slot on WhatsApp. The ₹1,499 fee is paid at confirmation (UPI or cash).</p>
                 </div>
             </form>
 
@@ -305,7 +336,7 @@
             <div class="benefit-section">
                 <h4><i class="fa-solid fa-check-circle" style="color: #C59D5F; margin-right: 8px;"></i>What's Included</h4>
                 <ul class="benefit-list">
-                    <li>15-minute personalized video consultation</li>
+                    <li>One-to-one consultation at our studio or by video call</li>
                     <li>Expert guidance on your project requirements</li>
                     <li>Recommendation of the right package for you</li>
                     <li>₹1,499 fee adjusted against your project if you proceed</li>
@@ -378,18 +409,15 @@
     <script>
         document.getElementById('consultationForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const fullname = document.getElementById('fullname').value;
-            const whatsapp = document.getElementById('whatsapp').value;
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            
-            // You would integrate Razorpay payment gateway here
-            // For now, show confirmation
-            alert(`Thank you ${fullname}! Your consultation is booked for ${date} at ${time}. Payment integration coming soon!`);
-            
-            // Reset form
-            this.reset();
+            const v = id => document.getElementById(id).value.trim();
+            const ts = document.getElementById('time');
+            const msg = 'Consultation request (ADS Creative Space website)\n' +
+                'Name: ' + v('fullname') + '\n' +
+                'WhatsApp: ' + v('whatsapp') + '\n' +
+                'Project: ' + v('ptype') + ', ' + v('location') + '\n' +
+                'Mode: ' + v('mode') + '\n' +
+                'Preferred: ' + v('date') + ', ' + ts.options[ts.selectedIndex].text;
+            window.open('https://wa.me/917003071858?text=' + encodeURIComponent(msg), '_blank');
         });
     </script>
 <script>
