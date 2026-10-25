@@ -40,13 +40,6 @@ features:
       a simple, practical layout.
     image: /images/uploads/first-project-bedroom-two-tone-wardrobe-panelled-bed-wall.jpg
     alt: Bedroom with a two-tone full-height wardrobe, a door and a dark panelled bed wall
-  - title: Planned Around Daily Life
-    text: The furniture layout groups the living area, dining table and kitchen into one open zone
-      near the entrance. The parents' room, two bedrooms and a kids' room each have built-in
-      wardrobes. Two bedrooms have attached toilets, a common toilet serves the rest, and a separate
-      pooja room sits away from the main circulation.
-    image: /images/uploads/first-project-furniture-layout-floor-plan.jpg
-    alt: Furniture layout floor plan with living, dining, kitchen, four bedrooms, pooja room, toilets and staircase
 highlights:
   - title: First Independent Project
     text: Designed in 2020, the project that started ADS Creative Space.
@@ -58,8 +51,6 @@ highlights:
     text: Sculpted wall finishes, damask wallpaper and panelled laminates.
   - title: Full-Height Wardrobes
     text: Built-in storage in every bedroom.
-  - title: Furniture Layout Planning
-    text: Open living-dining-kitchen zone, four bedrooms and a dedicated pooja room.
 gallery:
   - image: /images/uploads/first-project-dining-slatted-partition-pendant-living-beyond.jpg
     alt: Dining area with a white slatted display partition, cage pendant and the living room beyond
@@ -71,8 +62,6 @@ gallery:
     alt: Bedroom with a two-tone wardrobe and a dark panelled bed wall
   - image: /images/uploads/first-project-bedroom-damask-panel-fabric-finish-wardrobe.jpg
     alt: Bedroom with a damask wallpaper panel, fabric-finish headboard and wardrobe with dresser
-  - image: /images/uploads/first-project-furniture-layout-floor-plan.jpg
-    alt: Furniture layout floor plan with living, dining, kitchen, four bedrooms, pooja room and staircase
 seo:
   meta_title: First Independent Project, Gangarampur | ADS Creative Space
   meta_description: The 2020 residential interior that began ADS Creative Space, with a slatted
@@ -80,6 +69,6 @@ seo:
 ---
 This 2020 residence in Gangarampur was the first project Atish Dipankar took on as an independent designer, and it marks where ADS Creative Space began.
 
-The brief covered the furniture layout of a 3,200 sq.ft. home and the interiors of selected rooms: the living and dining areas and the bedrooms. The plan places the living area, dining table and kitchen together in one open zone near the entrance, with four bedrooms and a pooja room arranged around it. Instead of a solid wall, a slatted white display partition separates the living and dining spaces while keeping them visually connected. Textured feature walls and lit display niches give each room a focal point.
+The brief covered selected rooms of a 3,200 sq.ft. home: the living and dining areas and the bedrooms. Instead of a solid wall, a slatted white display partition separates the living and dining spaces while keeping them visually connected. Textured feature walls and lit display niches give each room a focal point.
 
 In the bedrooms, built-in storage was treated as a design element: a full wall of staggered, individually lit niches, full-height two-tone wardrobes and panelled or wallpapered bed walls. Many of the ideas that recur in the studio's later work, such as integrated storage, layered lighting and a single strong feature wall per room, first appear here.
