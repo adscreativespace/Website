@@ -5,7 +5,7 @@ description: A G+2 family home in Kaliaganj for Pratik Nandi, designed from floo
   to the elevation, with an efficient three-bedroom floor plate and a contemporary façade. Currently under construction.
 thumbnail: /images/uploads/nandi-residence-kaliaganj-exterior-elevation-design-concept-web.jpg
 hero_image: /images/uploads/nandi-residence-kaliaganj-exterior-elevation-design-concept.jpg
-order: 10
+order: 11
 category: Residential Architecture
 location: Kaliaganj, West Bengal
 area: Approx. 1,200 sq.ft. / floor (G+2)

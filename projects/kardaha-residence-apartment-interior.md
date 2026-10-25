@@ -6,7 +6,7 @@ description: A 1,500 sq.ft. apartment interior in Kardaha, planned as one open s
   walls and a statement teal glass chandelier over the dining table.
 thumbnail: /images/uploads/kardaha-residence-dining-teal-glass-chandelier-crockery-unit-web.jpg
 hero_image: /images/uploads/kardaha-residence-dining-teal-glass-chandelier-crockery-unit-hero.jpg
-order: 12
+order: 13
 category: Residential Interior
 location: Kardaha, West Bengal
 area: 1500 sq.ft.

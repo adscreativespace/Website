@@ -7,7 +7,7 @@ description: A 600 sq.ft. CT scan suite in Gangarampur for Ghosh Healthcare, com
   control desk.
 thumbnail: /images/uploads/ghosh-healthcare-ct-scan-room-three-quarter-view-control-window-web.jpg
 hero_image: /images/uploads/ghosh-healthcare-ct-scan-room-three-quarter-view-control-window-hero.jpg
-order: 9
+order: 10
 category: Healthcare
 location: Gangarampur, West Bengal
 area: 600 sq.ft.
