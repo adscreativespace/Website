@@ -10,6 +10,9 @@
     <meta name="author" content="ADS Creative Space">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://adscreativespace.com/packages.html">
+    <link rel="alternate" hreflang="en" href="https://adscreativespace.com/packages.html">
+    <link rel="alternate" hreflang="bn" href="https://adscreativespace.com/bn/packages.html">
+    <link rel="alternate" hreflang="x-default" href="https://adscreativespace.com/packages.html">
     <meta name="geo.region" content="IN-WB">
     <meta name="geo.placename" content="Gangarampur, Dakshin Dinajpur, West Bengal">
     <meta name="geo.position" content="25.4061;88.5198">
@@ -59,7 +62,7 @@
         }
 
         .packages-page-hero-left h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 3.2rem;
             line-height: 1.12;
             color: #111;
@@ -101,7 +104,7 @@
         }
 
         .packages-overview-header h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 2.4rem;
             color: #111;
             margin-bottom: 10px;
@@ -181,7 +184,7 @@
 
         .package-detail-card h3 {
             text-align: center;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 1.45rem;
             color: #111;
             margin-bottom: 4px;
@@ -206,7 +209,7 @@
 
         .package-price-big {
             text-align: center;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 2.4rem;
             color: #111;
             line-height: 1;
@@ -214,7 +217,7 @@
         }
 
         .package-price-big span {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
             font-size: 0.9rem;
             color: #888;
             font-weight: 400;
@@ -262,7 +265,7 @@
             border: 2px solid #111;
             background: transparent;
             color: #111;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
             font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.8px;
@@ -296,7 +299,7 @@
 
         .comparison-title {
             text-align: center;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 2.2rem;
             color: #111;
             margin-bottom: 30px;
@@ -415,7 +418,7 @@
         }
 
         .packages-cta h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 2.2rem;
             color: #fff;
             margin-bottom: 10px;
@@ -555,6 +558,7 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="bn/packages.html" class="lang-switch" lang="bn" hreflang="bn">বাংলা</a></li>
     </ul>
 </nav>
 
@@ -787,7 +791,7 @@
                     <img src="logo.png" alt="ADS Creative Space"
                          style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
                 </a>
-                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display','Noto Serif Bengali',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
                 <div class="socials" style="margin-top:16px;">
                     <a href="https://www.facebook.com/adscreativespace" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/adscreativespace" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -849,5 +853,6 @@
   });
 </script>
 
+<script>document.querySelectorAll(".lang-switch").forEach(function(a){a.href+=location.search});</script>
 </body>
 </html>

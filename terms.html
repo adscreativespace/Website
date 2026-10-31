@@ -10,6 +10,9 @@
     <meta name="author" content="ADS Creative Space">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://adscreativespace.com/terms.html">
+    <link rel="alternate" hreflang="en" href="https://adscreativespace.com/terms.html">
+    <link rel="alternate" hreflang="bn" href="https://adscreativespace.com/bn/terms.html">
+    <link rel="alternate" hreflang="x-default" href="https://adscreativespace.com/terms.html">
     <meta name="geo.region" content="IN-WB">
     <meta name="geo.placename" content="Gangarampur, Dakshin Dinajpur, West Bengal">
     <meta name="geo.position" content="25.4061;88.5198">
@@ -40,7 +43,7 @@
     <style>
         .legal-hero{padding:70px 5% 30px;background:#fff;border-bottom:1px solid #eee}
         .legal-hero .subtitle{letter-spacing:3px}
-        .legal-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.2rem);margin:8px 0 10px;color:#111}
+        .legal-hero h1{font-family:'Playfair Display','Noto Serif Bengali',serif;font-size:clamp(2.2rem,5vw,3.2rem);margin:8px 0 10px;color:#111}
         .legal-hero p{color:#555;max-width:760px;line-height:1.7}
         .legal-wrap{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;max-width:1150px;margin:0 auto;padding:40px 5% 80px}
         .legal-toc{position:sticky;top:100px;align-self:start;font-size:.9rem;border-left:2px solid #C59D5F;padding-left:16px}
@@ -48,7 +51,7 @@
         .legal-toc a{display:block;color:#444;text-decoration:none;padding:4px 0;line-height:1.35}
         .legal-toc a:hover{color:#C59D5F}
         .legal-body{color:#333;line-height:1.8;font-size:1rem;max-width:780px}
-        .legal-body h2{font-family:'Playfair Display',serif;font-size:1.45rem;color:#111;margin:42px 0 10px;scroll-margin-top:100px}
+        .legal-body h2{font-family:'Playfair Display','Noto Serif Bengali',serif;font-size:1.45rem;color:#111;margin:42px 0 10px;scroll-margin-top:100px}
         .legal-body h2:first-child{margin-top:0}
         .legal-body ul{padding-left:20px;margin:8px 0 14px}.legal-body li{margin:5px 0}
         .legal-body .note{background:#faf6ef;border-left:3px solid #C59D5F;padding:14px 18px;margin:18px 0;font-size:.95rem}
@@ -82,6 +85,7 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="bn/terms.html" class="lang-switch" lang="bn" hreflang="bn">বাংলা</a></li>
     </ul>
 </nav>
 
@@ -173,7 +177,7 @@
                     <img src="logo.png" alt="ADS Creative Space"
                          style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
                 </a>
-                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display','Noto Serif Bengali',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
                 <div class="socials" style="margin-top:16px;">
                     <a href="https://www.facebook.com/adscreativespace" target="_blank">
                         <i class="fa-brands fa-facebook-f"></i>
@@ -265,5 +269,6 @@
       })();
     </script>
 
+<script>document.querySelectorAll(".lang-switch").forEach(function(a){a.href+=location.search});</script>
 </body>
 </html>

@@ -10,6 +10,9 @@
     <meta name="author" content="ADS Creative Space">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://adscreativespace.com/gallery.html">
+    <link rel="alternate" hreflang="en" href="https://adscreativespace.com/gallery.html">
+    <link rel="alternate" hreflang="bn" href="https://adscreativespace.com/bn/gallery.html">
+    <link rel="alternate" hreflang="x-default" href="https://adscreativespace.com/gallery.html">
     <meta name="geo.region" content="IN-WB">
     <meta name="geo.placename" content="Gangarampur, Dakshin Dinajpur, West Bengal">
     <meta name="geo.position" content="25.4061;88.5198">
@@ -38,15 +41,15 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .gal-card img { cursor: zoom-in; }
-        .gal-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #c59d5f; text-decoration: none; transition: gap .25s ease, color .25s ease; }
+        .gal-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-family: 'Montserrat', 'Hind Siliguri', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #c59d5f; text-decoration: none; transition: gap .25s ease, color .25s ease; }
         .gal-link:hover, .gal-link:focus-visible { gap: 12px; color: #111; }
         .lb { position: fixed; inset: 0; z-index: 10000; background: rgba(10,10,10,0.95); display: none; align-items: center; justify-content: center; flex-direction: column; touch-action: pan-y; }
         .lb.open { display: flex; }
         .lb-img { max-width: 92vw; max-height: 78vh; object-fit: contain; border-radius: 4px; user-select: none; -webkit-user-drag: none; }
-        .lb-cap { color: #ddd; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; margin-top: 14px; text-align: center; max-width: 80vw; line-height: 1.5; }
-        .lb-proj { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 10px 22px; border: 1px solid #c59d5f; border-radius: 30px; color: #fff; background: rgba(197,157,95,0.15); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+        .lb-cap { color: #ddd; font-family: 'Montserrat', 'Hind Siliguri', sans-serif; font-size: 0.9rem; margin-top: 14px; text-align: center; max-width: 80vw; line-height: 1.5; }
+        .lb-proj { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 10px 22px; border: 1px solid #c59d5f; border-radius: 30px; color: #fff; background: rgba(197,157,95,0.15); font-family: 'Montserrat', 'Hind Siliguri', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; transition: background .2s; }
         .lb-proj:hover, .lb-proj:focus-visible { background: #c59d5f; outline: none; }
-        .lb-count { position: absolute; top: 22px; left: 24px; color: #aaa; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 1px; }
+        .lb-count { position: absolute; top: 22px; left: 24px; color: #aaa; font-family: 'Montserrat', 'Hind Siliguri', sans-serif; font-size: 0.8rem; letter-spacing: 1px; }
         .lb-btn { position: absolute; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
         .lb-btn:hover, .lb-btn:focus-visible { background: rgba(196,155,92,0.85); outline: none; }
         .lb-close { top: 16px; right: 18px; }
@@ -81,6 +84,7 @@
         <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="bn/gallery.html" class="lang-switch" lang="bn" hreflang="bn">বাংলা</a></li>
     </ul>
 </nav>
 
@@ -685,7 +689,7 @@
                 <img src="logo.png" alt="ADS Creative Space"
                      style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
             </a>
-            <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
+            <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display','Noto Serif Bengali',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
             <div class="socials" style="margin-top:16px;">
                 <a href="https://www.facebook.com/adscreativespace" target="_blank">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -844,5 +848,6 @@
             });
         })();
     </script>
+<script>document.querySelectorAll(".lang-switch").forEach(function(a){a.href+=location.search});</script>
 </body>
 </html>

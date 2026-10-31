@@ -42,7 +42,7 @@
         if (sending) return;
         if (!contact.checkValidity()) return;
         e.preventDefault(); sending = true;
-        var btn = contact.querySelector('[type="submit"]'); if (btn) { btn.disabled = true; btn.textContent = "SENDING…"; }
+        var btn = contact.querySelector('[type="submit"]'); if (btn) { btn.disabled = true; btn.textContent = document.documentElement.lang === "bn" ? "পাঠানো হচ্ছে…" : "SENDING…"; }
         window.sendToAdsOs(contact, {
           form: "contact", name: val(contact, "#name"), email: val(contact, "#email"), phone: val(contact, "#phone"),
           project_type: val(contact, "#project-type"), package: val(contact, "#package-dropdown"), message: val(contact, "#message")

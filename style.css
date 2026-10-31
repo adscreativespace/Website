@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
     background-color: var(--white);
     color: var(--text);
     line-height: 1.6;
@@ -45,7 +45,7 @@ a {
 /* ═════════════════════════════════════════════════════════════════════ */
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
@@ -54,7 +54,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.2;
@@ -63,14 +63,14 @@ h2 {
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--dark);
 }
 
 h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--dark);
@@ -147,7 +147,7 @@ nav ul {
 }
 
 nav ul li a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #444444;
@@ -558,7 +558,7 @@ footer,
 }
 
 .contact-info-card h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2.2rem;
     color: #111;
     margin-bottom: 30px;
@@ -664,7 +664,7 @@ footer,
 }
 
 .contact-form-card h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2.2rem;
     color: #111;
     margin-bottom: 30px;
@@ -700,7 +700,7 @@ footer,
     border-radius: 4px;
     padding: 14px 12px;
     font-size: 0.95rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
     background: #fff;
     color: #333;
     outline: none;
@@ -786,7 +786,7 @@ footer,
 }
 
 .contact-cta h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2.6rem;
     margin-bottom: 16px;
     color: #fff;
@@ -884,7 +884,7 @@ footer,
 }
 
 .projects-hero-content h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 3.6rem;
     line-height: 1.1;
     color: #111;
@@ -945,7 +945,7 @@ footer,
 }
 
 .proj-text h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 1.35rem;
     color: #111;
     margin: 6px 0 10px;
@@ -1010,7 +1010,7 @@ footer,
 
 .filter-btn,
 .filter-sort select {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
 }
 
 .filter-btn {
@@ -1058,7 +1058,7 @@ footer,
 }
 
 .services-hero-content h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 3.6rem;
     color: #111;
     margin-bottom: 10px;
@@ -1140,7 +1140,7 @@ footer,
 }
 
 .srv-card-body h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 1.4rem;
     color: #111;
     margin-bottom: 4px;
@@ -1204,7 +1204,7 @@ footer,
 }
 
 .why-card h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     color: #111;
@@ -1227,7 +1227,7 @@ footer,
 }
 
 .services-cta-left h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2.4rem;
     color: #fff;
     margin-bottom: 10px;
@@ -1273,7 +1273,7 @@ footer,
 }
 
 .gallery-hero-content h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 3.6rem;
     color: #111;
     margin-bottom: 10px;
@@ -1308,7 +1308,7 @@ footer,
     background: #fff;
     color: #444;
     font-size: 0.88rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
 }
 
 .view-toggle {
@@ -1377,7 +1377,7 @@ footer,
 }
 
 .gal-text h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 1.3rem;
     color: #111;
     margin: 6px 0 10px;
@@ -1433,7 +1433,7 @@ footer,
 }
 
 .gallery-cta-left h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2rem;
     color: #111;
     margin-bottom: 6px;
@@ -1460,7 +1460,7 @@ footer,
 
 .about-hero-left h1 {
     font-size: 3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     line-height: 1.2;
     margin-bottom: 20px;
     color: #111;
@@ -1490,7 +1490,7 @@ footer,
 
 .philosophy-left h2 {
     font-size: 2.2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     margin-bottom: 25px;
     color: #111;
 }
@@ -1568,7 +1568,7 @@ footer,
 
 .founder-content h3 {
     font-size: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     margin-bottom: 8px;
     margin-top: 10px;
     color: #111;
@@ -1625,7 +1625,7 @@ footer,
 
 .timeline-section h2 {
     font-size: 2.2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     color: #111;
 }
 
@@ -1692,7 +1692,7 @@ footer,
 
 .process-behind h2 {
     font-size: 2.2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     color: #111;
 }
 
@@ -1746,7 +1746,7 @@ footer,
 
 .quote-text p {
     font-size: 1.8rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     color: #fff;
     line-height: 1.5;
 }
@@ -1796,7 +1796,7 @@ footer,
 }
 
 .services-header h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
     font-size: 2.8rem;
     color: #111;
     margin-bottom: 18px;
@@ -2494,3 +2494,19 @@ footer,
 
 /* Footer service-area line (SEO) */
 .footer-areas { color: #8a8a8a; font-size: 0.8rem; max-width: 640px; line-height: 1.6; }
+
+/* ── Language switch + Bengali pages (/bn/) ─────────────────────────── */
+nav ul li a.lang-switch {
+    border: 1px solid #C59D5F;
+    border-radius: 999px;
+    padding: 4px 14px;
+    color: #C59D5F;
+}
+nav ul li a.lang-switch:hover { background: #C59D5F; color: #fff; }
+html[lang="bn"] body { font-family: 'Montserrat', 'Hind Siliguri', sans-serif; }
+html[lang="bn"] *:not(i):not(.fa):not([class*="fa-"]) { letter-spacing: 0 !important; }
+html[lang="bn"] h1, html[lang="bn"] h2, html[lang="bn"] h3 { line-height: 1.35 !important; }
+html[lang="bn"] p, html[lang="bn"] li { line-height: 1.8; }
+@media (max-width: 768px) {
+    nav ul li a.lang-switch { display: inline-block; padding: 6px 18px; margin: 12px 0 4px; border: 1px solid #C59D5F !important; }
+}

@@ -10,6 +10,9 @@
     <meta name="author" content="ADS Creative Space">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://adscreativespace.com/consultation.html">
+    <link rel="alternate" hreflang="en" href="https://adscreativespace.com/consultation.html">
+    <link rel="alternate" hreflang="bn" href="https://adscreativespace.com/bn/consultation.html">
+    <link rel="alternate" hreflang="x-default" href="https://adscreativespace.com/consultation.html">
     <meta name="geo.region" content="IN-WB">
     <meta name="geo.placename" content="Gangarampur, Dakshin Dinajpur, West Bengal">
     <meta name="geo.position" content="25.4061;88.5198">
@@ -73,7 +76,7 @@
         }
 
         .consult-main-box h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
             font-size: 2.4rem;
             color: #111;
             margin-bottom: 15px;
@@ -137,7 +140,7 @@
             padding: 14px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
             font-size: 0.95rem;
             background: #fff;
             color: #333;
@@ -247,6 +250,7 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+        <li><a href="bn/consultation.html" class="lang-switch" lang="bn" hreflang="bn">বাংলা</a></li>
         </ul>
     </nav>
 
@@ -290,13 +294,13 @@
                             <label for="ptype">Project Type *</label>
                             <select id="ptype" name="ptype" required>
                                 <option value="">Select Project Type</option>
-                                <option>New house / building plan</option>
-                                <option>Home interior</option>
-                                <option>Exterior / 3D elevation</option>
-                                <option>Clinic / hospital</option>
-                                <option>Shop / showroom / office</option>
-                                <option>Hotel / restaurant</option>
-                                <option>Other</option>
+                                <option value="New house / building plan">New house / building plan</option>
+                                <option value="Home interior">Home interior</option>
+                                <option value="Exterior / 3D elevation">Exterior / 3D elevation</option>
+                                <option value="Clinic / hospital">Clinic / hospital</option>
+                                <option value="Shop / showroom / office">Shop / showroom / office</option>
+                                <option value="Hotel / restaurant">Hotel / restaurant</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
@@ -354,7 +358,7 @@
                 <a href="index.html">
                     <img src="logo.png" alt="ADS Creative Space" style="height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
                 </a>
-                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
+                <p>Architecture and interior design consultancy creating timeless spaces that inspire.</p><p style="font-family:'Playfair Display','Noto Serif Bengali',Georgia,serif;font-style:italic;color:#C59D5F;margin-top:10px;">Driven by Vision. Defined by Precision.</p>
                 <div class="socials" style="margin-top:16px;">
                     <a href="https://www.facebook.com/adscreativespace" target="_blank">
                         <i class="fa-brands fa-facebook-f"></i>
@@ -441,5 +445,6 @@
 </script>
 
 <script src="scripts/ads-enquiry.js" defer></script>
+<script>document.querySelectorAll(".lang-switch").forEach(function(a){a.href+=location.search});</script>
 </body>
 </html>
