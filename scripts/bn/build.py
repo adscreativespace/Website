@@ -16,6 +16,26 @@ PAGE_RE=r'(index|about|services|packages|consultation|contact|gallery|projects|p
 JS_LABELS={'>Location<':'>লোকেশন<','>Area<':'>এরিয়া<','>Type<':'>ধরন<','>Style<':'>স্টাইল<','>Year<':'>বছর<','>Client<':'>ক্লায়েন্ট<',
  '>About<':'>প্রজেক্ট সম্পর্কে<','>Highlights<':'>বিশেষ দিক<','>Gallery<':'>গ্যালারি<',"'More Projects'":"'আরও প্রজেক্ট'",'<small>Previous<':'<small>আগের<','<small>Next<':'<small>পরের<','>Related<':'>সম্পর্কিত প্রজেক্ট<',
  'View Project <i':'প্রজেক্ট দেখুন <i','fa-arrow-left"></i> Back<':'fa-arrow-left"></i> সব প্রজেক্ট<'}
+BN_JS='''<script>
+  // Bengali text for each project lives in bn/projects/<slug>.json (made by scripts/bn/projects_build.py).
+  // Anything without a Bengali version simply stays in English.
+  const BN_CAT = {"Residential Interior":"রেসিডেন্সিয়াল ইন্টেরিয়র","Residential Architecture":"রেসিডেন্সিয়াল আর্কিটেকচার","Healthcare":"হেলথকেয়ার","Religious Architecture":"ধর্মীয় স্থাপত্য","Office Interior":"অফিস ইন্টেরিয়র","Commercial Workspace":"কমার্শিয়াল ওয়ার্কস্পেস","Retail Interior":"রিটেল ইন্টেরিয়র","Institutional":"ইনস্টিটিউশনাল","Hospitality":"হসপিটালিটি"};
+  const bnYear = y => String(y || '').replace('Under Construction', 'নির্মাণাধীন').replace('Ongoing', 'চলছে');
+  function bnApply(d, o) {
+    for (const [path, v] of Object.entries(o)) {
+      if (path === 'body') { d._body = v; continue; }
+      const ks = path.split('.'); let t = d;
+      for (let i = 0; i < ks.length - 1 && t; i++) t = (t[ks[i]] == null && isNaN(ks[i + 1])) ? (t[ks[i]] = {}) : t[ks[i]];
+      if (t && typeof t === 'object') t[ks[ks.length - 1]] = v;
+    }
+  }
+  async function bnOverlay(list, slugOf, apply) {
+    await Promise.all(list.map(async x => {
+      try { const r = await fetch('bn/projects/' + slugOf(x) + '.json', { cache: 'no-cache' }); if (r.ok) apply(x, await r.json()); } catch (e) {}
+    }));
+  }
+</script>
+'''
 def lang_li(target_href, label, lang):
     return f'<li><a href="{target_href}" class="lang-switch" lang="{lang}" hreflang="{lang}">{label}</a></li>'
 def build(p):
@@ -41,6 +61,14 @@ def build(p):
     h=re.sub(r'(["`\'])project\.html\?slug=', r'\1bn/project.html?slug=', h)
     # option values: keep English values so ADS OS data stays consistent
     for k,v in JS_LABELS.items(): h=h.replace(k,v)
+    if p in ('project','projects'):
+        h=h.replace('</head>', BN_JS+'</head>',1)
+        if p=='project':
+            a="        all.sort((a,b) =>"
+            assert a in h; h=h.replace(a,"        await bnOverlay(all, d => d.slug, (d,o) => { bnApply(d,o); d.category = BN_CAT[d.category] || d.category; });\n        all.forEach(d => { if (d.year) d.year = bnYear(d.year); });\n"+a,1)
+        else:
+            a="            allProjects = realProjects.length ? realProjects : fallbackProjects;"
+            assert a in h; h=h.replace(a,"            await bnOverlay(realProjects, p => p.slug, (p,o) => { ['title','location','area'].forEach(k => { if (o[k]) p[k] = o[k]; }); if (o.description) p.desc = o.description; });\n            realProjects.forEach(p => { p.tag = BN_CAT[p.category] || p.tag; p.year = bnYear(p.year); });\n"+a,1)
     h=h.replace("'Consultation request (ADS Creative Space website)","'Consultation request (ADS Creative Space website, Bengali page)")
     FONT='<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@600;700&display=swap" rel="stylesheet">\n    '
     h,n=re.subn(r'(<link rel="stylesheet" href="style\.css">)', lambda m:FONT+m.group(1), h, count=1); assert n==1,p

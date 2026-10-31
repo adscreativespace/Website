@@ -135,6 +135,25 @@
       .lb-img { max-height: 72vh; }
     }
 </style>
+<script>
+  // Bengali text for each project lives in bn/projects/<slug>.json (made by scripts/bn/projects_build.py).
+  // Anything without a Bengali version simply stays in English.
+  const BN_CAT = {"Residential Interior":"রেসিডেন্সিয়াল ইন্টেরিয়র","Residential Architecture":"রেসিডেন্সিয়াল আর্কিটেকচার","Healthcare":"হেলথকেয়ার","Religious Architecture":"ধর্মীয় স্থাপত্য","Office Interior":"অফিস ইন্টেরিয়র","Commercial Workspace":"কমার্শিয়াল ওয়ার্কস্পেস","Retail Interior":"রিটেল ইন্টেরিয়র","Institutional":"ইনস্টিটিউশনাল","Hospitality":"হসপিটালিটি"};
+  const bnYear = y => String(y || '').replace('Under Construction', 'নির্মাণাধীন').replace('Ongoing', 'চলছে');
+  function bnApply(d, o) {
+    for (const [path, v] of Object.entries(o)) {
+      if (path === 'body') { d._body = v; continue; }
+      const ks = path.split('.'); let t = d;
+      for (let i = 0; i < ks.length - 1 && t; i++) t = (t[ks[i]] == null && isNaN(ks[i + 1])) ? (t[ks[i]] = {}) : t[ks[i]];
+      if (t && typeof t === 'object') t[ks[ks.length - 1]] = v;
+    }
+  }
+  async function bnOverlay(list, slugOf, apply) {
+    await Promise.all(list.map(async x => {
+      try { const r = await fetch('bn/projects/' + slugOf(x) + '.json', { cache: 'no-cache' }); if (r.ok) apply(x, await r.json()); } catch (e) {}
+    }));
+  }
+</script>
 </head>
 <body>
 
@@ -317,6 +336,8 @@
           if (d.slug === slug) cur = d;
         }
 
+        await bnOverlay(all, d => d.slug, (d,o) => { bnApply(d,o); d.category = BN_CAT[d.category] || d.category; });
+        all.forEach(d => { if (d.year) d.year = bnYear(d.year); });
         all.sort((a,b) => ((a.order||999) - (b.order||999)) || a.slug.localeCompare(b.slug));
         const idx = all.findIndex(p => p.slug === slug);
         const prev = all[idx-1]; const next = all[idx+1];
