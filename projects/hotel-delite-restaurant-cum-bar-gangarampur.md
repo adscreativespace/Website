@@ -36,7 +36,7 @@ features:
   - title: A Sculpted Reception Desk
     text: The white reception desk steps down in a soft curve, with a circular cut-out and slatted
       wood detailing echoing the vertical wood-and-white panelling behind it. A brass globe pendant
-      hangs above, and Hotel Deilte lettering sits on the panelled backdrop beside the
+      hangs above, and Hotel Delite lettering sits on the panelled backdrop beside the
       terrazzo-clad lift.
     image: /images/uploads/hotel-delite-reception-desk-circular-cutout.jpg
     alt: Curved white reception desk with a circular cut-out, slatted wood detail and globe pendant
