@@ -1,4 +1,4 @@
-"""Write sitemap.xml: static pages, their Bengali versions (bn/), plus one URL per project (projects/*.md)."""
+"""Write sitemap.xml: static pages, their Bengali versions (bn/), plus each project page in English and Bengali (projects/*.md)."""
 import os, datetime
 SITE = "https://adscreativespace.com/"
 today = datetime.date.today().isoformat()
@@ -11,7 +11,8 @@ urls = [(SITE + p, pr, cf) for p, pr, cf in static]
 urls += [(SITE + "bn/" + p, str(round(float(pr) - 0.1, 1)), cf) for p, pr, cf in static]
 for n in sorted(os.listdir("projects")):
     if n.endswith(".md"):
-        urls.append((SITE + "project.html?slug=" + n[:-3], "0.7", "monthly"))
+        urls.append((SITE + "projects/" + n[:-3] + ".html", "0.8", "monthly"))      # own page (scripts/prerender_projects.mjs)
+        urls.append((SITE + "bn/projects/" + n[:-3] + ".html", "0.7", "monthly"))
 out = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for u, pr, cf in urls:
     out.append(f"  <url><loc>{u.replace('&', '&amp;')}</loc><lastmod>{today}</lastmod><changefreq>{cf}</changefreq><priority>{pr}</priority></url>")

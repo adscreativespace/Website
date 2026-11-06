@@ -59,6 +59,7 @@ def build(p):
     h=re.sub(r'(href=")#', r'\1bn/'+p+'.html#', h)
     h=h.replace('href="bn/'+p+'.html#"','href="#"')  # keep bare "#" placeholders
     h=re.sub(r'(["`\'])project\.html\?slug=', r'\1bn/project.html?slug=', h)
+    h=re.sub(r'(["`\'])projects/([a-z0-9-]+|\$\{[^}]+\})\.html', r'\1bn/projects/\2.html', h)
     # option values: keep English values so ADS OS data stays consistent
     for k,v in JS_LABELS.items(): h=h.replace(k,v)
     if p in ('project','projects'):

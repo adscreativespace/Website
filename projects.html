@@ -252,7 +252,7 @@
         let allProjects = [];
 
         function buildCard(data) {
-            const projectLink = data.slug && data.slug !== "#" ? `project.html?slug=${encodeURIComponent(data.slug)}` : "#";
+            const projectLink = data.slug && data.slug !== "#" ? `projects/${encodeURIComponent(data.slug)}.html` : "#";
 
             const imgHtml = data.image
                 ? `<img src="${data.image}" alt="${data.title}" loading="lazy">`

@@ -317,8 +317,12 @@
     }
     async function loadPage() {
       const root = document.getElementById('pd-root');
-      const slug = new URLSearchParams(window.location.search).get('slug');
+      // Each project has its own page: projects/<slug>.html (Bengali: bn/projects/<slug>.html), made by
+      // scripts/prerender_projects.mjs. Old ?slug= links forward there.
+      const PDIR = (document.documentElement.lang === 'bn' ? 'bn/' : '') + 'projects/';
+      const slug = window.__SLUG__ || new URLSearchParams(window.location.search).get('slug');
       if (!slug) return;
+      if (!window.__SLUG__ && !window.__PRERENDER__) { location.replace('/' + PDIR + encodeURIComponent(slug) + '.html' + location.hash); return; }
 
       try {
         const files = await listProjectFiles();
@@ -352,7 +356,7 @@
         if (md) md.setAttribute('content', seo.meta_description || cur.description || '');
         try {
           const SITE = 'https://adscreativespace.com/';
-          const pageUrl = SITE + 'bn/project.html?slug=' + encodeURIComponent(slug);
+          const pageUrl = SITE + PDIR + encodeURIComponent(slug) + '.html';
           const ogImg = SITE + fixImg(cur.hero_image || cur.thumbnail || '');
           const setA = (id, a, v) => { const el = document.getElementById(id); if (el && v) el.setAttribute(a, v); };
           setA('meta-canonical', 'href', pageUrl);
@@ -360,7 +364,7 @@
           setA('og-desc', 'content', seo.meta_description || cur.description || '');
           setA('og-url', 'content', pageUrl);
           if (cur.hero_image || cur.thumbnail) setA('og-image', 'content', ogImg);
-          const ld = document.createElement('script');
+          const ld = document.getElementById('ld-project') || document.createElement('script'); ld.id = 'ld-project';
           ld.type = 'application/ld+json';
           ld.textContent = JSON.stringify({
             '@context': 'https://schema.org', '@type': 'CreativeWork',
@@ -423,9 +427,9 @@
           h += `<div class="pd-more"><div class="pd-section-label">${esc(ms.title || 'আরও প্রজেক্ট')}</div>${ms.intro ? `<p class="pd-more-intro">${esc(ms.intro)}</p>` : ''}<div class="pd-more-grid">${ms.stores.map(x => `<div class="pd-more-card"><img src="${fixImg(x.image)}" alt="${esc(x.alt || x.name)}" loading="lazy"><h4>${esc(x.name)}</h4><p>${esc(x.text || '')}</p></div>`).join('')}</div></div>`;
         }
 
-        if (prev || next) h += `<div class="pd-project-nav">${prev?`<a href="bn/project.html?slug=${prev.slug}"><small>আগের</small><strong>${prev.title}</strong></a>`:'<div></div>'}${next?`<a href="bn/project.html?slug=${next.slug}" style="text-align:right;"><small>পরের</small><strong>${next.title}</strong></a>`:'<div></div>'}</div>`;
+        if (prev || next) h += `<div class="pd-project-nav">${prev?`<a href="${PDIR}${prev.slug}.html"><small>আগের</small><strong>${prev.title}</strong></a>`:'<div></div>'}${next?`<a href="${PDIR}${next.slug}.html" style="text-align:right;"><small>পরের</small><strong>${next.title}</strong></a>`:'<div></div>'}</div>`;
 
-        if (rel.length) h += `<div class="pd-related"><div style="max-width:1300px;margin:0 auto;"><div class="pd-section-label">সম্পর্কিত প্রজেক্ট</div><div class="pd-related-grid">${rel.map(p => `<a href="bn/project.html?slug=${p.slug}" class="rel-card"><img src="${fixImg(p.thumbnail||p.hero_image)}" alt="${esc(p.title)}" loading="lazy"><div class="rel-info"><strong>${p.title}</strong><small>${p.category}</small></div></a>`).join('')}</div></div></div>`;
+        if (rel.length) h += `<div class="pd-related"><div style="max-width:1300px;margin:0 auto;"><div class="pd-section-label">সম্পর্কিত প্রজেক্ট</div><div class="pd-related-grid">${rel.map(p => `<a href="${PDIR}${p.slug}.html" class="rel-card"><img src="${fixImg(p.thumbnail||p.hero_image)}" alt="${esc(p.title)}" loading="lazy"><div class="rel-info"><strong>${p.title}</strong><small>${p.category}</small></div></a>`).join('')}</div></div></div>`;
 
         root.innerHTML = h;
         initLightbox();

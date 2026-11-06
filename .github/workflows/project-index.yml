@@ -1,10 +1,11 @@
 name: Update project index
-# Keeps projects/index.json in sync with the .md files, so the website can list
-# projects without calling the rate-limited GitHub API.
+# Keeps projects/index.json in sync with the .md files (so the website can list projects without the
+# rate-limited GitHub API), rebuilds each project's own page for Google (projects/<slug>.html and
+# bn/projects/<slug>.html, scripts/prerender_projects.mjs) and the sitemap.
 on:
   push:
     branches: [main]
-    paths: ['projects/**']
+    paths: ['projects/*.md', 'project.html', 'bn/project.html', 'bn/projects/*.json', 'scripts/prerender_projects.mjs', 'scripts/build_sitemap.py']
   workflow_dispatch:
 permissions:
   contents: write
@@ -20,14 +21,22 @@ jobs:
           names = sorted(n for n in os.listdir('projects') if n.endswith('.md'))
           open('projects/index.json', 'w').write(json.dumps(names, indent=1) + '\n')
           PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build project pages
+        run: |
+          npm i --no-save --prefix /tmp/pr playwright@1.48.2 js-yaml@4.1.0
+          npx --prefix /tmp/pr playwright install --with-deps chromium
+          NODE_PATH=/tmp/pr/node_modules node scripts/prerender_projects.mjs
       - name: Build sitemap
         run: python3 scripts/build_sitemap.py
       - name: Commit if changed
         run: |
-          if ! git diff --quiet projects/index.json sitemap.xml; then
+          git add -A projects/index.json sitemap.xml projects/*.html bn/projects/*.html
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-            git add projects/index.json sitemap.xml
-            git commit -m "Update project index and sitemap"
+            git commit -m "Update project index, project pages and sitemap"
             git push
           fi
