@@ -158,6 +158,8 @@
 
                 <!-- FORM: Connected to Formspree -->
                 <form action="https://formspree.io/f/mnjebdpy" method="POST">
+                    <!-- Bot trap: hidden from people; Formspree drops any submission that fills it -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
                     <!-- Row 1: Name + Email -->
                     <div class="form-row">
